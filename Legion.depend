@@ -1,0 +1,525 @@
+# depslib dependency file v1.0
+1316950758 source:d:\programowanie\zrodla\gcc\legion\engine\alan.cpp
+	<iostream>
+	<fstream>
+	<sstream>
+	"Alan.h"
+	"Bob.h"
+	"alan_parser.hh"
+
+1316950738 d:\programowanie\zrodla\gcc\legion\engine\alan.h
+	<map>
+
+1316951286 d:\programowanie\zrodla\gcc\legion\engine\bob.h
+	"Grid.h"
+	"Utils.h"
+	"Alan.h"
+
+1242308896 d:\programowanie\zrodla\gcc\legion\engine\grid.h
+	<list>
+	<GL/gl.h>
+	"Types.h"
+
+1243192440 d:\programowanie\zrodla\gcc\legion\engine\types.h
+
+1243192440 d:\programowanie\zrodla\gcc\legion\engine\utils.h
+	<string>
+	<iostream>
+
+1316941693 d:\programowanie\zrodla\gcc\legion\engine\alan_parser.hh
+	<iostream>
+	<string>
+	<exception>
+	"alan_token.hh"
+	"alan_scanner.hh"
+
+1316941693 d:\programowanie\zrodla\gcc\legion\engine\alan_token.hh
+	<string>
+	<sstream>
+
+1316941693 d:\programowanie\zrodla\gcc\legion\engine\alan_scanner.hh
+	<string>
+	<fstream>
+	<iostream>
+	<exception>
+	<stack>
+	"alan_token.hh"
+	<vector>
+	"_alan_interials.h"
+
+1315660442 d:\programowanie\zrodla\gcc\legion\engine\_alan_interials.h
+	<string>
+	<vector>
+	<map>
+	<stack>
+	<cmath>
+	"Textures.h"
+	"Utils.h"
+	"Rand.h"
+
+1252668318 d:\programowanie\zrodla\gcc\legion\engine\textures.h
+	<string>
+	<map>
+	<GL/gl.h>
+	<SDL/SDL_image.h>
+	"Utils.h"
+
+1243192440 d:\programowanie\zrodla\gcc\legion\engine\rand.h
+
+1312731937 source:d:\programowanie\zrodla\gcc\legion\engine\basic.cpp
+	<math.h>
+	"Basic.h"
+	"Bob.h"
+	"Types.h"
+	"Pictures.h"
+
+1312731930 d:\programowanie\zrodla\gcc\legion\engine\basic.h
+	<GL/gl.h>
+
+1308406575 d:\programowanie\zrodla\gcc\legion\engine\pictures.h
+	<string>
+
+1316951517 source:d:\programowanie\zrodla\gcc\legion\engine\bob.cpp
+	"Bob.h"
+	"Textures.h"
+
+1223726072 source:d:\programowanie\zrodla\gcc\legion\engine\collision.cpp
+	"Collision.h"
+	"Basic.h"
+
+1243357062 d:\programowanie\zrodla\gcc\legion\engine\collision.h
+	<GL/gl.h>
+
+1242909006 source:d:\programowanie\zrodla\gcc\legion\engine\core.cpp
+	<iostream>
+	"Core.h"
+	"Utils.h"
+	"Bob.h"
+	"Collision.h"
+
+1243192424 d:\programowanie\zrodla\gcc\legion\engine\core.h
+	<string>
+	<SDL/SDL.h>
+	<SDL/SDL_mixer.h>
+	"Settings.h"
+	"Grid.h"
+	"Rand.h"
+	"Types.h"
+	"Events.h"
+
+1315138487 d:\programowanie\zrodla\gcc\legion\engine\settings.h
+	<string>
+
+1219604272 d:\programowanie\zrodla\gcc\legion\engine\events.h
+
+1219604704 source:d:\programowanie\zrodla\gcc\legion\engine\events.cpp
+	<SDL/SDL.h>
+	"Events.h"
+
+1242900416 source:d:\programowanie\zrodla\gcc\legion\engine\font.cpp
+	<cstdio>
+	<SDL/SDL.h>
+	<SDL/SDL_image.h>
+	<SDL/SDL_ttf.h>
+	<GL/gl.h>
+	"Font.h"
+	"Utils.h"
+	"Textures.h"
+	"Bob.h"
+	"Basic.h"
+	"Settings.h"
+
+1243192432 d:\programowanie\zrodla\gcc\legion\engine\font.h
+	<string>
+	<map>
+
+1243192378 source:d:\programowanie\zrodla\gcc\legion\engine\gfx.cpp
+	<iostream>
+	"Gfx.h"
+	"Utils.h"
+	<SDL/SDL.h>
+	<SDL/SDL_image.h>
+
+1308408892 d:\programowanie\zrodla\gcc\legion\engine\gfx.h
+	"Alan.h"
+	"Basic.h"
+	"Bob.h"
+	"Font.h"
+	"Textures.h"
+	"Pictures.h"
+	"PicDraw.h"
+
+1308835118 d:\programowanie\zrodla\gcc\legion\engine\picdraw.h
+
+1243192378 source:d:\programowanie\zrodla\gcc\legion\engine\grid.cpp
+	"Grid.h"
+	"Collision.h"
+	"Types.h"
+	"Bob.h"
+	"Basic.h"
+
+1242906632 source:d:\programowanie\zrodla\gcc\legion\engine\locale.cpp
+	"Locale.h"
+
+1242391866 d:\programowanie\zrodla\gcc\legion\engine\locale.h
+	<string>
+	<map>
+
+1308835139 source:d:\programowanie\zrodla\gcc\legion\engine\picdraw.cpp
+	"PicDraw.h"
+	"Pictures.h"
+	"Utils.h"
+
+1308406624 source:d:\programowanie\zrodla\gcc\legion\engine\pictures.cpp
+	<string>
+	<cstdio>
+	<libpng12/png.h>
+	<jpeglib.h>
+	<SDL/SDL_image.h>
+	"Pictures.h"
+	"Utils.h"
+
+1312727647 source:d:\programowanie\zrodla\gcc\legion\engine\rand.cpp
+	<ctime>
+	"Rand.h"
+
+1243192378 source:d:\programowanie\zrodla\gcc\legion\engine\samples.cpp
+	"Samples.h"
+	"Settings.h"
+	"Utils.h"
+
+1242391634 d:\programowanie\zrodla\gcc\legion\engine\samples.h
+	<string>
+	<map>
+	<SDL/SDL.h>
+	<SDL/SDL_mixer.h>
+
+1315139107 source:d:\programowanie\zrodla\gcc\legion\engine\settings.cpp
+	<iostream>
+	<fstream>
+	<sstream>
+	<string>
+	"settings_parser.hh"
+	"Settings.h"
+
+1308399829 d:\programowanie\zrodla\gcc\legion\engine\settings_parser.hh
+	<iostream>
+	<string>
+	<exception>
+	"settings_token.hh"
+	"settings_scanner.hh"
+
+1308399829 d:\programowanie\zrodla\gcc\legion\engine\settings_token.hh
+	<string>
+	<sstream>
+
+1308399829 d:\programowanie\zrodla\gcc\legion\engine\settings_scanner.hh
+	<string>
+	<fstream>
+	<iostream>
+	<exception>
+	<stack>
+	"settings_token.hh"
+	<cstdlib>
+	<cstring>
+	"_settings_symbols.h"
+
+1315138144 d:\programowanie\zrodla\gcc\legion\engine\_settings_symbols.h
+	<string>
+	<vector>
+	<map>
+	<cstdio>
+
+1315140107 source:d:\programowanie\zrodla\gcc\legion\engine\textures.cpp
+	<iostream>
+	<GL/glu.h>
+	<GL/glext.h>
+	<SDL/SDL.h>
+	<SDL/SDL_image.h>
+	"Textures.h"
+	"Utils.h"
+	"Settings.h"
+	"Pictures.h"
+
+1243192378 source:d:\programowanie\zrodla\gcc\legion\engine\utils.cpp
+	<cstdio>
+	"Utils.h"
+
+1315661457 source:d:\programowanie\zrodla\gcc\legion\engine\_alan_interials.cpp
+	"_alan_interials.h"
+
+1217530884 source:d:\programowanie\zrodla\gcc\legion\engine\_settings_test.cpp
+	<iostream>
+	<fstream>
+	<sstream>
+	<string>
+	"settings_parser.hh"
+	"Settings.h"
+	"Utils.h"
+
+1316941693 source:d:\programowanie\zrodla\gcc\legion\engine\alan_parser.cc
+	"alan_parser.hh"
+
+1316941693 source:d:\programowanie\zrodla\gcc\legion\engine\alan_scanner.cc
+	"alan_scanner.hh"
+
+1316941693 source:d:\programowanie\zrodla\gcc\legion\engine\alan_token.cc
+	"alan_token.hh"
+
+1308399829 source:d:\programowanie\zrodla\gcc\legion\engine\settings_parser.cc
+	"settings_parser.hh"
+
+1308399829 source:d:\programowanie\zrodla\gcc\legion\engine\settings_scanner.cc
+	"settings_scanner.hh"
+
+1308399829 source:d:\programowanie\zrodla\gcc\legion\engine\settings_token.cc
+	"settings_token.hh"
+
+1250411890 source:d:\programowanie\zrodla\gcc\legion\game\amosimage.cpp
+	"AmosImage.h"
+
+1243192280 d:\programowanie\zrodla\gcc\legion\game\amosimage.h
+
+1250412066 source:d:\programowanie\zrodla\gcc\legion\game\amosmusic.cpp
+	<iostream>
+	<cstdio>
+	<string>
+	<vector>
+	"AmosMusic.h"
+	<Engine2d/Utils.h>
+
+1243192280 d:\programowanie\zrodla\gcc\legion\game\amosmusic.h
+	<SDL/SDL_mixer.h>
+
+1250412144 source:d:\programowanie\zrodla\gcc\legion\game\locale.cpp
+	<Engine2d/Extras.h>
+	"Locale.h"
+
+1243184874 d:\programowanie\zrodla\gcc\legion\game\locale.h
+	<string>
+
+1335714870 source:d:\programowanie\zrodla\gcc\legion\game\amos.cpp
+	<string>
+	<cstdio>
+	<vector>
+	<queue>
+	<cmath>
+	<algorithm>
+	<SDL/SDL.h>
+	<SDL/SDL_image.h>
+	<SDL/SDL_mixer.h>
+	<GL/gl.h>
+	<Engine2d/Core.h>
+	<Engine2d/Gfx.h>
+	<Engine2d/Sfx.h>
+	"main.h"
+	"Amos.h"
+	"AmosMusic.h"
+	"AmosImage.h"
+
+1243192288 d:\programowanie\zrodla\gcc\legion\game\main.h
+	<Engine2d/Core.h>
+
+1251919510 d:\programowanie\zrodla\gcc\legion\game\amos.h
+	<vector>
+	<Engine2d/Core.h>
+	<Engine2d/Gfx.h>
+	"amos_types.h"
+
+1243192280 d:\programowanie\zrodla\gcc\legion\game\amos_types.h
+	<string>
+
+1250412184 source:d:\programowanie\zrodla\gcc\legion\game\hq2x.cpp
+	<cstdlib>
+
+1242392364 source:d:\programowanie\zrodla\gcc\legion\game\lgn_armia.cpp
+	"Amos.h"
+	"legion.h"
+	"lgn_akcja.h"
+	"lgn_armia.h"
+	"lgn_miasto.h"
+	"lgn_diskacs.h"
+	"lgn_mapa.h"
+	"lgn_sceneria.h"
+	"lgn_util.h"
+	"utl_locale.h"
+
+1242986384 d:\programowanie\zrodla\gcc\legion\game\legion.h
+	"amos_types.h"
+
+1243192280 d:\programowanie\zrodla\gcc\legion\game\lgn_akcja.h
+
+1243192280 d:\programowanie\zrodla\gcc\legion\game\lgn_armia.h
+
+1243192280 d:\programowanie\zrodla\gcc\legion\game\lgn_miasto.h
+	"amos_types.h"
+
+1243192280 d:\programowanie\zrodla\gcc\legion\game\lgn_diskacs.h
+
+1243192280 d:\programowanie\zrodla\gcc\legion\game\lgn_mapa.h
+
+1243192280 d:\programowanie\zrodla\gcc\legion\game\lgn_sceneria.h
+
+1243192280 d:\programowanie\zrodla\gcc\legion\game\lgn_util.h
+	"amos_types.h"
+
+1242392264 d:\programowanie\zrodla\gcc\legion\game\utl_locale.h
+	<string>
+
+1242392378 source:d:\programowanie\zrodla\gcc\legion\game\lgn_diskacs.cpp
+	"Amos.h"
+	"legion.h"
+	"lgn_diskacs.h"
+	"lgn_util.h"
+	"utl_locale.h"
+
+1242993138 source:d:\programowanie\zrodla\gcc\legion\game\legion.cpp
+	<Engine2d/Gfx.h>
+	"Amos.h"
+	"legion.h"
+	"lgn_armia.h"
+	"lgn_diskacs.h"
+	"lgn_intro.h"
+	"lgn_mapa.h"
+	"lgn_miasto.h"
+	"lgn_przygoda.h"
+	"lgn_util.h"
+	"lgn_wczytaj.h"
+	"utl_locale.h"
+	"version.h"
+
+1243192280 d:\programowanie\zrodla\gcc\legion\game\lgn_intro.h
+
+1243192280 d:\programowanie\zrodla\gcc\legion\game\lgn_przygoda.h
+
+1243192280 d:\programowanie\zrodla\gcc\legion\game\lgn_wczytaj.h
+
+1242986484 d:\programowanie\zrodla\gcc\legion\game\version.h
+
+1266788732 source:d:\programowanie\zrodla\gcc\legion\game\lgn_ekran1.cpp
+	"Amos.h"
+	"legion.h"
+	"lgn_ekran1.h"
+	"lgn_util.h"
+
+1243192280 d:\programowanie\zrodla\gcc\legion\game\lgn_ekran1.h
+
+1242392392 source:d:\programowanie\zrodla\gcc\legion\game\lgn_intro.cpp
+	"Amos.h"
+	"legion.h"
+	"lgn_diskacs.h"
+	"lgn_intro.h"
+	"lgn_util.h"
+	"utl_locale.h"
+
+1242392406 source:d:\programowanie\zrodla\gcc\legion\game\lgn_mapa.cpp
+	"Amos.h"
+	"legion.h"
+	"lgn_akcja.h"
+	"lgn_armia.h"
+	"lgn_diskacs.h"
+	"lgn_intro.h"
+	"lgn_mapa.h"
+	"lgn_miasto.h"
+	"lgn_opcje.h"
+	"lgn_przygoda.h"
+	"lgn_sceneria.h"
+	"lgn_util.h"
+	"utl_locale.h"
+	<cmath>
+
+1243192280 d:\programowanie\zrodla\gcc\legion\game\lgn_opcje.h
+
+1251921800 source:d:\programowanie\zrodla\gcc\legion\game\lgn_miasto.cpp
+	"Amos.h"
+	"legion.h"
+	"lgn_akcja.h"
+	"lgn_diskacs.h"
+	"lgn_ekran1.h"
+	"lgn_mapa.h"
+	"lgn_miasto.h"
+	"lgn_przygoda.h"
+	"lgn_sceneria.h"
+	"lgn_util.h"
+	"utl_locale.h"
+
+1242392428 source:d:\programowanie\zrodla\gcc\legion\game\lgn_opcje.cpp
+	"Amos.h"
+	"legion.h"
+	"lgn_opcje.h"
+	"lgn_diskacs.h"
+	"lgn_mapa.h"
+	"lgn_util.h"
+	"utl_locale.h"
+
+1335714671 source:d:\programowanie\zrodla\gcc\legion\game\lgn_akcja.cpp
+	<cmath>
+	"Amos.h"
+	"legion.h"
+	"lgn_akcja.h"
+	"lgn_diskacs.h"
+	"lgn_ekran1.h"
+	"lgn_przygoda.h"
+	"lgn_sceneria.h"
+	"lgn_sklep.h"
+	"lgn_util.h"
+	"main.h"
+	"utl_locale.h"
+
+1243192280 d:\programowanie\zrodla\gcc\legion\game\lgn_sklep.h
+
+1243192232 source:d:\programowanie\zrodla\gcc\legion\game\lgn_przygoda.cpp
+	"Amos.h"
+	"legion.h"
+	"lgn_przygoda.h"
+	"lgn_util.h"
+	"locale.h"
+
+1251920432 source:d:\programowanie\zrodla\gcc\legion\game\lgn_sceneria.cpp
+	"Amos.h"
+	"legion.h"
+	"lgn_sceneria.h"
+	"lgn_akcja.h"
+	"lgn_diskacs.h"
+	"lgn_ekran1.h"
+	"lgn_util.h"
+
+1251920448 source:d:\programowanie\zrodla\gcc\legion\game\lgn_sklep.cpp
+	"Amos.h"
+	"legion.h"
+	"lgn_diskacs.h"
+	"lgn_ekran1.h"
+	"lgn_akcja.h"
+	"lgn_sklep.h"
+	"lgn_util.h"
+	"utl_locale.h"
+
+1243188340 source:d:\programowanie\zrodla\gcc\legion\game\lgn_util.cpp
+	<cmath>
+	"Amos.h"
+	"legion.h"
+	"lgn_util.h"
+	"lgn_intro.h"
+	"utl_locale.h"
+
+1242392462 source:d:\programowanie\zrodla\gcc\legion\game\lgn_wczytaj.cpp
+	"Amos.h"
+	"legion.h"
+	"lgn_wczytaj.h"
+	"utl_locale.h"
+
+1335713831 source:d:\programowanie\zrodla\gcc\legion\game\main.cpp
+	<Engine2d/Core.h>
+	<Engine2d/Gfx.h>
+	"main.h"
+	"Amos.h"
+	"AmosImage.h"
+	"legion.h"
+	"utl_locale.h"
+	<SDL_main.h>
+	<SDL.h>
+
+1242392494 source:d:\programowanie\zrodla\gcc\legion\game\utl_locale.cpp
+	<Engine2d/Extras.h>
+	"utl_locale.h"
+

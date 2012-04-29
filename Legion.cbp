@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Legion" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin\Debug\Legion" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="..\Legion" />
+				<Option object_output="obj\Debug\" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin\Release\Legion" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj\Release\" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Linker>
+			<Add library="mingw32" />
+			<Add library="SDLmain" />
+			<Add library="SDL" />
+			<Add library="SDL_image" />
+			<Add library="SDL_mixer" />
+			<Add library="SDL_ttf" />
+			<Add library="opengl32" />
+			<Add library="glu32" />
+			<Add library="png" />
+			<Add library="jpeg" />
+		</Linker>
+		<Unit filename="engine\Alan.cpp" />
+		<Unit filename="engine\Alan.h" />
+		<Unit filename="engine\Basic.cpp" />
+		<Unit filename="engine\Basic.h" />
+		<Unit filename="engine\Bob.cpp" />
+		<Unit filename="engine\Bob.h" />
+		<Unit filename="engine\Collision.cpp" />
+		<Unit filename="engine\Collision.h" />
+		<Unit filename="engine\Core.cpp" />
+		<Unit filename="engine\Core.h" />
+		<Unit filename="engine\Events.cpp" />
+		<Unit filename="engine\Events.h" />
+		<Unit filename="engine\Extras.h" />
+		<Unit filename="engine\Font.cpp" />
+		<Unit filename="engine\Font.h" />
+		<Unit filename="engine\Fzx.h" />
+		<Unit filename="engine\Gfx.cpp" />
+		<Unit filename="engine\Gfx.h" />
+		<Unit filename="engine\Grid.cpp" />
+		<Unit filename="engine\Grid.h" />
+		<Unit filename="engine\Locale.cpp" />
+		<Unit filename="engine\Locale.h" />
+		<Unit filename="engine\PicDraw.cpp" />
+		<Unit filename="engine\PicDraw.h" />
+		<Unit filename="engine\Pictures.cpp" />
+		<Unit filename="engine\Pictures.h" />
+		<Unit filename="engine\Rand.cpp" />
+		<Unit filename="engine\Rand.h" />
+		<Unit filename="engine\Samples.cpp" />
+		<Unit filename="engine\Samples.h" />
+		<Unit filename="engine\Settings.cpp" />
+		<Unit filename="engine\Settings.h" />
+		<Unit filename="engine\Sfx.h" />
+		<Unit filename="engine\Textures.cpp" />
+		<Unit filename="engine\Textures.h" />
+		<Unit filename="engine\Types.h" />
+		<Unit filename="engine\Utils.cpp" />
+		<Unit filename="engine\Utils.h" />
+		<Unit filename="engine\_alan_interials.cpp" />
+		<Unit filename="engine\_alan_interials.h" />
+		<Unit filename="engine\_settings_symbols.h" />
+		<Unit filename="engine\alan_parser.cc" />
+		<Unit filename="engine\alan_parser.hh" />
+		<Unit filename="engine\alan_scanner.cc" />
+		<Unit filename="engine\alan_scanner.hh" />
+		<Unit filename="engine\alan_token.cc" />
+		<Unit filename="engine\alan_token.hh" />
+		<Unit filename="engine\settings_parser.cc" />
+		<Unit filename="engine\settings_parser.hh" />
+		<Unit filename="engine\settings_scanner.cc" />
+		<Unit filename="engine\settings_scanner.hh" />
+		<Unit filename="engine\settings_token.cc" />
+		<Unit filename="engine\settings_token.hh" />
+		<Unit filename="engine\version.h" />
+		<Unit filename="game\Amos.cpp" />
+		<Unit filename="game\Amos.h" />
+		<Unit filename="game\AmosImage.cpp" />
+		<Unit filename="game\AmosImage.h" />
+		<Unit filename="game\AmosMusic.cpp" />
+		<Unit filename="game\AmosMusic.h" />
+		<Unit filename="game\amos_types.h" />
+		<Unit filename="game\hq2x.cpp" />
+		<Unit filename="game\legion.cpp" />
+		<Unit filename="game\legion.h" />
+		<Unit filename="game\lgn_akcja.cpp" />
+		<Unit filename="game\lgn_akcja.h" />
+		<Unit filename="game\lgn_armia.cpp" />
+		<Unit filename="game\lgn_armia.h" />
+		<Unit filename="game\lgn_diskacs.cpp" />
+		<Unit filename="game\lgn_diskacs.h" />
+		<Unit filename="game\lgn_ekran1.cpp" />
+		<Unit filename="game\lgn_ekran1.h" />
+		<Unit filename="game\lgn_intro.cpp" />
+		<Unit filename="game\lgn_intro.h" />
+		<Unit filename="game\lgn_mapa.cpp" />
+		<Unit filename="game\lgn_mapa.h" />
+		<Unit filename="game\lgn_miasto.cpp" />
+		<Unit filename="game\lgn_miasto.h" />
+		<Unit filename="game\lgn_opcje.cpp" />
+		<Unit filename="game\lgn_opcje.h" />
+		<Unit filename="game\lgn_przygoda.cpp" />
+		<Unit filename="game\lgn_przygoda.h" />
+		<Unit filename="game\lgn_sceneria.cpp" />
+		<Unit filename="game\lgn_sceneria.h" />
+		<Unit filename="game\lgn_sklep.cpp" />
+		<Unit filename="game\lgn_sklep.h" />
+		<Unit filename="game\lgn_util.cpp" />
+		<Unit filename="game\lgn_util.h" />
+		<Unit filename="game\lgn_wczytaj.cpp" />
+		<Unit filename="game\lgn_wczytaj.h" />
+		<Unit filename="game\main.cpp" />
+		<Unit filename="game\main.h" />
+		<Unit filename="game\utl_locale.cpp" />
+		<Unit filename="game\utl_locale.h" />
+		<Unit filename="game\version.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

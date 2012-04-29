@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="Debug" />
+	<File name="engine\Basic.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="5561" topLine="207" />
+	</File>
+	<File name="game\Amos.cpp" open="1" top="1" tabpos="1">
+		<Cursor position="10023" topLine="115" />
+	</File>
+	<File name="game\Amos.h" open="1" top="0" tabpos="3">
+		<Cursor position="489" topLine="252" />
+	</File>
+	<File name="game\legion.cpp" open="0" top="0" tabpos="2">
+		<Cursor position="316" topLine="0" />
+	</File>
+	<File name="game\lgn_akcja.cpp" open="1" top="0" tabpos="2">
+		<Cursor position="201588" topLine="3328" />
+	</File>
+	<File name="game\main.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="119" topLine="0" />
+	</File>
+	<File name="game\utl_locale.cpp" open="0" top="0" tabpos="5">
+		<Cursor position="313" topLine="0" />
+	</File>
+</CodeBlocks_layout_file>
