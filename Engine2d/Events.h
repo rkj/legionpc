@@ -12,23 +12,23 @@ namespace Core {
 	typedef void (*MouseMotionEvent)(int x,int y,int xrel, int yrel,UserData udata);
 	typedef void (*ResizeEvent)(int w,int h,UserData udata);
 
-	/// Rejestruje funkcjê jako obs³ugê zdarzenia QUIT (zamkniêcie okna, aplikacji)
+	/// Rejestruje funkcjÄ™ jako obsÅ‚ugÄ™ zdarzenia QUIT (zamkniÄ™cie okna, aplikacji)
 	QuitEvent RegisterQuitEvent( QuitEvent e, UserData udata = 0 );
-	/// Rejestruje funkcjê jako obs³ugê zdarzenia KEYDOWN (wciœniêcia klawisza klawiatury)
+	/// Rejestruje funkcjÄ™ jako obsÅ‚ugÄ™ zdarzenia KEYDOWN (wciÅ›niÄ™cia klawisza klawiatury)
 	KeyDownEvent RegisterKeyDownEvent( KeyDownEvent e, UserData udata = 0 );
-	/// Rejestruje funkcjê jako obs³ugê zdarzenia KEYUP (puszczenia klawisza klawiatury)
+	/// Rejestruje funkcjÄ™ jako obsÅ‚ugÄ™ zdarzenia KEYUP (puszczenia klawisza klawiatury)
 	KeyUpEvent RegisterKeyUpEvent( KeyUpEvent e, UserData udata = 0 );
-	/// Rejestruje funkcjê jako obs³ugê zdarzenia MOUSE_BUTTON_DOWN (wciœniêcia klawisza myszy)
+	/// Rejestruje funkcjÄ™ jako obsÅ‚ugÄ™ zdarzenia MOUSE_BUTTON_DOWN (wciÅ›niÄ™cia klawisza myszy)
 	MouseButtonDownEvent RegisterMouseButtonDownEvent( MouseButtonDownEvent e, UserData udata = 0 );
-	/// Rejestruje funkcjê jako obs³ugê zdarzenia MOUSE_BUTTON_UP (puszczenia klawisza myszy)
+	/// Rejestruje funkcjÄ™ jako obsÅ‚ugÄ™ zdarzenia MOUSE_BUTTON_UP (puszczenia klawisza myszy)
 	MouseButtonUpEvent RegisterMouseButtonUpEvent( MouseButtonUpEvent e, UserData udata = 0 );
-	/// Rejestruje funkcjê jako obs³ugê zdarzenia MOUSE_MOTION (zmiany polozenia myszy)
+	/// Rejestruje funkcjÄ™ jako obsÅ‚ugÄ™ zdarzenia MOUSE_MOTION (zmiany polozenia myszy)
 	MouseMotionEvent RegisterMouseMotionEvent( MouseMotionEvent e, UserData udata = 0 );
-	/// Rejestruje funkcjê jako obs³ugê zdarzenia VIDEORESIZE (zmiany rozmiaru okna)
+	/// Rejestruje funkcjÄ™ jako obsÅ‚ugÄ™ zdarzenia VIDEORESIZE (zmiany rozmiaru okna)
 	ResizeEvent RegisterResizeEvent( ResizeEvent e, UserData udata = 0 );
 	
-	/** Przetwarza kolejkê oczekuj¹cych zdarzeñ.
-	 *  Je¿eli s¹ zarejestrowane jakieœ funkcjê obs³ugi zdarzeñ to bêd¹ one wywo³ane.
+	/** Przetwarza kolejkÄ™ oczekujÄ…cych zdarzeÅ„.
+	 *  JeÅ¼eli sÄ… zarejestrowane jakieÅ› funkcjÄ™ obsÅ‚ugi zdarzeÅ„ to bÄ™dÄ… one wywoÅ‚ane.
 	 */
 	bool ProcessEvents(void);
 

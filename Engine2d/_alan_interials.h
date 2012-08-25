@@ -106,19 +106,19 @@ public:
 	void Set(const std::string& v) 	{ type = TP_STRING; v_str = v; }
 
 	bool GetBool(void)	{
-		ASSERT( type == TP_BOOL, "ALAN: Próba pobrania wartoœci typu BOOL, a wartoœæ jest innego typu" );
+		ASSERT( type == TP_BOOL, "ALAN: PrÃ³ba pobrania wartoÅ›ci typu BOOL, a wartoÅ›Ä‡ jest innego typu" );
 		return val.v_bool;
 	}
 	int GetInt(void)	{
-		ASSERT( type == TP_INT, "ALAN: Próba pobrania wartoœci typu INT, a wartoœæ jest innego typu" );
+		ASSERT( type == TP_INT, "ALAN: PrÃ³ba pobrania wartoÅ›ci typu INT, a wartoÅ›Ä‡ jest innego typu" );
 		return val.v_int;
 	}
 	float GetFloat(void)	{
-		ASSERT( type == TP_FLOAT, "ALAN: Próba pobrania wartoœci typu FLOAT, a wartoœæ jest innego typu" );
+		ASSERT( type == TP_FLOAT, "ALAN: PrÃ³ba pobrania wartoÅ›ci typu FLOAT, a wartoÅ›Ä‡ jest innego typu" );
 		return val.v_float;
 	}
 	const std::string& GetString(void)	{
-		ASSERT( type == TP_STRING, "ALAN: Próba pobrania wartoœci typu STRING, a wartoœæ jest innego typu" );
+		ASSERT( type == TP_STRING, "ALAN: PrÃ³ba pobrania wartoÅ›ci typu STRING, a wartoÅ›Ä‡ jest innego typu" );
 		return v_str;
 	}
 
@@ -286,7 +286,7 @@ public:
 	}
 	~AlanFuncStrLen()	{}
 	AlanValue Eval(AlanState *state) {
-		ASSERT( str->type == TP_STRING, "ALAN: Parametr 'str' funkcji STRLEN jest innego typu ni¿ STRING" );
+		ASSERT( str->type == TP_STRING, "ALAN: Parametr 'str' funkcji STRLEN jest innego typu niÅ¼ STRING" );
 		return AlanValue( (int)str->Eval(state).GetString().size() );
 	}
 	std::string Dump(void) {
@@ -302,9 +302,9 @@ public:
 	}
 	~AlanFuncSubStr()	{}
 	AlanValue Eval(AlanState *state) {
-		ASSERT( str->type == TP_STRING, "ALAN: Parametr 'str' funkcji SUBSTR jest innego typu ni¿ STRING" );
-		ASSERT( beg->type == TP_INT, "ALAN: Parametr 'beg' funkcji SUBSTR jest innego typu ni¿ INT" );
-		ASSERT( cnt->type == TP_INT, "ALAN: Parametr 'cnt' funkcji SUBSTR jest innego typu ni¿ INT" );
+		ASSERT( str->type == TP_STRING, "ALAN: Parametr 'str' funkcji SUBSTR jest innego typu niÅ¼ STRING" );
+		ASSERT( beg->type == TP_INT, "ALAN: Parametr 'beg' funkcji SUBSTR jest innego typu niÅ¼ INT" );
+		ASSERT( cnt->type == TP_INT, "ALAN: Parametr 'cnt' funkcji SUBSTR jest innego typu niÅ¼ INT" );
 		int b,c;
 		std::string s;
 		b = beg->Eval(state).GetInt();
@@ -331,9 +331,9 @@ public:
 	}
 	~AlanFuncInStr()	{}
 	AlanValue Eval(AlanState *state) {
-		ASSERT( str->type == TP_STRING, "ALAN: Parametr 'str' funkcji INSTR jest innego typu ni¿ STRING" );
-		ASSERT( pat->type == TP_STRING, "ALAN: Parametr 'pat' funkcji INSTR jest innego typu ni¿ STRING" );
-		ASSERT( beg->type == TP_INT, "ALAN: Parametr 'beg' funkcji SUBSTR jest innego typu ni¿ INT" );
+		ASSERT( str->type == TP_STRING, "ALAN: Parametr 'str' funkcji INSTR jest innego typu niÅ¼ STRING" );
+		ASSERT( pat->type == TP_STRING, "ALAN: Parametr 'pat' funkcji INSTR jest innego typu niÅ¼ STRING" );
+		ASSERT( beg->type == TP_INT, "ALAN: Parametr 'beg' funkcji SUBSTR jest innego typu niÅ¼ INT" );
 		int b,i;
 		std::string s,p;
 		s = str->Eval(state).GetString();
@@ -356,8 +356,8 @@ public:
 	AlanFuncRandI(AlanExpr *p_p1, AlanExpr *p_p2) : p1(p_p1), p2(p_p2)	{ type = TP_INT; }
 	~AlanFuncRandI()	{}
 	AlanValue Eval(AlanState *state) {
-		ASSERT( p1->type == TP_INT, "ALAN: Parametr nr 1 funkcji RAND jest innego typu ni¿ INT" );
-		ASSERT( p2->type == TP_INT, "ALAN: Parametr nr 2 funkcji RAND jest innego typu ni¿ INT" );
+		ASSERT( p1->type == TP_INT, "ALAN: Parametr nr 1 funkcji RAND jest innego typu niÅ¼ INT" );
+		ASSERT( p2->type == TP_INT, "ALAN: Parametr nr 2 funkcji RAND jest innego typu niÅ¼ INT" );
 		int low,hi;
 		low = p1->Eval(state).GetInt();
 		hi  = p2->Eval(state).GetInt();
@@ -374,8 +374,8 @@ public:
 	AlanFuncRandF(AlanExpr *p_p1, AlanExpr *p_p2) : p1(p_p1), p2(p_p2)	{ type = TP_FLOAT; }
 	~AlanFuncRandF()	{}
 	AlanValue Eval(AlanState *state) {
-		ASSERT( p1->type == TP_FLOAT, "ALAN: Parametr nr 1 funkcji RANDF jest innego typu ni¿ FLOAT" );
-		ASSERT( p2->type == TP_FLOAT, "ALAN: Parametr nr 2 funkcji RANDF jest innego typu ni¿ FLOAT" );
+		ASSERT( p1->type == TP_FLOAT, "ALAN: Parametr nr 1 funkcji RANDF jest innego typu niÅ¼ FLOAT" );
+		ASSERT( p2->type == TP_FLOAT, "ALAN: Parametr nr 2 funkcji RANDF jest innego typu niÅ¼ FLOAT" );
 		float low,hi;
 		low = p1->Eval(state).GetFloat();
 		hi  = p2->Eval(state).GetFloat();
@@ -392,7 +392,7 @@ public:
 	AlanFuncSin(AlanExpr *p_par) : par(p_par)	{ type = TP_FLOAT; }
 	~AlanFuncSin()	{}
 	AlanValue Eval(AlanState *state) {
-		ASSERT( par->type == TP_FLOAT, "ALAN: Parametr funkcji SIN jest innego typu ni¿ FLOAT" );
+		ASSERT( par->type == TP_FLOAT, "ALAN: Parametr funkcji SIN jest innego typu niÅ¼ FLOAT" );
 		float p;
 		p = par->Eval(state).GetFloat();
 		return AlanValue((float)sin(p));
@@ -408,7 +408,7 @@ public:
 	AlanFuncCos(AlanExpr *p_par) : par(p_par)	{ type = TP_FLOAT; }
 	~AlanFuncCos()	{}
 	AlanValue Eval(AlanState *state) {
-		ASSERT( par->type == TP_FLOAT, "ALAN: Parametr funkcji COS jest innego typu ni¿ FLOAT" );
+		ASSERT( par->type == TP_FLOAT, "ALAN: Parametr funkcji COS jest innego typu niÅ¼ FLOAT" );
 		float p;
 		p = par->Eval(state).GetFloat();
 		return AlanValue((float)cos(p));
@@ -424,7 +424,7 @@ public:
 	AlanFuncTan(AlanExpr *p_par) : par(p_par)	{ type = TP_FLOAT; }
 	~AlanFuncTan()	{}
 	AlanValue Eval(AlanState *state) {
-		ASSERT( par->type == TP_FLOAT, "ALAN: Parametr funkcji TAN jest innego typu ni¿ FLOAT" );
+		ASSERT( par->type == TP_FLOAT, "ALAN: Parametr funkcji TAN jest innego typu niÅ¼ FLOAT" );
 		float p;
 		p = par->Eval(state).GetFloat();
 		return AlanValue((float)tan(p));
@@ -440,7 +440,7 @@ public:
 	AlanFuncExp(AlanExpr *p_par) : par(p_par)	{ type = TP_FLOAT; }
 	~AlanFuncExp()	{}
 	AlanValue Eval(AlanState *state) {
-		ASSERT( par->type == TP_FLOAT, "ALAN: Parametr funkcji EXP jest innego typu ni¿ FLOAT" );
+		ASSERT( par->type == TP_FLOAT, "ALAN: Parametr funkcji EXP jest innego typu niÅ¼ FLOAT" );
 		float p;
 		p = par->Eval(state).GetFloat();
 		return AlanValue((float)exp(p));
@@ -456,7 +456,7 @@ public:
 	AlanFuncLog(AlanExpr *p_par) : par(p_par)	{ type = TP_FLOAT; }
 	~AlanFuncLog()	{}
 	AlanValue Eval(AlanState *state) {
-		ASSERT( par->type == TP_FLOAT, "ALAN: Parametr funkcji LOG jest innego typu ni¿ FLOAT" );
+		ASSERT( par->type == TP_FLOAT, "ALAN: Parametr funkcji LOG jest innego typu niÅ¼ FLOAT" );
 		float p;
 		p = par->Eval(state).GetFloat();
 		return AlanValue((float)log(p));
@@ -472,8 +472,8 @@ public:
 	AlanFuncPow(AlanExpr *p_p1, AlanExpr *p_p2) : p1(p_p1), p2(p_p2)	{ type = TP_FLOAT; }
 	~AlanFuncPow()	{}
 	AlanValue Eval(AlanState *state) {
-		ASSERT( p1->type == TP_FLOAT, "ALAN: Parametr nr 1 funkcji POW jest innego typu ni¿ FLOAT" );
-		ASSERT( p2->type == TP_FLOAT, "ALAN: Parametr nr 2 funkcji POW jest innego typu ni¿ FLOAT" );
+		ASSERT( p1->type == TP_FLOAT, "ALAN: Parametr nr 1 funkcji POW jest innego typu niÅ¼ FLOAT" );
+		ASSERT( p2->type == TP_FLOAT, "ALAN: Parametr nr 2 funkcji POW jest innego typu niÅ¼ FLOAT" );
 		float v1,v2;
 		v1 = p1->Eval(state).GetFloat();
 		v2 = p2->Eval(state).GetFloat();
@@ -490,7 +490,7 @@ public:
 	AlanFuncSqrt(AlanExpr *p_par) : par(p_par)	{ type = TP_FLOAT; }
 	~AlanFuncSqrt()	{}
 	AlanValue Eval(AlanState *state) {
-		ASSERT( par->type == TP_FLOAT, "ALAN: Parametr funkcji SQRT jest innego typu ni¿ FLOAT" );
+		ASSERT( par->type == TP_FLOAT, "ALAN: Parametr funkcji SQRT jest innego typu niÅ¼ FLOAT" );
 		float p;
 		p = par->Eval(state).GetFloat();
 		return AlanValue((float)sqrt(p));
@@ -506,7 +506,7 @@ public:
 	AlanFuncAbsI(AlanExpr *p_par) : par(p_par)	{ type = TP_INT; }
 	~AlanFuncAbsI()	{}
 	AlanValue Eval(AlanState *state) {
-		ASSERT( par->type == TP_INT, "ALAN: Parametr funkcji ABS_I jest innego typu ni¿ INT" );
+		ASSERT( par->type == TP_INT, "ALAN: Parametr funkcji ABS_I jest innego typu niÅ¼ INT" );
 		int p;
 		p = par->Eval(state).GetInt();
 		return AlanValue( (int)(p<0 ? -p : p) );
@@ -522,7 +522,7 @@ public:
 	AlanFuncAbsF(AlanExpr *p_par) : par(p_par)	{ type = TP_FLOAT; }
 	~AlanFuncAbsF()	{}
 	AlanValue Eval(AlanState *state) {
-		ASSERT( par->type == TP_INT, "ALAN: Parametr funkcji ABS_F jest innego typu ni¿ FLOAT" );
+		ASSERT( par->type == TP_INT, "ALAN: Parametr funkcji ABS_F jest innego typu niÅ¼ FLOAT" );
 		float p;
 		p = par->Eval(state).GetFloat();
 		return AlanValue( (float)(p<0.0f ? -p : p) );
@@ -538,7 +538,7 @@ public:
 	AlanFuncSgnI(AlanExpr *p_par) : par(p_par)	{ type = TP_INT; }
 	~AlanFuncSgnI()	{}
 	AlanValue Eval(AlanState *state) {
-		ASSERT( par->type == TP_INT, "ALAN: Parametr funkcji SGN_I jest innego typu ni¿ INT" );
+		ASSERT( par->type == TP_INT, "ALAN: Parametr funkcji SGN_I jest innego typu niÅ¼ INT" );
 		int p;
 		p = par->Eval(state).GetInt();
 		return AlanValue( (int)(p==0 ? 0 : (p<0 ? -1 : 1)) );
@@ -554,7 +554,7 @@ public:
 	AlanFuncSgnF(AlanExpr *p_par) : par(p_par)	{ type = TP_FLOAT; }
 	~AlanFuncSgnF()	{}
 	AlanValue Eval(AlanState *state) {
-		ASSERT( par->type == TP_INT, "ALAN: Parametr funkcji SGN_F jest innego typu ni¿ FLOAT" );
+		ASSERT( par->type == TP_INT, "ALAN: Parametr funkcji SGN_F jest innego typu niÅ¼ FLOAT" );
 		float p;
 		p = par->Eval(state).GetFloat();
 		return AlanValue( (int)(p==0.0f ? 0.0f : (p<0.0f ? -1.0f : 1.0f)) );
@@ -570,7 +570,7 @@ public:
 	AlanFuncFloor(AlanExpr *p_par) : par(p_par)	{ type = TP_INT; }
 	~AlanFuncFloor()	{}
 	AlanValue Eval(AlanState *state) {
-		ASSERT( par->type == TP_FLOAT, "ALAN: Parametr funkcji FLOOR jest innego typu ni¿ FLOAT" );
+		ASSERT( par->type == TP_FLOAT, "ALAN: Parametr funkcji FLOOR jest innego typu niÅ¼ FLOAT" );
 		float p;
 		p = par->Eval(state).GetFloat();
 		return AlanValue( (int)floor(p) );
@@ -586,7 +586,7 @@ public:
 	AlanFuncCeil(AlanExpr *p_par) : par(p_par)	{ type = TP_INT; }
 	~AlanFuncCeil()	{}
 	AlanValue Eval(AlanState *state) {
-		ASSERT( par->type == TP_FLOAT, "ALAN: Parametr funkcji CEIL jest innego typu ni¿ FLOAT" );
+		ASSERT( par->type == TP_FLOAT, "ALAN: Parametr funkcji CEIL jest innego typu niÅ¼ FLOAT" );
 		float p;
 		p = par->Eval(state).GetFloat();
 		return AlanValue( (int)ceil(p) );
@@ -602,8 +602,8 @@ public:
 	AlanFuncMinF(AlanExpr *p_p1, AlanExpr *p_p2) : p1(p_p1), p2(p_p2)	{ type = TP_FLOAT; }
 	~AlanFuncMinF()	{}
 	AlanValue Eval(AlanState *state) {
-		ASSERT( p1->type == TP_FLOAT, "ALAN: Parametr nr 1 funkcji MIN_F jest innego typu ni¿ FLOAT" );
-		ASSERT( p2->type == TP_FLOAT, "ALAN: Parametr nr 2 funkcji MIN_F jest innego typu ni¿ FLOAT" );
+		ASSERT( p1->type == TP_FLOAT, "ALAN: Parametr nr 1 funkcji MIN_F jest innego typu niÅ¼ FLOAT" );
+		ASSERT( p2->type == TP_FLOAT, "ALAN: Parametr nr 2 funkcji MIN_F jest innego typu niÅ¼ FLOAT" );
 		float v1,v2;
 		v1 = p1->Eval(state).GetFloat();
 		v2 = p2->Eval(state).GetFloat();
@@ -620,8 +620,8 @@ public:
 	AlanFuncMinI(AlanExpr *p_p1, AlanExpr *p_p2) : p1(p_p1), p2(p_p2)	{ type = TP_INT; }
 	~AlanFuncMinI()	{}
 	AlanValue Eval(AlanState *state) {
-		ASSERT( p1->type == TP_INT, "ALAN: Parametr nr 1 funkcji MIN_I jest innego typu ni¿ INT" );
-		ASSERT( p2->type == TP_INT, "ALAN: Parametr nr 2 funkcji MIN_I jest innego typu ni¿ INT" );
+		ASSERT( p1->type == TP_INT, "ALAN: Parametr nr 1 funkcji MIN_I jest innego typu niÅ¼ INT" );
+		ASSERT( p2->type == TP_INT, "ALAN: Parametr nr 2 funkcji MIN_I jest innego typu niÅ¼ INT" );
 		int v1,v2;
 		v1 = p1->Eval(state).GetInt();
 		v2 = p2->Eval(state).GetInt();
@@ -638,8 +638,8 @@ public:
 	AlanFuncMaxF(AlanExpr *p_p1, AlanExpr *p_p2) : p1(p_p1), p2(p_p2)	{ type = TP_FLOAT; }
 	~AlanFuncMaxF()	{}
 	AlanValue Eval(AlanState *state) {
-		ASSERT( p1->type == TP_FLOAT, "ALAN: Parametr nr 1 funkcji MAX_F jest innego typu ni¿ FLOAT" );
-		ASSERT( p2->type == TP_FLOAT, "ALAN: Parametr nr 2 funkcji MAX_F jest innego typu ni¿ FLOAT" );
+		ASSERT( p1->type == TP_FLOAT, "ALAN: Parametr nr 1 funkcji MAX_F jest innego typu niÅ¼ FLOAT" );
+		ASSERT( p2->type == TP_FLOAT, "ALAN: Parametr nr 2 funkcji MAX_F jest innego typu niÅ¼ FLOAT" );
 		float v1,v2;
 		v1 = p1->Eval(state).GetFloat();
 		v2 = p2->Eval(state).GetFloat();
@@ -656,8 +656,8 @@ public:
 	AlanFuncMaxI(AlanExpr *p_p1, AlanExpr *p_p2) : p1(p_p1), p2(p_p2)	{ type = TP_INT; }
 	~AlanFuncMaxI()	{}
 	AlanValue Eval(AlanState *state) {
-		ASSERT( p1->type == TP_INT, "ALAN: Parametr nr 1 funkcji MAX_I jest innego typu ni¿ INT" );
-		ASSERT( p2->type == TP_INT, "ALAN: Parametr nr 2 funkcji MAX_I jest innego typu ni¿ INT" );
+		ASSERT( p1->type == TP_INT, "ALAN: Parametr nr 1 funkcji MAX_I jest innego typu niÅ¼ INT" );
+		ASSERT( p2->type == TP_INT, "ALAN: Parametr nr 2 funkcji MAX_I jest innego typu niÅ¼ INT" );
 		int v1,v2;
 		v1 = p1->Eval(state).GetInt();
 		v2 = p2->Eval(state).GetInt();
@@ -695,7 +695,7 @@ public:
 		val.Set(false);
 	}
 	void SetValue( const AlanValue& v ) {
-		ASSERT( type == v.type, "ALAN: Próba przypisania zmiennej wartoœci typu innego ni¿ BOOL" );
+		ASSERT( type == v.type, "ALAN: PrÃ³ba przypisania zmiennej wartoÅ›ci typu innego niÅ¼ BOOL" );
 		val = v;
 	}
 	AlanValue Eval(AlanState *state) { return val; }
@@ -713,7 +713,7 @@ public:
 		val.Set(0);
 	}
 	void SetValue( const AlanValue& v ) {
-		ASSERT( type == v.type, "ALAN: Próba przypisania zmiennej wartoœci typu innego ni¿ INT " );
+		ASSERT( type == v.type, "ALAN: PrÃ³ba przypisania zmiennej wartoÅ›ci typu innego niÅ¼ INT " );
 		val = v;
 	}
 	AlanValue Eval(AlanState *state) { return val; }
@@ -731,7 +731,7 @@ public:
 		val.Set(float(0));
 	}
 	void SetValue( const AlanValue& v ) {
-		ASSERT( type == v.type, "ALAN: Próba przypisania zmiennej wartoœci typu innego ni¿ FLOAT" );
+		ASSERT( type == v.type, "ALAN: PrÃ³ba przypisania zmiennej wartoÅ›ci typu innego niÅ¼ FLOAT" );
 		val = v;
 	}
 	AlanValue Eval(AlanState *state) { return val; }
@@ -749,7 +749,7 @@ public:
 		val.Set(std::string(""));
 	}
 	void SetValue( const AlanValue& v ) {
-		ASSERT( type == v.type, "ALAN: Próba przypisania zmiennej wartoœci typu innego ni¿ STRING" );
+		ASSERT( type == v.type, "ALAN: PrÃ³ba przypisania zmiennej wartoÅ›ci typu innego niÅ¼ STRING" );
 		val = v;
 	}
 	AlanValue Eval(AlanState *state) { return val; }
@@ -779,7 +779,7 @@ class AlanExpr2Arg : public AlanExpr {
 public:
 	AlanExpr *e1, *e2;
 	AlanExpr2Arg( AlanExpr *p_e1, AlanExpr *p_e2 ) : e1(p_e1), e2(p_e2) {
-		ASSERT( e1->type == e2->type, "ALAN: Typy parametrów operatora dwuargumentowego nie s¹ zgodne");
+		ASSERT( e1->type == e2->type, "ALAN: Typy parametrÃ³w operatora dwuargumentowego nie sÄ… zgodne");
 		type = e1->type;
 	}
 	~AlanExpr2Arg() { delete e1; delete e2; }
@@ -796,8 +796,8 @@ public:
 		AlanValue v1,v2;
 		v1 = e1->Eval(state);
 		v2 = e2->Eval(state);
-		//typy powinny siê zgadzac
-		ASSERT( v1.type == v2.type, "ALAN: Typy parametrów operatora + nie s¹ zgodne");
+		//typy powinny siÄ™ zgadzac
+		ASSERT( v1.type == v2.type, "ALAN: Typy parametrÃ³w operatora + nie sÄ… zgodne");
 		switch( v1.type ) {
 			case TP_INT:		return AlanValue( v1.GetInt() + v2.GetInt() );
 			case TP_FLOAT:	return AlanValue( v1.GetFloat() + v2.GetFloat() );
@@ -813,7 +813,7 @@ public:
 					//return AlanValue( v1.GetString() + v2.GetString() );
 				}
 			case TP_BOOL:		ERROR("ALAN: Operator + jest niezdefiniowany dla typu boolean"); return AlanValue(false);
-			default:				ERROR("ALAN: Nieznany typ parametrów operatora +"); return AlanValue();
+			default:				ERROR("ALAN: Nieznany typ parametrÃ³w operatora +"); return AlanValue();
 		}
 	}
 	std::string Dump(void) {
@@ -829,14 +829,14 @@ public:
 		AlanValue v1,v2;
 		v1 = e1->Eval(state);
 		v2 = e2->Eval(state);
-		//typy powinny siê zgadzac
-		ASSERT( v1.type == v2.type, "ALAN: Typy parametrów operatora - nie s¹ zgodne");
+		//typy powinny siÄ™ zgadzac
+		ASSERT( v1.type == v2.type, "ALAN: Typy parametrÃ³w operatora - nie sÄ… zgodne");
 		switch( v1.type ) {
 			case TP_INT:		return AlanValue( v1.GetInt() - v2.GetInt() );
 			case TP_FLOAT:	return AlanValue( v1.GetFloat() - v2.GetFloat() );
 			case TP_STRING:	ERROR("ALAN: Operator - jest niezdefiniowany dla typu string"); return AlanValue(std::string(""));
 			case TP_BOOL:		ERROR("ALAN: Operator - jest niezdefiniowany dla typu boolean"); return AlanValue(false);
-			default:				ERROR("ALAN: Nieznany typ parametrów operatora -"); return AlanValue();
+			default:				ERROR("ALAN: Nieznany typ parametrÃ³w operatora -"); return AlanValue();
 		}
 	}
 	std::string Dump(void) {
@@ -852,14 +852,14 @@ public:
 		AlanValue v1,v2;
 		v1 = e1->Eval(state);
 		v2 = e2->Eval(state);
-		//typy powinny siê zgadzac
-		ASSERT( v1.type == v2.type, "ALAN: Typy parametrów operatora * nie s¹ zgodne");
+		//typy powinny siÄ™ zgadzac
+		ASSERT( v1.type == v2.type, "ALAN: Typy parametrÃ³w operatora * nie sÄ… zgodne");
 		switch( v1.type ) {
 			case TP_INT:		return AlanValue( v1.GetInt() * v2.GetInt() );
 			case TP_FLOAT:	return AlanValue( v1.GetFloat() * v2.GetFloat() );
 			case TP_STRING:	ERROR("ALAN: Operator * jest niezdefiniowany dla typu string"); return AlanValue(std::string(""));
 			case TP_BOOL:		ERROR("ALAN: Operator * jest niezdefiniowany dla typu boolean"); return AlanValue(false);
-			default:				ERROR("ALAN: Nieznany typ parametrów operatora *"); return AlanValue();
+			default:				ERROR("ALAN: Nieznany typ parametrÃ³w operatora *"); return AlanValue();
 		}
 	}
 	std::string Dump(void) {
@@ -875,14 +875,14 @@ public:
 		AlanValue v1,v2;
 		v1 = e1->Eval(state);
 		v2 = e2->Eval(state);
-		//typy powinny siê zgadzac
-		ASSERT( v1.type == v2.type, "ALAN: Typy parametrów operatora / nie s¹ zgodne");
+		//typy powinny siÄ™ zgadzac
+		ASSERT( v1.type == v2.type, "ALAN: Typy parametrÃ³w operatora / nie sÄ… zgodne");
 		switch( v1.type ) {
 			case TP_INT:		return AlanValue( v1.GetInt() / v2.GetInt() );
 			case TP_FLOAT:	return AlanValue( v1.GetFloat() / v2.GetFloat() );
 			case TP_STRING:	ERROR("ALAN: Operator / jest niezdefiniowany dla typu string"); return AlanValue(std::string(""));
 			case TP_BOOL:		ERROR("ALAN: Operator / jest niezdefiniowany dla typu boolean"); return AlanValue(false);
-			default:				ERROR("ALAN: Nieznany typ parametrów operatora /"); return AlanValue();
+			default:				ERROR("ALAN: Nieznany typ parametrÃ³w operatora /"); return AlanValue();
 		}
 	}
 	std::string Dump(void) {
@@ -898,14 +898,14 @@ public:
 		AlanValue v1,v2;
 		v1 = e1->Eval(state);
 		v2 = e2->Eval(state);
-		//typy powinny siê zgadzac
-		ASSERT( v1.type == v2.type, "ALAN: Typy parametrów operatora % nie s¹ zgodne");
+		//typy powinny siÄ™ zgadzac
+		ASSERT( v1.type == v2.type, "ALAN: Typy parametrÃ³w operatora % nie sÄ… zgodne");
 		switch( v1.type ) {
 			case TP_INT:		return AlanValue( v1.GetInt() % v2.GetInt() );
 			case TP_FLOAT:	return AlanValue( (float)fmod(v1.GetFloat(),v2.GetFloat()) );
 			case TP_STRING:	ERROR("ALAN: Operator % jest niezdefiniowany dla typu string"); return AlanValue(std::string(""));
 			case TP_BOOL:		ERROR("ALAN: Operator % jest niezdefiniowany dla typu boolean"); return AlanValue(false);
-			default:				ERROR("ALAN: Nieznany typ parametrów operatora %"); return AlanValue();
+			default:				ERROR("ALAN: Nieznany typ parametrÃ³w operatora %"); return AlanValue();
 		}
 	}
 	std::string Dump(void) {
@@ -1019,14 +1019,14 @@ public:
 		AlanValue v1,v2;
 		v1 = e1->Eval(state);
 		v2 = e2->Eval(state);
-		//typy powinny siê zgadzac
-		ASSERT( v1.type == v2.type, "ALAN: Typy parametrów operatora = (==) nie s¹ zgodne");
+		//typy powinny siÄ™ zgadzac
+		ASSERT( v1.type == v2.type, "ALAN: Typy parametrÃ³w operatora = (==) nie sÄ… zgodne");
 		switch( v1.type ) {
 			case TP_INT:		if( v1.GetInt() == v2.GetInt() ) return AlanValue(true); return AlanValue(false);
 			case TP_FLOAT:	if( v1.GetFloat() == v2.GetFloat() ) return AlanValue(true); return AlanValue(false);
 			case TP_STRING:	if( v1.GetString() == v1.GetString() )return AlanValue(true); return AlanValue(false);
 			case TP_BOOL:		if( v1.GetBool() == v1.GetBool() )return AlanValue(true); return AlanValue(false);
-			default:				ERROR("ALAN: Nieznany typ parametrów operatora = (==)"); return AlanValue();
+			default:				ERROR("ALAN: Nieznany typ parametrÃ³w operatora = (==)"); return AlanValue();
 		}
 	}
 	std::string Dump(void) {
@@ -1044,14 +1044,14 @@ public:
 		AlanValue v1,v2;
 		v1 = e1->Eval(state);
 		v2 = e2->Eval(state);
-		//typy powinny siê zgadzac
-		ASSERT( v1.type == v2.type, "ALAN: Typy parametrów operatora <> nie s¹ zgodne");
+		//typy powinny siÄ™ zgadzac
+		ASSERT( v1.type == v2.type, "ALAN: Typy parametrÃ³w operatora <> nie sÄ… zgodne");
 		switch( v1.type ) {
 			case TP_INT:		if( v1.GetInt() != v2.GetInt() ) return AlanValue(true); return AlanValue(false);
 			case TP_FLOAT:	if( v1.GetFloat() != v2.GetFloat() ) return AlanValue(true); return AlanValue(false);
 			case TP_STRING:	if( v1.GetString() != v1.GetString() )return AlanValue(true); return AlanValue(false);
 			case TP_BOOL:		if( v1.GetBool() != v1.GetBool() )return AlanValue(true); return AlanValue(false);
-			default:				ERROR("ALAN: Nieznany typ parametrów operatora <>"); return AlanValue();
+			default:				ERROR("ALAN: Nieznany typ parametrÃ³w operatora <>"); return AlanValue();
 		}
 	}
 	std::string Dump(void) {
@@ -1069,14 +1069,14 @@ public:
 		AlanValue v1,v2;
 		v1 = e1->Eval(state);
 		v2 = e2->Eval(state);
-		//typy powinny siê zgadzac
-		ASSERT( v1.type == v2.type, "ALAN: Typy parametrów operatora < nie s¹ zgodne");
+		//typy powinny siÄ™ zgadzac
+		ASSERT( v1.type == v2.type, "ALAN: Typy parametrÃ³w operatora < nie sÄ… zgodne");
 		switch( v1.type ) {
 			case TP_INT:		if( v1.GetInt() < v2.GetInt() ) return AlanValue(true); return AlanValue(false);
 			case TP_FLOAT:	if( v1.GetFloat() < v2.GetFloat() ) return AlanValue(true); return AlanValue(false);
 			case TP_STRING:	if( v1.GetString() < v1.GetString() )return AlanValue(true); return AlanValue(false);
 			case TP_BOOL:		ERROR("ALAN: Operator < jest niezdefiniowany dla typu boolean"); return AlanValue(false);
-			default:				ERROR("ALAN: Nieznany typ parametrów operatora <"); return AlanValue();
+			default:				ERROR("ALAN: Nieznany typ parametrÃ³w operatora <"); return AlanValue();
 		}
 	}
 	std::string Dump(void) {
@@ -1094,14 +1094,14 @@ public:
 		AlanValue v1,v2;
 		v1 = e1->Eval(state);
 		v2 = e2->Eval(state);
-		//typy powinny siê zgadzac
-		ASSERT( v1.type == v2.type, "ALAN: Typy parametrów operatora > nie s¹ zgodne");
+		//typy powinny siÄ™ zgadzac
+		ASSERT( v1.type == v2.type, "ALAN: Typy parametrÃ³w operatora > nie sÄ… zgodne");
 		switch( v1.type ) {
 			case TP_INT:		if( v1.GetInt() > v2.GetInt() ) return AlanValue(true); return AlanValue(false);
 			case TP_FLOAT:	if( v1.GetFloat() > v2.GetFloat() ) return AlanValue(true); return AlanValue(false);
 			case TP_STRING:	if( v1.GetString() > v1.GetString() )return AlanValue(true); return AlanValue(false);
 			case TP_BOOL:		ERROR("ALAN: Operator > jest niezdefiniowany dla typu boolean"); return AlanValue(false);
-			default:				ERROR("ALAN: Nieznany typ parametrów operatora >"); return AlanValue();
+			default:				ERROR("ALAN: Nieznany typ parametrÃ³w operatora >"); return AlanValue();
 		}
 	}
 	std::string Dump(void) {
@@ -1119,14 +1119,14 @@ public:
 		AlanValue v1,v2;
 		v1 = e1->Eval(state);
 		v2 = e2->Eval(state);
-		//typy powinny siê zgadzac
-		ASSERT( v1.type == v2.type, "ALAN: Typy parametrów operatora <= nie s¹ zgodne");
+		//typy powinny siÄ™ zgadzac
+		ASSERT( v1.type == v2.type, "ALAN: Typy parametrÃ³w operatora <= nie sÄ… zgodne");
 		switch( v1.type ) {
 			case TP_INT:		if( v1.GetInt() <= v2.GetInt() ) return AlanValue(true); return AlanValue(false);
 			case TP_FLOAT:	if( v1.GetFloat() <= v2.GetFloat() ) return AlanValue(true); return AlanValue(false);
 			case TP_STRING:	if( v1.GetString() <= v1.GetString() )return AlanValue(true); return AlanValue(false);
 			case TP_BOOL:		ERROR("ALAN: Operator <= jest niezdefiniowany dla typu boolean"); return AlanValue(false);
-			default:				ERROR("ALAN: Nieznany typ parametrów operatora <="); return AlanValue();
+			default:				ERROR("ALAN: Nieznany typ parametrÃ³w operatora <="); return AlanValue();
 		}
 	}
 	std::string Dump(void) {
@@ -1144,14 +1144,14 @@ public:
 		AlanValue v1,v2;
 		v1 = e1->Eval(state);
 		v2 = e2->Eval(state);
-		//typy powinny siê zgadzac
-		ASSERT( v1.type == v2.type, "ALAN: Typy parametrów operatora >= nie s¹ zgodne");
+		//typy powinny siÄ™ zgadzac
+		ASSERT( v1.type == v2.type, "ALAN: Typy parametrÃ³w operatora >= nie sÄ… zgodne");
 		switch( v1.type ) {
 			case TP_INT:		if( v1.GetInt() >= v2.GetInt() ) return AlanValue(true); return AlanValue(false);
 			case TP_FLOAT:	if( v1.GetFloat() >= v2.GetFloat() ) return AlanValue(true); return AlanValue(false);
 			case TP_STRING:	if( v1.GetString() >= v1.GetString() )return AlanValue(true); return AlanValue(false);
 			case TP_BOOL:		ERROR("ALAN: Operator >= jest niezdefiniowany dla typu boolean"); return AlanValue(false);
-			default:				ERROR("ALAN: Nieznany typ parametrów operatora >="); return AlanValue();
+			default:				ERROR("ALAN: Nieznany typ parametrÃ³w operatora >="); return AlanValue();
 		}
 	}
 	std::string Dump(void) {

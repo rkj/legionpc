@@ -203,7 +203,7 @@ void STATUS(void) {
 	}																															//	   Next A
 	KON_S=GS("142"); KON2_S=GS("143");														//	   KON$="s" : KON2$="s"
 	RES=AM % 10;																									//		RES=AM mod 10
-	if( RES<=1 || RES>4 ) KON_S=GS("144");												//		If RES<=1 or RES>4 : KON$="ów" : End If
+	if( RES<=1 || RES>4 ) KON_S=GS("144");												//		If RES<=1 or RES>4 : KON$="Ã³w" : End If
 	if( RES> 1 &&	RES<5 ) KON_S=GS("145");												//		If RES>1 and RES<5 : KON$="y" : End If
 	if( AM==1 ) KON_S="";																					//	   If AM=1 : KON$="" : End If
 	if( WOJ==1 ) KON2_S="";																				//	   If WOJ=1 : KON2$="" : End If

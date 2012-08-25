@@ -18,7 +18,7 @@ namespace Gfx {
 	class Pic;
 
 	/**
-		Klasa reprezentuje fizyczn¹ teksturê (bity, piksle, teksele, czy jak to siê jeszcze zwie)
+		Klasa reprezentuje fizycznÄ… teksturÄ™ (bity, piksle, teksele, czy jak to siÄ™ jeszcze zwie)
 		<BR>
 				 Zadaniem klasy jest zaladowanie obrazka, wykonanie ewentualnej konwersji
 				 i podlaczenie pixelmapy jako tekstury w systemie OpenGL.
@@ -210,33 +210,33 @@ namespace Gfx {
 	};
 
 	/**
-		Klasa reprezentuje managera (zarz¹dce) tekstur
+		Klasa reprezentuje managera (zarzÄ…dce) tekstur
 		<BR>
-				 Aby ¿ycie by³o jeszcze prostrze wprowadzone zostaje pojêcie zarz¹dcy tekstur.
-				 Mo¿na ca³kowicie zrezygnowaæ z korzystania z tej klasy, ale po co ? ;-)
+				 Aby Å¼ycie byÅ‚o jeszcze prostrze wprowadzone zostaje pojÄ™cie zarzÄ…dcy tekstur.
+				 MoÅ¼na caÅ‚kowicie zrezygnowaÄ‡ z korzystania z tej klasy, ale po co ? ;-)
 				 Klasa przechowuje tekstury fizyczne i logiczne i przypisuje im identyfikatory (stringi),
-				 dziêki którym mo¿liwe jest pos³ugiwanie si¿ nazwami tekstur zamiast adresami obiektów.
-				 Dodatkowo mo¿liwe jest za³adowanie i inicjacja ca³ego zbioru tekstur fizycznych i logicznych
+				 dziÄ™ki ktÃ³rym moÅ¼liwe jest posÅ‚ugiwanie siÅ¼ nazwami tekstur zamiast adresami obiektÃ³w.
+				 Dodatkowo moÅ¼liwe jest zaÅ‚adowanie i inicjacja caÅ‚ego zbioru tekstur fizycznych i logicznych
 				 na podstawie definicji zapisanej w pliku konfiguracyjnym.
 	*/
 	class TextureManager {
 		protected:
-			/// Zbiór tekstur fizycznych
+			/// ZbiÃ³r tekstur fizycznych
 			std::map<std::string,PTex*> ptex;
 
-			/// Zbiór tekstur logicznych
+			/// ZbiÃ³r tekstur logicznych
 			std::map<std::string,LTex*> ltex;
 
-			/// Zbiór flag dotycz¹cych tekstur fizycznych
+			/// ZbiÃ³r flag dotyczÄ…cych tekstur fizycznych
 			std::map<std::string,unsigned char> ptex_flags;
 
-			/// Zbiór flag dotycz¹cych tekstur logicznych
+			/// ZbiÃ³r flag dotyczÄ…cych tekstur logicznych
 			std::map<std::string,unsigned char> ltex_flags;
 
-			/// Ustawia wartoœci inicjalne obiektu
+			/// Ustawia wartoÅ›ci inicjalne obiektu
 			void _reset(void);
 
-			/// Niszczy sk³adowe obiektu
+			/// Niszczy skÅ‚adowe obiektu
 			void _destroy(void);
 
 			///Flagi
@@ -252,71 +252,71 @@ namespace Gfx {
 			/// Destruktor
 			~TextureManager();
 
-			/** Zwraca <B>true</B> je¿eli w zbiorze tekstur fizycznych istnieje tekstura o podanym ID
+			/** Zwraca <B>true</B> jeÅ¼eli w zbiorze tekstur fizycznych istnieje tekstura o podanym ID
 			 @param id ID tekstury
 			 */
 			bool ExistsPTex(const std::string& id);
 
-			/** Zwraca <B>true</B> je¿eli w zbiorze tekstur logicznych istnieje tekstura o podanym ID
+			/** Zwraca <B>true</B> jeÅ¼eli w zbiorze tekstur logicznych istnieje tekstura o podanym ID
 			 @param id ID tekstury
 			 */
 			bool ExistsLTex(const std::string& id);
 
-			/** Dodaje do zbioru tekstur fizycznych now¹ teksturê
+			/** Dodaje do zbioru tekstur fizycznych nowÄ… teksturÄ™
 			 @param id ID tekstury
-			 @param t wskazanie na dodawan¹ teksturê
-			 @param overwrite mówi o tym czy nale¿y nadpisaæ teksturê je¿eli
-			                  w zbiorze istnieje ju¿ tekstura o podanym ID
-			 @param ref mówi o tym czy nie nale¿y usuwaæ tekstury (manager nie stanie siê w³aœcicielem obiektu je¿eli ref=true)
+			 @param t wskazanie na dodawanÄ… teksturÄ™
+			 @param overwrite mÃ³wi o tym czy naleÅ¼y nadpisaÄ‡ teksturÄ™ jeÅ¼eli
+			                  w zbiorze istnieje juÅ¼ tekstura o podanym ID
+			 @param ref mÃ³wi o tym czy nie naleÅ¼y usuwaÄ‡ tekstury (manager nie stanie siÄ™ wÅ‚aÅ›cicielem obiektu jeÅ¼eli ref=true)
 			 */
 			void AddPTex(const std::string& id,PTex* t,bool overwrite=false,bool ref=false);
 
-			/** Dodaje do zbioru tekstur logicznych now¹ teksturê
+			/** Dodaje do zbioru tekstur logicznych nowÄ… teksturÄ™
 			 @param id ID tekstury
-			 @param t wskazanie na dodawan¹ teksturê
-			 @param overwrite mówi o tym czy nale¿y nadpisaæ teksturê je¿eli
-			                  w zbiorze istnieje ju¿ tekstura o podanym ID
-			 @param ref mówi o tym czy nie nale¿y usuwaæ tekstury (manager nie stanie siê w³aœcicielem obiektu je¿eli ref=true)
+			 @param t wskazanie na dodawanÄ… teksturÄ™
+			 @param overwrite mÃ³wi o tym czy naleÅ¼y nadpisaÄ‡ teksturÄ™ jeÅ¼eli
+			                  w zbiorze istnieje juÅ¼ tekstura o podanym ID
+			 @param ref mÃ³wi o tym czy nie naleÅ¼y usuwaÄ‡ tekstury (manager nie stanie siÄ™ wÅ‚aÅ›cicielem obiektu jeÅ¼eli ref=true)
 			 */
 			void AddLTex(const std::string& id,LTex* t,bool overwrite=false,bool ref=false);
 
-			/** Zwraca wskazanie na teksture fizyczn¹ okreœlon¹ poprzez przekazane ID
+			/** Zwraca wskazanie na teksture fizycznÄ… okreÅ›lonÄ… poprzez przekazane ID
 			 @param id ID tekstury
-			 @return wskazanie na teksturê lub 0 je¿eli w zbiorze nie istnieje tekstura o podanym ID
+			 @return wskazanie na teksturÄ™ lub 0 jeÅ¼eli w zbiorze nie istnieje tekstura o podanym ID
 			 */
 			PTex* GetPTex(const std::string& id);
 
-			/** Zwraca wskazanie na teksture logiczn¹ okreœlon¹ poprzez przekazane ID
+			/** Zwraca wskazanie na teksture logicznÄ… okreÅ›lonÄ… poprzez przekazane ID
 			 @param id ID tekstury
-			 @return wskazanie na teksturê lub 0 je¿eli w zbiorze nie istnieje tekstura o podanym ID
+			 @return wskazanie na teksturÄ™ lub 0 jeÅ¼eli w zbiorze nie istnieje tekstura o podanym ID
 			 */
 			LTex* GetLTex(const std::string& id);
 
-			/** Usuwa teksture fizyczn¹ ze zbioru a nastêpnie zwraca wskazanie na ni¹.
+			/** Usuwa teksture fizycznÄ… ze zbioru a nastÄ™pnie zwraca wskazanie na niÄ….
 			    Tekstura jako obiekt nie jest niszczona a jedynie usuwana ze zbioru.
 			 @param id ID tekstury
-			 @return wskazanie na teksturê lub 0 je¿eli w zbiorze nie istnieje tekstura o podanym ID
+			 @return wskazanie na teksturÄ™ lub 0 jeÅ¼eli w zbiorze nie istnieje tekstura o podanym ID
 			 */
 			PTex* RemPTex(const std::string& id);
 
-			/** Usuwa teksture logiczn¹ ze zbioru a nastêpnie zwraca wskazanie na ni¹.
+			/** Usuwa teksture logicznÄ… ze zbioru a nastÄ™pnie zwraca wskazanie na niÄ….
 			    Tekstura jako obiekt nie jest niszczona a jedynie usuwana ze zbioru.
 			 @param id ID tekstury
-			 @return wskazanie na teksturê lub 0 je¿eli w zbiorze nie istnieje tekstura o podanym ID
+			 @return wskazanie na teksturÄ™ lub 0 jeÅ¼eli w zbiorze nie istnieje tekstura o podanym ID
 			 */
 			LTex* RemLTex(const std::string& id);
 
-			/** Usuwa teksture fizyczn¹ ze zbioru a nastêpnie niszczy obiekt opisuj¹cy j¹.
+			/** Usuwa teksture fizycznÄ… ze zbioru a nastÄ™pnie niszczy obiekt opisujÄ…cy jÄ….
 			 @param id ID tekstury
 			 */
 			void DelPTex(const std::string& id);
 
-			/** Usuwa teksture logiczn¹ ze zbioru a nastêpnie niszczy obiekt opisuj¹cy j¹.
+			/** Usuwa teksture logicznÄ… ze zbioru a nastÄ™pnie niszczy obiekt opisujÄ…cy jÄ….
 			 @param id ID tekstury
 			 */
 			void DelLTex(const std::string& id);
 
-			/** Usuwa wszystkie tekstury ze zbioru a nastêpnie niszczy obiekty opisuj¹ce je.
+			/** Usuwa wszystkie tekstury ze zbioru a nastÄ™pnie niszczy obiekty opisujÄ…ce je.
 			 */
 			void DelAll(void);
 
@@ -330,13 +330,13 @@ namespace Gfx {
 
 			/** Automatycznie tworzy obiekty tekstur fizycznych i logicznych na podstawie
 			    opisu w pliku konfiguracyjnym.
-			    Stworzone obiekty s¹ nastêpnie dodawane do zbiorów.
-			    Oprócz zebrania opisu tekstur w jednym miejscu dodatkow¹ zalet¹ wykorzystania
-			    managera tekstur i metody <B>Load</B> jest uniezale¿nienie pracy grafika od pracy
-			    programisty (zmiany w teksturach nie poci¹gaj¹ za sob¹ koniecznoœci kompilacji).
+			    Stworzone obiekty sÄ… nastÄ™pnie dodawane do zbiorÃ³w.
+			    OprÃ³cz zebrania opisu tekstur w jednym miejscu dodatkowÄ… zaletÄ… wykorzystania
+			    managera tekstur i metody <B>Load</B> jest uniezaleÅ¼nienie pracy grafika od pracy
+			    programisty (zmiany w teksturach nie pociÄ…gajÄ… za sobÄ… koniecznoÅ›ci kompilacji).
 			 @param filename nazwa pliku konfiguracyjnego
-			 @param root scie¿ka do opisu tekstur w pliku konfiguracyjnym
-			 @example Czêœæ pliku konfiguracyjnego odpowiedzialna za tekstury wygl¹da nastêpuj¹co: <BR>
+			 @param root scieÅ¼ka do opisu tekstur w pliku konfiguracyjnym
+			 @example CzÄ™Å›Ä‡ pliku konfiguracyjnego odpowiedzialna za tekstury wyglÄ…da nastÄ™pujÄ…co: <BR>
 			          <CODE>
 Textures { <BR>
 	Phisical { <BR>
@@ -380,9 +380,9 @@ Textures { <BR>
 
 			/** Automatycznie tworzy obiekty tekstur fizycznych i logicznych na podstawie
 			    opisu w obiekcie konfiguracyjnym.
-			    Stworzone obiekty s¹ nastêpnie dodawane do zbiorów.
-			 @param sets obiekt z konfiguracj¹
-			 @param root scie¿ka do opisu tekstur w pliku konfiguracyjnym
+			    Stworzone obiekty sÄ… nastÄ™pnie dodawane do zbiorÃ³w.
+			 @param sets obiekt z konfiguracjÄ…
+			 @param root scieÅ¼ka do opisu tekstur w pliku konfiguracyjnym
 			 */
 			int Load(const Core::Settings& sets,const std::string& root="");
 	};

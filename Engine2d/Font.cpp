@@ -280,7 +280,7 @@ int FontManager :: Load(const string& filename,const string& root) {
 	Settings sets;
 	int ret = sets.ReadFile(filename);
 	if( ret < 0 ) {
-		ERROR("Blad wczytywania pliku z opisem fontów: " + sets.ErrorMsg());
+		ERROR("Blad wczytywania pliku z opisem fontĂłw: " + sets.ErrorMsg());
 		return -1;
 	}
 	return Load(sets,root);
@@ -288,7 +288,7 @@ int FontManager :: Load(const string& filename,const string& root) {
 
 int FontManager :: Load(const Settings& sets,const string& root) {
 	if( ! sets.isValid() ) {
-		ERROR("Obiekt opisuj¹cy tekstury jest niewa¿ny");
+		ERROR("Obiekt opisujÂący tekstury jest niewaÂżny");
 		return -2;
 	}
 
@@ -375,7 +375,7 @@ int FontManager :: Load(const Settings& sets,const string& root) {
 //
 //		pt = GetPTex(pid);
 //		if( 0 == pt ) {
-//			ERROR("Brak tekstury fizycznej o ID=\"" + pid + "\". Tekstura logiczna o ID=\"" + id + "\" nie mo¿e byæ utworzona !!!");
+//			ERROR("Brak tekstury fizycznej o ID=\"" + pid + "\". Tekstura logiczna o ID=\"" + id + "\" nie moÂże byĂ¦ utworzona !!!");
 //		} else {
 //			lt = new LTex();
 //			lt->Set(pt,ix1,iy1,ix2,iy2);

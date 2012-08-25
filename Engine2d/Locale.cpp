@@ -149,7 +149,7 @@ void LocaleMgr::Add(const char* def[]) {
 //	lm.Add("EN","0002","Ass");
 //	lm.Add("EN","9999","What's up doc ?");
 //
-//	char *def[] = {"PL:0003:Je\\st\\nem\\tnajlep\\\\szy",":0004:Kim jesteú?","EN:0003:I'm the best",":0004:Who you are?",0};
+//	char *def[] = {"PL:0003:Je\\st\\nem\\tnajlep\\\\szy",":0004:Kim jeste≈õ?","EN:0003:I'm the best",":0004:Who you are?",0};
 //	lm.Add(def);
 //
 //	lm.SetLang("PL");

@@ -325,9 +325,9 @@ void USTAW_FONT( astr FONTNAME_S, astr FILENAME_S, aint WIEL, aint ANTIA) {
 	if( I >= 0 ) {
 		FONR = I;
 		FONT = WIEL;
-		INFO("Pomyœlnie za³adowano font: " + FILENAME_S + ", " + toString(WIEL));
+		INFO("PomyÅ›lnie zaÅ‚adowano font: " + FILENAME_S + ", " + toString(WIEL));
 	} else {
-		ERROR("B³¹d ³adowania fontu: " + FILENAME_S + ", " + toString(WIEL));
+		ERROR("BÅ‚Ä…d Å‚adowania fontu: " + FILENAME_S + ", " + toString(WIEL));
 	}
 }
 void _GET_XY(aint TRYB,aint X1,aint Y1) {
@@ -929,11 +929,11 @@ void NAPISZ(aint X,aint Y,aint SZER,aint WYS,astr A_S,aint P,aint K1,aint K2) {
 
 																									//
 		if(Z_S=="*") {ROB_IMIE(); Z_S=Param_S;}				//	      If Z$="*" : ROB_IMIE : Z$=Param$ : End If
-		if(Z_S=="§") {Z_S=MIASTA_S[PRZYGODY[P][P_X]];}//	      If Z$="#" : Z$=MIASTA$(PRZYGODY(P,P_X)) : End If
+		if(Z_S=="Â§") {Z_S=MIASTA_S[PRZYGODY[P][P_X]];}//	      If Z$="#" : Z$=MIASTA$(PRZYGODY(P,P_X)) : End If
 		if(Z_S=="&") {Z_S=MIASTA_S[PRZYGODY[P][P_NAGRODA]];}//	      If Z$="&" : Z$=MIASTA$(PRZYGODY(P,P_NAGRODA)) : End If
 		if(Z_S=="$") {Z_S=IM_PRZYGODY_S[P];}					//	      If Z$="$" : Z$=IM_PRZYGODY$(P) : End If
 		if(Z_S=="%") {BRO=PRZYGODY[P][P_BRON]; Z_S=BRON2_S[BRON[BRO][B_TYP]]+" "+BRON_S[BRO];}//	      If Z$="%" : BRO=PRZYGODY(P,P_BRON) : Z$=BRON2$(BRON(BRO,B_TYP))+" "+BRON$(BRO) : End If
-		if(Z_S=="°") {Z_S=RASY_S[PRZYGODY[P][P_BRON]];}//	      If Z$="¹" : Z$=RASY$(PRZYGODY(P,P_BRON)) : End If
+		if(Z_S=="Â°") {Z_S=RASY_S[PRZYGODY[P][P_BRON]];}//	      If Z$="Ä…" : Z$=RASY$(PRZYGODY(P,P_BRON)) : End If
 		WYRA_S=WYRA_S+Z_S;														//	      WYRA$=WYRA$+Z$
 																									//
 		if( Z_S==" " || Z_S=="." || Z_S=="?" ) {			//	      If Z$=" " or Z$="." or Z$="?"

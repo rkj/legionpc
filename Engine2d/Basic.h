@@ -7,62 +7,62 @@ namespace Gfx {
 
 class Pic;
 
-/// Sk³adowa czerwona bie¿¹cego koloru [0.0,1.0]
+/// SkÅ‚adowa czerwona bieÅ¼Ä…cego koloru [0.0,1.0]
 extern GLfloat red;
-/// Sk³adowa zielona bie¿¹cego koloru [0.0,1.0]
+/// SkÅ‚adowa zielona bieÅ¼Ä…cego koloru [0.0,1.0]
 extern GLfloat green;
-/// Sk³adowa niebieska bie¿¹cego koloru [0.0,1.0]
+/// SkÅ‚adowa niebieska bieÅ¼Ä…cego koloru [0.0,1.0]
 extern GLfloat blue;
-/// Sk³adowa alfa (przeŸroczystoœæ) bie¿¹cego koloru [0.0,1.0]
+/// SkÅ‚adowa alfa (przeÅºroczystoÅ›Ä‡) bieÅ¼Ä…cego koloru [0.0,1.0]
 extern GLfloat alpha;
 
-/// Ustawia bie¿¹cy kolor (czyli kolor, który bêd¹ rysowane "prymitywy")
+/// Ustawia bieÅ¼Ä…cy kolor (czyli kolor, ktÃ³ry bÄ™dÄ… rysowane "prymitywy")
 void Color(GLfloat r,GLfloat g,GLfloat b,GLfloat a=1.0f);
 
-/// Ustawia bie¿¹cy kolor (czyli kolor, który bêd¹ rysowane "prymitywy")
+/// Ustawia bieÅ¼Ä…cy kolor (czyli kolor, ktÃ³ry bÄ™dÄ… rysowane "prymitywy")
 void Color(int r,int g,int b,int a=255);
 
 /// Rysuje punkt
 void Plot(GLfloat x,GLfloat y);
 
-/// Rysuje liniê
+/// Rysuje liniÄ™
 void Line(GLfloat x1,GLfloat y1,GLfloat x2,GLfloat y2);
 
-/// Rysuje prostok¹t
+/// Rysuje prostokÄ…t
 void Box(GLfloat x1,GLfloat y1,GLfloat x2,GLfloat y2);
 
-/// Rysuje wype³niony prostok¹t
+/// Rysuje wypeÅ‚niony prostokÄ…t
 void Bar(GLfloat x1,GLfloat y1,GLfloat x2,GLfloat y2);
 
-/// Rysuje têczê
+/// Rysuje tÄ™czÄ™
 void Rainbow(GLfloat x1,GLfloat y1,GLfloat x2,GLfloat y2,float *rb, int rows);
 
-/// Rysuje têczê w poziomie
+/// Rysuje tÄ™czÄ™ w poziomie
 void RainbowH(GLfloat x1,GLfloat y1,GLfloat x2,GLfloat y2,float *rb, int rows);
 
-/// Rysuje okr¹g
+/// Rysuje okrÄ…g
 void Circle(GLfloat x,GLfloat y,GLfloat r);
 
-/// Rysuje ko³o
+/// Rysuje koÅ‚o
 void Disc(GLfloat x,GLfloat y,GLfloat r);
 
-/// Rysuje elipsê
+/// Rysuje elipsÄ™
 void Elipse(GLfloat x,GLfloat y,GLfloat rx,GLfloat ry);
 
-/// Rysuje wype³nion¹ elipsê
+/// Rysuje wypeÅ‚nionÄ… elipsÄ™
 void SolidElipse(GLfloat x,GLfloat y,GLfloat rx,GLfloat ry);
 
-/// Rysuje pixmapê (rysunek)
+/// Rysuje pixmapÄ™ (rysunek)
 void Blit2Raster(int x,int y,unsigned char *rgba,int w,int h);
 void Blit2Raster(int x,int y,unsigned char *rgba,int w,int h,float sx,float sy);
 
 /// Pobiera okreslona czesc bufora i tworzy z tego obiekt typu Pic
 Pic* ReadRaster(int x,int y,int w,int h);
 
-/// Czyœci bufor ekranu (bie¿¹cym kolorem)
+/// CzyÅ›ci bufor ekranu (bieÅ¼Ä…cym kolorem)
 void Cls(void);
 
-/// Czyœci bufor ekranu wskazanym kolorem (bie¿¹cy nie bêdzie zmieniony)
+/// CzyÅ›ci bufor ekranu wskazanym kolorem (bieÅ¼Ä…cy nie bÄ™dzie zmieniony)
 void Cls(GLfloat r,GLfloat g,GLfloat b,GLfloat a=1.0f);
 
 /// Ustawia bufory, w ktorych ma byc rysowana grafika

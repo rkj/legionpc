@@ -192,7 +192,7 @@ int AlanInstrGoto :: Execute(AlanState* stat) {
 bool AlanInstrGoto :: Relocate(int pc,AlanCode *code,string& error) {
 	int refpc = code->GetLabelPC(label);
 	if( refpc < 0 ) {
-		error = "Odwo³anie do nieistniej¹cej etykiety o nazwie " + label;
+		error = "OdwoÅ‚anie do nieistniejÄ…cej etykiety o nazwie " + label;
 		return false;
 	}
 	dpc = refpc - pc;
@@ -218,7 +218,7 @@ int AlanInstrGosub :: Execute(AlanState* stat) {
 bool AlanInstrGosub :: Relocate(int pc,AlanCode *code,string& error) {
 	int refpc = code->GetLabelPC(label);
 	if( refpc < 0 ) {
-		error = "Odwo³anie do nieistniej¹cej etykiety o nazwie " + label;
+		error = "OdwoÅ‚anie do nieistniejÄ…cej etykiety o nazwie " + label;
 		return false;
 	}
 	dpc = refpc - pc;
@@ -283,7 +283,7 @@ int AlanInstrFor :: Execute(AlanState* stat) {
 bool AlanInstrFor :: Relocate(int pc,AlanCode *code,string& error) {
 	int refpc = code->GetLabelPC(label);
 	if( refpc < 0 ) {
-		error = "Odwo³anie do nieistniej¹cej etykiety o nazwie " + label;
+		error = "OdwoÅ‚anie do nieistniejÄ…cej etykiety o nazwie " + label;
 		return false;
 	}
 	dpc = refpc - pc;
@@ -301,7 +301,7 @@ AlanInstrWhile :: ~AlanInstrWhile() {}
 int AlanInstrWhile :: Execute(AlanState* stat) {
 	AlanValue v;
 	v = val->Eval(stat);
-	ASSERT( v.type == TP_BOOL, "ALAN: Wartoœæ warunku instrukcji WHILE nie jest typu BOOL" );
+	ASSERT( v.type == TP_BOOL, "ALAN: WartoÅ›Ä‡ warunku instrukcji WHILE nie jest typu BOOL" );
 	if( v.GetBool() )
 		return 1;
 	else
@@ -310,7 +310,7 @@ int AlanInstrWhile :: Execute(AlanState* stat) {
 bool AlanInstrWhile :: Relocate(int pc,AlanCode *code,string& error) {
 	int refpc = code->GetLabelPC(label);
 	if( refpc < 0 ) {
-		error = "Odwo³anie do nieistniej¹cej etykiety o nazwie " + label;
+		error = "OdwoÅ‚anie do nieistniejÄ…cej etykiety o nazwie " + label;
 		return false;
 	}
 	dpc = refpc - pc;
@@ -328,7 +328,7 @@ AlanInstrIf :: ~AlanInstrIf() {}
 int AlanInstrIf :: Execute(AlanState* stat) {
 	AlanValue v;
 	v = val->Eval(stat);
-	ASSERT( v.type == TP_BOOL, "ALAN: Wartoœæ warunku instrukcji IF nie jest typu BOOL" );
+	ASSERT( v.type == TP_BOOL, "ALAN: WartoÅ›Ä‡ warunku instrukcji IF nie jest typu BOOL" );
 	if( v.GetBool() )
 		return 1;
 	return dpc;
@@ -336,7 +336,7 @@ int AlanInstrIf :: Execute(AlanState* stat) {
 bool AlanInstrIf :: Relocate(int pc,AlanCode *code,string& error) {
 	int refpc = code->GetLabelPC(label);
 	if( refpc < 0 ) {
-		error = "Odwo³anie do nieistniej¹cej etykiety o nazwie " + label;
+		error = "OdwoÅ‚anie do nieistniejÄ…cej etykiety o nazwie " + label;
 		return false;
 	}
 	dpc = refpc - pc;
@@ -365,7 +365,7 @@ AlanInstrPauseWhile :: ~AlanInstrPauseWhile() {}
 int AlanInstrPauseWhile :: Execute(AlanState* stat) {
 	AlanValue v;
 	v = val->Eval(stat);
-	ASSERT( v.type == TP_BOOL, "ALAN: Wartoœæ warunku instrukcji PAUSE WHILE nie jest typu BOOL" );
+	ASSERT( v.type == TP_BOOL, "ALAN: WartoÅ›Ä‡ warunku instrukcji PAUSE WHILE nie jest typu BOOL" );
 	if( v.GetBool() )
 		return SPC_PAUSE_WHILE_INSTR;		//warunek spelniony, a wiec czekamy
 	return 1;
@@ -405,7 +405,7 @@ void AlanCode :: Reset(void) {
 	if( ! relocated ) {
 		string error = "";
 		if( ! Relocate(error) ) {
-			ERROR("B³¹d podczas relokowania kodu: " + error );
+			ERROR("BÅ‚Ä…d podczas relokowania kodu: " + error );
 		}
 	}
 }
@@ -500,12 +500,12 @@ int AlanCode :: AddSpecLabel(char type,string& error) {
 	if( SpecialLabel::SLT_ELSE == type ) {
 		//ELSE mozna dodac tylko, gdy na stosie jest IF (w takim przypadku zastepujemy IF ELSEm)
 		if( speclabs.size() <= 0 ) {
-			error = "Jest ELSE, a nie ma pasuj¹cego IF";
+			error = "Jest ELSE, a nie ma pasujÄ…cego IF";
 			return -1;
 		}
 		SpecialLabel &sl = speclabs.top();
 		if( SpecialLabel::SLT_IF != sl.type ) {
-			error = "Jest ELSE, a nie ma pasuj¹cego IF";
+			error = "Jest ELSE, a nie ma pasujÄ…cego IF";
 			return -1;
 		}
 		sl.type = SpecialLabel::SLT_ELSE;
@@ -517,12 +517,12 @@ int AlanCode :: AddSpecLabel(char type,string& error) {
 	if( SpecialLabel::SLT_EIF == type ) {
 		//EIF mozna dodac tylko, gdy na stosie jest IF lub ELSE(w takim przypadku zastepujemy IF lub ELSE EIFem)
 		if( speclabs.size() <= 0 ) {
-			error = "Jest EIF, a nie ma pasuj¹cego IF lub ELSE";
+			error = "Jest EIF, a nie ma pasujÄ…cego IF lub ELSE";
 			return -1;
 		}
 		SpecialLabel &sl = speclabs.top();
 		if( SpecialLabel::SLT_IF != sl.type && SpecialLabel::SLT_ELSE != sl.type) {
-			error = "Jest ELSE, a nie ma pasuj¹cego IF lub ELSE";
+			error = "Jest ELSE, a nie ma pasujÄ…cego IF lub ELSE";
 			return -1;
 		}
 		int refpc = sl.refpc;
@@ -545,12 +545,12 @@ int AlanCode :: AddSpecLabel(char type,string& error) {
 	if( SpecialLabel::SLT_NEXT == type ) {
 		//NEXT mozna dodac tylko, gdy na stosie jest FOR (w takim przypadku zastepujemy zdejmujemy FOR ze stosu)
 		if( speclabs.size() <= 0 ) {
-			error = "Jest NEXT, a nie ma pasuj¹cego FOR";
+			error = "Jest NEXT, a nie ma pasujÄ…cego FOR";
 			return -1;
 		}
 		SpecialLabel &sl = speclabs.top();
 		if( SpecialLabel::SLT_FOR != sl.type ) {
-			error = "Jest NEXT, a nie ma pasuj¹cego FOR";
+			error = "Jest NEXT, a nie ma pasujÄ…cego FOR";
 			return -1;
 		}
 		int refpc = sl.refpc;
@@ -571,12 +571,12 @@ int AlanCode :: AddSpecLabel(char type,string& error) {
 	if( SpecialLabel::SLT_WEND == type ) {
 		//WEND mozna dodac tylko, gdy na stosie jest WHILE (w takim przypadku zastepujemy zdejmujemy WHILE ze stosu)
 		if( speclabs.size() <= 0 ) {
-			error = "Jest WEND, a nie ma pasuj¹cego WHILE";
+			error = "Jest WEND, a nie ma pasujÄ…cego WHILE";
 			return -1;
 		}
 		SpecialLabel &sl = speclabs.top();
 		if( SpecialLabel::SLT_WHILE != sl.type ) {
-			error = "Jest WEND, a nie ma pasuj¹cego WHILE";
+			error = "Jest WEND, a nie ma pasujÄ…cego WHILE";
 			return -1;
 		}
 		int refpc = sl.refpc;
@@ -718,25 +718,25 @@ bool AlanCode :: AddInstrPauseWhile(AlanExpr* value,string& error) {
 void AlanCode :: SetVarVal(const string& varname,bool v) {
 	AlanVariable *var = GetVar(varname);
 	ASSERT( 0 != var, "ALAN: Zmienna " + varname + " nieistnieje" );
-	ASSERT( TP_BOOL == var->type, "ALAN: Proba przypisania zmiennej typu " + TypeName(var->type) + " wartoœci typu BOOL");
+	ASSERT( TP_BOOL == var->type, "ALAN: Proba przypisania zmiennej typu " + TypeName(var->type) + " wartoÅ›ci typu BOOL");
 	var->SetValue(v);
 }
 void AlanCode :: SetVarVal(const string& varname,int v) {
 	AlanVariable *var = GetVar(varname);
 	ASSERT( 0 != var, "ALAN: Zmienna " + varname + " nieistnieje" );
-	ASSERT( TP_INT == var->type, "ALAN: Proba przypisania zmiennej typu " + TypeName(var->type) + " wartoœci typu INT");
+	ASSERT( TP_INT == var->type, "ALAN: Proba przypisania zmiennej typu " + TypeName(var->type) + " wartoÅ›ci typu INT");
 	var->SetValue(v);
 }
 void AlanCode :: SetVarVal(const string& varname,float v) {
 	AlanVariable *var = GetVar(varname);
 	ASSERT( 0 != var, "ALAN: Zmienna " + varname + " nieistnieje" );
-	ASSERT( TP_FLOAT == var->type, "ALAN: Proba przypisania zmiennej typu " + TypeName(var->type) + " wartoœci typu FLOAT");
+	ASSERT( TP_FLOAT == var->type, "ALAN: Proba przypisania zmiennej typu " + TypeName(var->type) + " wartoÅ›ci typu FLOAT");
 	var->SetValue(v);
 }
 void AlanCode :: SetVarVal(const string& varname,const string& v) {
 	AlanVariable *var = GetVar(varname);
 	ASSERT( 0 != var, "ALAN: Zmienna " + varname + " nieistnieje" );
-	ASSERT( TP_STRING == var->type, "ALAN: Proba przypisania zmiennej typu " + TypeName(var->type) + " wartoœci typu STRING");
+	ASSERT( TP_STRING == var->type, "ALAN: Proba przypisania zmiennej typu " + TypeName(var->type) + " wartoÅ›ci typu STRING");
 	var->SetValue(v);
 }
 bool AlanCode :: GetVarValB(const string& varname) {

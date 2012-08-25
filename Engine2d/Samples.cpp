@@ -232,7 +232,7 @@ int SampleManager :: Load(const string& filename,const string& root) {
 
 int SampleManager :: Load(const Settings& sets,const string& root) {
 	if( ! sets.isValid() ) {
-		ERROR("Obiekt opisuj¹cy sample jest niewa¿ny");
+		ERROR("Obiekt opisujÄ…cy sample jest niewaÅ¼ny");
 		return -2;
 	}
 
@@ -310,7 +310,7 @@ int SampleManager :: Load(const Settings& sets,const string& root) {
 
 		pt = GetPSam(pid);
 		if( 0 == pt ) {
-			ERROR("Brak sampla fizycznego o ID=\"" + pid + "\". Sampel logiczny o ID=\"" + id + "\" nie mo¿e byæ utworzony !!!");
+			ERROR("Brak sampla fizycznego o ID=\"" + pid + "\". Sampel logiczny o ID=\"" + id + "\" nie moÅ¼e byÄ‡ utworzony !!!");
 		} else {
 			lt = new LSam();
 			lt->Set(pt,ioffset,ilen);

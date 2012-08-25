@@ -89,7 +89,7 @@ void MAIN_ACTION(void) {
 
 	KONIEC_AKCJI=0;													//	   KONIEC_AKCJI=False
 	WYNIK_AKCJI=0;													//	   WYNIK_AKCJI=0
-																					//	   'przeîadowanie îuków
+																					//	   'przeÃ®adowanie Ã®ukÃ³w
 	for(I=1;I<=10;++I) STRZALY[I]=10;				//	   For I=1 To 10 : STRZALY(I)=10 : Next I
 	Screen(2);															//	   Screen 2 : Get Palette 0
 	Screen(0);															//	   Screen 0
@@ -169,7 +169,7 @@ void MAIN_ACTION(void) {
 					Screen(scr);
 				}
 
-				if( (KeyState(69)!=0 && IMIONA_S[1]=="Marcin ®") || ARMIA[ARM][0][TE]==0 || KONIEC_AKCJI!=0 )							//	            If(Key State(69) and IMIONA$(1)="Marcin ®") or ARMIA(ARM,0,TE)=0 or KONIEC_AKCJI : Exit 2 : End If
+				if( (KeyState(69)!=0 && IMIONA_S[1]=="Marcin Â®") || ARMIA[ARM][0][TE]==0 || KONIEC_AKCJI!=0 )							//	            If(Key State(69) and IMIONA$(1)="Marcin Â®") or ARMIA(ARM,0,TE)=0 or KONIEC_AKCJI : Exit 2 : End If
 					goto SKIP;
 
 				if( STREFA==20 || STREFA==21 ) {	//	            If STREFA=20 or STREFA=21 : BRON_INFO[STREFA] : End If
@@ -762,7 +762,7 @@ void WYBOR(aint WT) {
 	GADGET(235,v.Y,75,100,"",0,5,19,19,-1);														//	   GADGET[235,Y,75,100,"",0,5,19,19,-1]
 	GADGET(235,v.Y2+15,30,15,"   <",5,0,8,1,21);											//	   GADGET[235,Y2+15,30,15,"   <",5,0,8,1,21]
 	GADGET(280,v.Y2+15,30,15,"    >",5,0,8,1,22);											//	   GADGET[280,Y2+15,30,15,"    >",5,0,8,1,22]
-	//strefy doswiadczenia;																						//	   '--------------strefy doôwiadczenia
+	//strefy doswiadczenia;																						//	   '--------------strefy doÃ´wiadczenia
 	for( v.I=0; v.I<=4; ++v.I ) {																			//	   For I=0 To 4
 		SetZone(25+v.I,237,28+v.I*10,277,37+v.I*10);										//	      Set Zone 25+I,237,28+I*10 To 277,37+I*10
 	}																																	//	   Next I
@@ -1793,7 +1793,7 @@ void A_STRZAL(aint A,aint I) {
 	Screen(0);																		//	   Screen 0
 	_Bob(I2+30,(aint)XP_F,(aint)YP_F,BB);					//	   Bob I2+30,XP#,YP#,BB
 	STREFA=_Zone((aint)XP_F,(aint)YP_F);					//	   STREFA=Zone(XP#,YP#)
-	//trafienie w goscia													//	   'trafienie w goôcia
+	//trafienie w goscia													//	   'trafienie w goÃ´cia
 	if( STREFA>0 && STREFA!=I2 && STREFA<21 ) {		//	   If STREFA>0 and STREFA<>I2 and STREFA<21
 		if( STREFA>10 ) {														//	      If STREFA>10
 			STREFA-=10;																//	         Add STREFA,-10
@@ -1809,7 +1809,7 @@ void A_STRZAL(aint A,aint I) {
 		ODP=ARMIA[B][STREFA][TP];										//	      ODP=ARMIA(B,STREFA,TP)
 		RASA2=ARMIA[B][STREFA][TRASA];							//	      RASA2=ARMIA(B,STREFA,TRASA)
 		if( RASA2>9 ) ODLOT=0;											//	      If RASA2>9 : ODLOT=0 : End If
-		//oszczepy laduja na glebie									//	      'oszczepy lâdujâ na glebie
+		//oszczepy laduja na glebie									//	      'oszczepy lÃ¢dujÃ¢ na glebie
 		OSZ=(aint)VEKTOR_F[I2][5];												//	      OSZ=VEKTOR#(I2,5)
 		if( BRON[OSZ][B_TYP]==9 ) {									//	      If BRON(OSZ,B_TYP)=9
 			SEKTOR(X1,Y1); SEK=Param;									//	         SEKTOR[X1,Y1] : SEK=Param
@@ -2041,7 +2041,7 @@ void A_CZAR(aint A,aint I) {
 																																//	   '---------------------
 	//---swiatlosc---
 	if( CZAR_TYP==5 ) {																						//	   If CZAR_TYP=5
-																																//	      'ôwiatîoôê
+																																//	      'Ã´wiatÃ®oÃ´Ä™
 		SPEED=(100-ARMIA[A][I][TSZ])/10;														//	      SPEED=(100-ARMIA(A,I,TSZ))/10
 		if( Rnd(SPEED)==0 ) {																				//	      If Rnd(SPEED)=0
 //			Fade 2,,$FFF,$FFF,$FFF,$FFF,$FFF,$FFF,$FFF,$FFF,$FFF,$FFF,$FFF,$FFF,$FFF,$FFF,$FFF,$FFF,$FFF,$FFF,$FFF,$FFF,$FFF,$FFF,$FFF,$FFF,$FFF,$FFF,$FFF,$FFF,$FFF,$FFF,$FFF;																															//	         Fade 2,,$FFF,$FFF,$FFF,$FFF,$FFF,$FFF,$FFF,$FFF,$FFF,$FFF,$FFF,$FFF,$FFF,$FFF,$FFF,$FFF,$FFF,$FFF,$FFF,$FFF,$FFF,$FFF,$FFF,$FFF,$FFF,$FFF,$FFF,$FFF,$FFF,$FFF,$FFF
@@ -2081,7 +2081,7 @@ void A_CZAR(aint A,aint I) {
 																																//	   '--------------
 	//---gniew bozy---
 	if( CZAR_TYP==7 ) {																						//	   If CZAR_TYP=7
-																																//	      'Gniew Boûy
+																																//	      'Gniew BoÅ±y
 		if( MUZYKA!=0 ) MusicStop();																//	      If MUZYKA : Music Stop : End If
 		rysuj(); BobUpdate(); WaitVbl(); FX(8);											//	      Wait Vbl : FX[8]
 		ARMIA[A][I][TMAG]-=BRON[BR][B_MAG];													//	      Add ARMIA(A,I,TMAG),-BRON(BR,B_MAG)
@@ -2135,7 +2135,7 @@ void A_CZAR(aint A,aint I) {
 																																//	   '-----------------------
 	//---nawrocenie---
 	if( CZAR_TYP==8 ) {																						//	   If CZAR_TYP=8
-																																//	      'nawrócenie
+																																//	      'nawrÃ³cenie
 		SPEED=(100-ARMIA[A][I][TSZ])/10;														//	      SPEED=(100-ARMIA(A,I,TSZ))/10
 		if( Rnd(SPEED)==0 ) {																				//	      If Rnd(SPEED)=0
 			ARMIA[A][I][TMAG]-=BRON[BR][B_MAG];												//	         Add ARMIA(A,I,TMAG),-BRON(BR,B_MAG)
@@ -2208,7 +2208,7 @@ void A_CZAR(aint A,aint I) {
 			}																													//	         Next J
 			BobOnOff(I2+30,false); ARMIA[A][I][TTRYB]=0;							//	         Bob Off I2+30 : ARMIA(A,I,TTRYB)=0
 																																//
-																																//	         'zliczanie odlegîoôci od epicentrum
+																																//	         'zliczanie odlegÃ®oÃ´ci od epicentrum
 			if( KLATKA==0 ) {																					//	         If KLATKA=0
 				for( J=1; J<=10; ++J ) {																//	            For J=1 To 10
 					if( ARMIA[WRG][J][TE]>0 ) {														//	               If ARMIA(WRG,J,TE)>0
@@ -2326,7 +2326,7 @@ void A_LOT(aint A,aint I,aint TRYB) {
 	}																																//	   End If
 																																	//	   'CHECK[TRYB]
 																																	//	   'If TRYB=8 : Bell : End If
-																																	//	   'wyîâczam goôcia pikiete
+																																	//	   'wyÃ®Ã¢czam goÃ´cia pikiete
 	BobOnOff(I2+30,false);																					//	   Bob Off I2+30
 																																	//
 	X1=ARMIA[A][I][TX];																							//	   X1=ARMIA(A,I,TX)
@@ -2485,7 +2485,7 @@ void PLAPKA(aint NR,aint A,aint I,aint X,aint Y) {
 	} else {																															//	   Else
 		I2=I;																															//	      I2=I
 	}																															//	   End If
-	//---przepasc---																															//	   'przepaôê
+	//---przepasc---																															//	   'przepaÃ´Ä™
 	if( _PLAPKA==1 ) {																															//	   If PLAPKA=1
 		LimitBob(I2,0,0,640,Y+2);																															//	      Limit Bob I2,0,0 To 640,Y+2
 		for( L=Y; L<=Y+60; L+=6 ) {																															//	      For L=Y To Y+60 Step 6
@@ -2539,7 +2539,7 @@ void PLAPKA(aint NR,aint A,aint I,aint X,aint Y) {
 		PasteBob(PLAPKI[NR][1],PLAPKI[NR][2],BIBY+7);																															//	      Paste Bob PLAPKI(NR,1),PLAPKI(NR,2),BIBY+7
 		PBListOnoff(false);																															//	      Autoback 1
 	}																															//	   End If
-	//---przepasc gleboka---																															//	   'przepaôê gîëboka
+	//---przepasc gleboka---																															//	   'przepaÃ´Ä™ gÃ®Ã«boka
 	if( _PLAPKA==6 ) {																															//	   If PLAPKA=6
 		LimitBob(I2,0,0,640,Y+PLAPKI[NR][4]);																															//	      Limit Bob I2,0,0 To 640,Y+PLAPKI(NR,4)
 		for( L=Y; L<=Y+180; L+=6 ) {																															//	      For L=Y To Y+180 Step 6
@@ -2570,7 +2570,7 @@ void _ATAK(aint TYP) {
 	if( STREFA>10 && STREFA<21 ) {	//	   If STREFA>10 and STREFA<21
 		A=WRG;												//	      A=WRG
 		STREFA-=10;										//	      Add STREFA,-10
-																	//	      'ûeby nie gadali ze zwierzakami
+																	//	      'Å±eby nie gadali ze zwierzakami
 		if( ARMIA[A][STREFA][TRASA]<10 ) {//	      If ARMIA(A,STREFA,TRASA)<10
 			WROG=-1;										//	         WROG=True
 		}															//	      End If
@@ -2675,7 +2675,7 @@ void STRZAL(void) {
 	BT1=BRON[B1][B_TYP];											//	   BT1=BRON(B1,B_TYP)
 	BT2=BRON[B2][B_TYP];											//	   BT2=BRON(B2,B_TYP)
 	BT3=RASY[ARMIA[ARM][NUMER][TRASA]][4];		//	   BT3=RASY(ARMIA(ARM,NUMER,TRASA),4)
-																						//	   'szybkoôê lotu pocisku
+																						//	   'szybkoÃ´Ä™ lotu pocisku
 	CZAD=4;																		//	   CZAD=4
 	if((BT1==4 && BT2==5 && STRZALY[NUMER]>0) ||//	   If(BT1=4 and BT2=5 and STRZALY(NUMER)>0) or(BT1=5 and BT2=4 and STRZALY(NUMER)>0) or(BT1=15 and BT2=16) or(BT1=16 and BT2=15) or(BT1=9 and BT2<>12) or(BT2=9 and BT1<>12)
 	   (BT1==5 && BT2==4 && STRZALY[NUMER]>0) ||
@@ -3270,7 +3270,7 @@ void GADKA(aint NR,aint B) {
 																															//	   Ink 30,25
 																															//	   'BOMBA4=False
 																															//	   Text XP,YP-15,"Enter a first letter of the word."
-																															//	   'zamiast edit jakiô poke niszczâcy system'
+																															//	   'zamiast edit jakiÃ´ poke niszczÃ¢cy system'
 																															//	   'If ERR#>0.04 : Set Zone 300,0,0 To 100,100 : BOMBA3=True : End If
 																															//	   Text XP,YP-5,"Page:"+Str$(STRONA)+", Line:"+Str$(WIERSZ)+", Word:"+Str$(WYRAZ)
 																															//	   Return
@@ -3416,7 +3416,7 @@ void NOWA_POSTAC(aint A,aint NR,aint RASA) {
 		ARMIA[A][NR][TKORP]=150+Rnd(60);						//	      ARMIA(A,NR,TKORP)=150+Rnd(60)
 		ARMIA[A][NR][TMAG]=BRON[RASY[RASA][6]][B_MAG]*5;	//	      ARMIA(A,NR,TMAG)=BRON(RASY(RASA,6),B_MAG)*5
 		ARMIA[A][NR][TMAGMA]=ARMIA[A][NR][TMAG];		//	      ARMIA(A,NR,TMAGMA)=ARMIA(A,NR,TMAG)
-																								//	      'potwory w plecaku przechowujâ czar
+																								//	      'potwory w plecaku przechowujÃ¢ czar
 		ARMIA[A][NR][TPLECAK]=RASY[RASA][6];				//	      ARMIA(A,NR,TPLECAK)=RASY(RASA,6)
 		ARMIA[A][NR][TAMO]=Rnd(20);									//	      ARMIA(A,NR,TAMO)=Rnd(20)
 		ODP=RASY[RASA][5];													//	      ODP=RASY(RASA,5)
@@ -3439,9 +3439,9 @@ void NOWA_POSTAC(aint A,aint NR,aint RASA) {
 			ARMIA[A][NR][TDOSW]=Rnd(POWER/2)+POWER/2;	//	         ARMIA(A,NR,TDOSW)=Rnd(POWER/2)+POWER/2
 		}																						//	      End If
 	} else {																			//	   Else
-																								//	      'zapasowa prëdkoôê w tamo
+																								//	      'zapasowa prÃ«dkoÃ´Ä™ w tamo
 		ARMIA[A][NR][TAMO]=ARMIA[A][NR][TSZ];				//	      ARMIA(A,NR,TAMO)=ARMIA(A,NR,TSZ)
-																								//	      'to jest tylko do testów nowej broni
+																								//	      'to jest tylko do testÃ³w nowej broni
 		if( TESTING != 0 ) {												//	      If TESTING : For J=0 To 7 : ARMIA(A,NR,TPLECAK+J)=Rnd(MX_WEAPON) : Next J : End If
 			for(J=0;J<=7;++J) {
 				ARMIA[A][NR][TPLECAK+J]=Rnd(MX_WEAPON);

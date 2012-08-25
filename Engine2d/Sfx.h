@@ -3,7 +3,7 @@
 
 #include "Samples.h"
 
-/** ZbiÛr klas i funkcji do obs≥ugi düwiÍkÛw.
+/** Zbi√≥r klas i funkcji do obs≈Çugi d≈∫wiƒôk√≥w.
     <BR>
 		Klasy z przestrzeni nazw Sfx maja za zadanie uproscic dostep do mozliwosci
 		danych przez SDL.

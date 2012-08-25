@@ -15,87 +15,87 @@
 #include "Events.h"
 
 namespace Core {
-	/// Czy podczas inicjacji Engine'a w³¹czyæ obs³ugê grafiki (domyœlnie true)
+	/// Czy podczas inicjacji Engine'a wÅ‚Ä…czyÄ‡ obsÅ‚ugÄ™ grafiki (domyÅ›lnie true)
 	extern bool ib_gfx_enable;
-	/// Czy podczas inicjacji Engine'a w³¹czyæ obs³ugê dzwiêku (domyœlnie true)
+	/// Czy podczas inicjacji Engine'a wÅ‚Ä…czyÄ‡ obsÅ‚ugÄ™ dzwiÄ™ku (domyÅ›lnie true)
 	extern bool ib_snd_enable;
-	/// Szerokoœæ ekranu (okna) otworzonego podczas inicjacji Engine'a (domyœlnie 640)
+	/// SzerokoÅ›Ä‡ ekranu (okna) otworzonego podczas inicjacji Engine'a (domyÅ›lnie 640)
 	extern long il_screen_width;
-	/// Wysokoœæ ekranu (okna) otworzonego podczas inicjacji Engine'a (domyœlnie 480)
+	/// WysokoÅ›Ä‡ ekranu (okna) otworzonego podczas inicjacji Engine'a (domyÅ›lnie 480)
 	extern long il_screen_height;
-	/// Czy ekran ma mieæ podwójne buforowanie (domyœlnie true)
+	/// Czy ekran ma mieÄ‡ podwÃ³jne buforowanie (domyÅ›lnie true)
 	extern bool ib_double_buffer;
-	/** Czy bêdziemy wykorzystywaæ bufor g³êbokoœci (domyœlnie false)
-	    S³owo wyjaœnienia: niby engine2d, a tu bufor g³ênokoœci ?
-	    1) Mo¿na bufor g³êbokoœci wykorzystaæ do nadania priorytetu Bob'om
-	    2) Przyda siê przy rzutowaniu izometrycznym
-	    3) Gra wcale nie musi byæ 2d, chodzi tylko o to, ¿e engine, na tym etapie rozwoju nie wpomaga 3d (ale wiele elementów jest wspólnych z 3d, np. ³adownie tekstur, muzyka, ...)
+	/** Czy bÄ™dziemy wykorzystywaÄ‡ bufor gÅ‚Ä™bokoÅ›ci (domyÅ›lnie false)
+	    SÅ‚owo wyjaÅ›nienia: niby engine2d, a tu bufor gÅ‚Ä™nokoÅ›ci ?
+	    1) MoÅ¼na bufor gÅ‚Ä™bokoÅ›ci wykorzystaÄ‡ do nadania priorytetu Bob'om
+	    2) Przyda siÄ™ przy rzutowaniu izometrycznym
+	    3) Gra wcale nie musi byÄ‡ 2d, chodzi tylko o to, Å¼e engine, na tym etapie rozwoju nie wpomaga 3d (ale wiele elementÃ³w jest wspÃ³lnych z 3d, np. Å‚adownie tekstur, muzyka, ...)
 	 */
 	extern bool ib_zbuffer;
-	/// G³êbokoœæ zbuffora. Wielkiego wyboru nie ma: 16 lub 24 (domyœlnie 16)
+	/// GÅ‚Ä™bokoÅ›Ä‡ zbuffora. Wielkiego wyboru nie ma: 16 lub 24 (domyÅ›lnie 16)
 	extern int ii_zbuffer_depth;
-	/// Czy okno ma byæ otwarte w trybie fullscreen (domyœlnie false)
+	/// Czy okno ma byÄ‡ otwarte w trybie fullscreen (domyÅ›lnie false)
 	extern bool ib_full_screen;
-	/// Czy okno mo¿e byæ rezizowane
+	/// Czy okno moÅ¼e byÄ‡ rezizowane
 	extern bool ib_resizable;
 
-	/// G³ówny ekran (okno)
+	/// GÅ‚Ã³wny ekran (okno)
 	extern SDL_Surface *screen;
 
-	/// Nazwa g³ównego okna
+	/// Nazwa gÅ‚Ã³wnego okna
 	extern std::string is_screen_title;
 
 	/// Mixer
 	extern Mix_Music *sound;
 
-	/// Inicjuje Engine, otwiera g³ówne okno, mixer dzwiêku, itp.
+	/// Inicjuje Engine, otwiera gÅ‚Ã³wne okno, mixer dzwiÄ™ku, itp.
 	int Init(void);
 
 	/// Zamyka Engine
 	int Finish(void);
 
-	/// Funkcja s³u¿y do pomiaru czasu ramek (klatek animacji)
+	/// Funkcja sÅ‚uÅ¼y do pomiaru czasu ramek (klatek animacji)
 	int FrameTiming(int mode);
 
-	/// Okreœlaj¹ tryb wywo³wania funkcji FrameTiming
+	/// OkreÅ›lajÄ… tryb wywoÅ‚wania funkcji FrameTiming
 	enum FT_MODES {
-		/// Rozpoczynamy now¹ ramkê, zwróæ czas w³aœnie zakoñczonej ramki
+		/// Rozpoczynamy nowÄ… ramkÄ™, zwrÃ³Ä‡ czas wÅ‚aÅ›nie zakoÅ„czonej ramki
 		FTM_NEW_FRAME				= 0
-		/// Zwróæ czas jaki up³yn¹³ od poczatku bie¿¹cej ramki
+		/// ZwrÃ³Ä‡ czas jaki upÅ‚ynÄ…Å‚ od poczatku bieÅ¼Ä…cej ramki
 	, FTM_FRAME_TIME			= 1
-		/// Zwróæ czas jaki up³yn¹³ od pocz¹tku pierwszej ramki
+		/// ZwrÃ³Ä‡ czas jaki upÅ‚ynÄ…Å‚ od poczÄ…tku pierwszej ramki
 	, FTM_ALL_FRAMES_TIME	= 2
-		/// Zwróæ surowe, nieprzetworzone ticki zegara
+		/// ZwrÃ³Ä‡ surowe, nieprzetworzone ticki zegara
 	, FTM_RAW_TICKS				= 3
 	};
 
-	/** Czeka tyle czasu, aby bie¿¹ca ramka trwa³a podany jako parametr czas.<BR>
-		@param frame_time zak³adany czas trwania ramki
-		@return ile czasu trzeba bylo poczekac (wartosci ujemne swiadcz¹ o niewyrabianiu siê animacji w za³o¿onym framerate)
+	/** Czeka tyle czasu, aby bieÅ¼Ä…ca ramka trwaÅ‚a podany jako parametr czas.<BR>
+		@param frame_time zakÅ‚adany czas trwania ramki
+		@return ile czasu trzeba bylo poczekac (wartosci ujemne swiadczÄ… o niewyrabianiu siÄ™ animacji w zaÅ‚oÅ¼onym framerate)
 	 */
 	long FrameWait(Uint32 frame_time);
 
-	/// Czeka wskazan¹ iloœæ milisekund (tysiêcznych czêœci sekundy)
+	/// Czeka wskazanÄ… iloÅ›Ä‡ milisekund (tysiÄ™cznych czÄ™Å›ci sekundy)
 	void Wait(long pl_milisec);
 
-	/// Przerzuca bufory ekranu (o ile s¹ dwa)
+	/// Przerzuca bufory ekranu (o ile sÄ… dwa)
 	void SwapBuffers(void);
 
 	/** Ustawia rzutowanie swiata na ekran
-	 @param minx - taka wspó³rzêdna œwiata przyporz¹dkowana zostanie lewej krawêdzi ekranu
-	 @param maxx - taka wspó³rzêdna œwiata przyporz¹dkowana zostanie prawej krawêdzi ekranu
-	 @param miny - taka wspó³rzêdna œwiata przyporz¹dkowana zostanie dolnej krawêdzi ekranu
-	 @param maxy - taka wspó³rzêdna œwiata przyporz¹dkowana zostanie górnej krawêdzi ekranu
-	 @param minz - taka wspó³rzêdna œwiata przyporz¹dkowana zostanie p³aszczyŸnie ekranu
-	 @param maxz - taka wspó³rzêdna œwiata przyporz¹dkowana zostanie horyzontowi œwiata (dalej nic nie bêdzie widaæ)
+	 @param minx - taka wspÃ³Å‚rzÄ™dna Å›wiata przyporzÄ…dkowana zostanie lewej krawÄ™dzi ekranu
+	 @param maxx - taka wspÃ³Å‚rzÄ™dna Å›wiata przyporzÄ…dkowana zostanie prawej krawÄ™dzi ekranu
+	 @param miny - taka wspÃ³Å‚rzÄ™dna Å›wiata przyporzÄ…dkowana zostanie dolnej krawÄ™dzi ekranu
+	 @param maxy - taka wspÃ³Å‚rzÄ™dna Å›wiata przyporzÄ…dkowana zostanie gÃ³rnej krawÄ™dzi ekranu
+	 @param minz - taka wspÃ³Å‚rzÄ™dna Å›wiata przyporzÄ…dkowana zostanie pÅ‚aszczyÅºnie ekranu
+	 @param maxz - taka wspÃ³Å‚rzÄ™dna Å›wiata przyporzÄ…dkowana zostanie horyzontowi Å›wiata (dalej nic nie bÄ™dzie widaÄ‡)
 	 */
 	void ProjectionOrtho(GLfloat minx,GLfloat maxx,GLfloat miny,GLfloat maxy,GLfloat minz = 0.0,GLfloat maxz = 1.0);
 
 	/// Ustawia rzutowanie swiata na ekran w ten sposob, ze jeden pixel to jedna jednosta miary swiata
-	/// (równowa¿ne: ProjectionOrtho(0,il_screen_width,il_screen_height,0,0,1);
+	/// (rÃ³wnowaÅ¼ne: ProjectionOrtho(0,il_screen_width,il_screen_height,0,0,1);
 	void ProjectionOrtho(void);
 
-	/// Wyœwietla lub chowa kursor myszy
+	/// WyÅ›wietla lub chowa kursor myszy
 	void ShowMouseCursor(bool visible);
 
 };

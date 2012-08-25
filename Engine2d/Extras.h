@@ -3,7 +3,7 @@
 
 #include "Locale.h"
 
-/** Zbiór klas i funkcji dodatkowych.
+/** ZbiÃ³r klas i funkcji dodatkowych.
     <BR>		
 */
 namespace Extras {	

@@ -53,26 +53,26 @@ namespace Sfx {
 
 
 	/**
-		Klasa reprezentuje managera (zarz¹dce) sampli
+		Klasa reprezentuje managera (zarzÄ…dce) sampli
 		<BR>
-				 Mo¿na ca³kowicie zrezygnowaæ z korzystania z tej klasy, ale po co siê mêczyæ? ;-)
-				 Klasa przechowuje sample (dŸwiêki) fizyczne i logiczne i przypisuje im identyfikatory (stringi),
-				 dziêki którym mo¿liwe jest pos³ugiwanie siê nazwami zamiast adresami obiektów.
-				 Dodatkowo mo¿liwe jest za³adowanie i inicjacja ca³ego zbioru sampli fizycznych i logicznych
+				 MoÅ¼na caÅ‚kowicie zrezygnowaÄ‡ z korzystania z tej klasy, ale po co siÄ™ mÄ™czyÄ‡? ;-)
+				 Klasa przechowuje sample (dÅºwiÄ™ki) fizyczne i logiczne i przypisuje im identyfikatory (stringi),
+				 dziÄ™ki ktÃ³rym moÅ¼liwe jest posÅ‚ugiwanie siÄ™ nazwami zamiast adresami obiektÃ³w.
+				 Dodatkowo moÅ¼liwe jest zaÅ‚adowanie i inicjacja caÅ‚ego zbioru sampli fizycznych i logicznych
 				 na podstawie definicji zapisanej w pliku konfiguracyjnym.
 	*/
 	class SampleManager {
 		protected:
-			/// Zbiór sampli fizycznych
+			/// ZbiÃ³r sampli fizycznych
 			std::map<std::string,PSam*> psam;
 
-			/// Zbiór sampli logicznych
+			/// ZbiÃ³r sampli logicznych
 			std::map<std::string,LSam*> lsam;
 
-			/// Ustawia wartoœci inicjalne obiektu
+			/// Ustawia wartoÅ›ci inicjalne obiektu
 			void _reset(void);
 
-			/// Niszczy sk³adowe obiektu
+			/// Niszczy skÅ‚adowe obiektu
 			void _destroy(void);
 
 		public:
@@ -83,12 +83,12 @@ namespace Sfx {
 			/// Destruktor
 			~SampleManager();
 
-			/** Zwraca <B>true</B> je¿eli w zbiorze sampli fizycznych istnieje sampel o podanym ID
+			/** Zwraca <B>true</B> jeÅ¼eli w zbiorze sampli fizycznych istnieje sampel o podanym ID
 			 @param id ID sampla
 			 */
 			bool ExistsPSam(const std::string& id);
 
-			/** Zwraca <B>true</B> je¿eli w zbiorze sampli logicznych istnieje sampel o podanym ID
+			/** Zwraca <B>true</B> jeÅ¼eli w zbiorze sampli logicznych istnieje sampel o podanym ID
 			 @param id ID sampel
 			 */
 			bool ExistsLSam(const std::string& id);
@@ -96,56 +96,56 @@ namespace Sfx {
 			/** Dodaje do zbioru sampli fizycznych nowy sampel
 			 @param id ID sampla
 			 @param t wskazanie na dodawany sampel
-			 @param overwrite mówi o tym czy nale¿y nadpisaæ sampel je¿eli
-			                  w zbiorze istnieje ju¿ sampel o podanym ID
+			 @param overwrite mÃ³wi o tym czy naleÅ¼y nadpisaÄ‡ sampel jeÅ¼eli
+			                  w zbiorze istnieje juÅ¼ sampel o podanym ID
 			 */
 			void AddPSam(const std::string& id,PSam* s,bool overwrite=false);
 
 			/** Dodaje do zbioru sampli logicznych nowy sampel
 			 @param id ID sampla
 			 @param t wskazanie na dodawany sampel
-			 @param overwrite mówi o tym czy nale¿y nadpisaæ sampel je¿eli
-			                  w zbiorze istnieje ju¿ sampel o podanym ID
+			 @param overwrite mÃ³wi o tym czy naleÅ¼y nadpisaÄ‡ sampel jeÅ¼eli
+			                  w zbiorze istnieje juÅ¼ sampel o podanym ID
 			 */
 			void AddLSam(const std::string& id,LSam* s,bool overwrite=false);
 
-			/** Zwraca wskazanie na sampel fizyczny okreœlony poprzez przekazane ID
+			/** Zwraca wskazanie na sampel fizyczny okreÅ›lony poprzez przekazane ID
 			 @param id ID sampla
-			 @return wskazanie na sampel lub 0 je¿eli w zbiorze nie istnieje sampel o podanym ID
+			 @return wskazanie na sampel lub 0 jeÅ¼eli w zbiorze nie istnieje sampel o podanym ID
 			 */
 			PSam* GetPSam(const std::string& id);
 
-			/** Zwraca wskazanie na sampel logiczny okreœlony poprzez przekazane ID
+			/** Zwraca wskazanie na sampel logiczny okreÅ›lony poprzez przekazane ID
 			 @param id ID sampla
-			 @return wskazanie na sampel lub 0 je¿eli w zbiorze nie istnieje sampel o podanym ID
+			 @return wskazanie na sampel lub 0 jeÅ¼eli w zbiorze nie istnieje sampel o podanym ID
 			 */
 			LSam* GetLSam(const std::string& id);
 
-			/** Usuwa sampel fizyczny ze zbioru a nastêpnie zwraca wskazanie na niego.
+			/** Usuwa sampel fizyczny ze zbioru a nastÄ™pnie zwraca wskazanie na niego.
 			    Sampel jako obiekt nie jest niszczony a jedynie usuwany ze zbioru.
 			 @param id ID sampla
-			 @return wskazanie na sampel lub 0 je¿eli w zbiorze nie istnieje sampel o podanym ID
+			 @return wskazanie na sampel lub 0 jeÅ¼eli w zbiorze nie istnieje sampel o podanym ID
 			 */
 			PSam* RemPSam(const std::string& id);
 
-			/** Usuwa sampel logiczny ze zbioru a nastêpnie zwraca wskazanie na niego.
+			/** Usuwa sampel logiczny ze zbioru a nastÄ™pnie zwraca wskazanie na niego.
 			    Sampel jako obiekt nie jest niszczony a jedynie usuwany ze zbioru.
 			 @param id ID sampla
-			 @return wskazanie na sampel lub 0 je¿eli w zbiorze nie istnieje sampel o podanym ID
+			 @return wskazanie na sampel lub 0 jeÅ¼eli w zbiorze nie istnieje sampel o podanym ID
 			 */
 			LSam* RemLSam(const std::string& id);
 
-			/** Usuwa sampel fizyczny ze zbioru a nastêpnie niszczy obiekt opisuj¹cy go.
+			/** Usuwa sampel fizyczny ze zbioru a nastÄ™pnie niszczy obiekt opisujÄ…cy go.
 			 @param id ID sampla
 			 */
 			void DelPSam(const std::string& id);
 
-			/** Usuwa sampel logiczny ze zbioru a nastêpnie niszczy obiekt opisuj¹cy go.
+			/** Usuwa sampel logiczny ze zbioru a nastÄ™pnie niszczy obiekt opisujÄ…cy go.
 			 @param id ID sampla
 			 */
 			void DelLSam(const std::string& id);
 
-			/** Usuwa wszystkie sample ze zbioru a nastêpnie niszczy obiekty opisuj¹ce je.
+			/** Usuwa wszystkie sample ze zbioru a nastÄ™pnie niszczy obiekty opisujÄ…ce je.
 			 */
 			void DelAll(void);
 
@@ -159,13 +159,13 @@ namespace Sfx {
 
 			/** Automatycznie tworzy obiekty sampli fizycznych i logicznych na podstawie
 			    opisu w pliku konfiguracyjnym.
-			    Stworzone obiekty s¹ nastêpnie dodawane do zbiorów.
-			    Oprócz zebrania opisu sampli w jednym miejscu dodatkow¹ zalet¹ wykorzystania
-			    managera sampli i metody <B>Load</B> jest uniezale¿nienie pracy dŸwiêkowca od pracy
-			    programisty (zmiany w samplach nie poci¹gaj¹ za sob¹ koniecznoœci kompilacji).
+			    Stworzone obiekty sÄ… nastÄ™pnie dodawane do zbiorÃ³w.
+			    OprÃ³cz zebrania opisu sampli w jednym miejscu dodatkowÄ… zaletÄ… wykorzystania
+			    managera sampli i metody <B>Load</B> jest uniezaleÅ¼nienie pracy dÅºwiÄ™kowca od pracy
+			    programisty (zmiany w samplach nie pociÄ…gajÄ… za sobÄ… koniecznoÅ›ci kompilacji).
 			 @param filename nazwa pliku konfiguracyjnego
-			 @param root scie¿ka do opisu sampli w pliku konfiguracyjnym
-			 @example Czêœæ pliku konfiguracyjnego odpowiedzialna za sample wygl¹da nastêpuj¹co: <BR>
+			 @param root scieÅ¼ka do opisu sampli w pliku konfiguracyjnym
+			 @example CzÄ™Å›Ä‡ pliku konfiguracyjnego odpowiedzialna za sample wyglÄ…da nastÄ™pujÄ…co: <BR>
 			          <CODE>
 Samples { <BR>
 	Phisical { <BR>
@@ -191,9 +191,9 @@ Samples { <BR>
 
 			/** Automatycznie tworzy obiekty sampli fizycznych i logicznych na podstawie
 			    opisu w obiekcie konfiguracyjnym.
-			    Stworzone obiekty s¹ nastêpnie dodawane do zbiorów.
-			 @param sets obiekt z konfiguracj¹
-			 @param root scie¿ka do opisu tekstur w pliku konfiguracyjnym
+			    Stworzone obiekty sÄ… nastÄ™pnie dodawane do zbiorÃ³w.
+			 @param sets obiekt z konfiguracjÄ…
+			 @param root scieÅ¼ka do opisu tekstur w pliku konfiguracyjnym
 			 */
 			int Load(const Core::Settings& sets,const std::string& root="");
 	};

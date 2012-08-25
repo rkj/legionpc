@@ -55,7 +55,7 @@ int Settings :: ReadFile(const string& file_name) {
 	try {
 		ifs = new ifstream(file_name.c_str());
 	} catch(...) {
-		last_errm = "B³¹d otwierania pliku " + file_name;
+		last_errm = "BÅ‚Ä…d otwierania pliku " + file_name;
 		last_errc = -1;
 		goto blad;
 	}
@@ -76,7 +76,7 @@ int Settings :: ReadFile(const string& file_name) {
 		last_errc = -3;
 		goto blad;
 	} catch(...) {
-		last_errm = "Nieznany wyj³tek";
+		last_errm = "Nieznany wyjÅ‚tek";
 		last_errc = -5;
 		goto blad;
 	}
@@ -113,7 +113,7 @@ int Settings :: ReadBuf(const string& buf) {
 	try {
 		ifs = new istringstream(buf);
 	} catch(...) {
-		last_errm = "B³¹d otwierania strumienia na buforze";
+		last_errm = "BÅ‚Ä…d otwierania strumienia na buforze";
 		last_errc = -1;
 		goto blad;
 	}
@@ -159,7 +159,7 @@ bool Settings :: isValid(void) const {
 
 bool Settings :: _checkValid(void) {
 	if( ! isValid() ) {
-		last_errm = "Obiekt ustawieñ nie jest wa¿ny";
+		last_errm = "Obiekt ustawieÅ„ nie jest waÅ¼ny";
 		last_errc = -100;
 		return false;
 	}
@@ -171,7 +171,7 @@ Settings Settings :: Extract(const string& path) const {
 	Settings s;
 
 	if( ! isValid() ) {
-		s.last_errm = "Obiekt ustawieñ nie jest wa¿ny";
+		s.last_errm = "Obiekt ustawieÅ„ nie jest waÅ¼ny";
 		s.last_errc = -100;
 		return s;
 	}
@@ -181,7 +181,7 @@ Settings Settings :: Extract(const string& path) const {
 		try {
 		ifs = new istringstream(path);
 	} catch(...) {
-		s.last_errm = "B³¹d otwierania strumienia na buforze";
+		s.last_errm = "BÅ‚Ä…d otwierania strumienia na buforze";
 		s.last_errc = -1;
 		return s;
 	}
@@ -205,7 +205,7 @@ Settings Settings :: Extract(const string& path) const {
 	}
 
 	if( 0 == sym ) {
-		s.last_errm = "Pusty plik lub niew³aœciwa œcie¿ka (" + path + ")";
+		s.last_errm = "Pusty plik lub niewÅ‚aÅ›ciwa Å›cieÅ¼ka (" + path + ")";
 		s.last_errc = -4;
 		return s;
 	}

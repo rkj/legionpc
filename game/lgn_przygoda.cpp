@@ -48,7 +48,7 @@ void NOWA_PRZYGODA(aint A,aint NR,aint TYP,aint LEVEL) {
 		PRZYGODY[NR][P_BRON]=0;																	//	      PRZYGODY(NR,P_BRON)=0
 	}																													//	   End If
 	if( TYP==4 ) {																						//	   If TYP=4
-		//---cora---																						//	      'córa
+		//---cora---																						//	      'cÃ³ra
 		PRZYGODY[NR][P_TERMIN]=100+Rnd(100);										//	      PRZYGODY(NR,P_TERMIN)=100+Rnd(100)
 		PRZYGODY[NR][P_CENA]=0;																	//	      PRZYGODY(NR,P_CENA)=0
 		do { _MIASTO=Rnd(49); } while( MIASTA[_MIASTO][0][M_CZYJE]==1 );//	      Repeat : MIASTO=Rnd(49) : Until MIASTA(MIASTO,0,M_CZYJE)<>1
@@ -59,7 +59,7 @@ void NOWA_PRZYGODA(aint A,aint NR,aint TYP,aint LEVEL) {
 		IM_PRZYGODY_S[NR]=Param_S;															//	      IM_PRZYGODY$(NR)=Param$
 	}																													//	   End If
 	if( TYP==5 ) {																						//	   If TYP=5
-		//---gora jakas tam---																	//	      'góra jakaô tam
+		//---gora jakas tam---																	//	      'gÃ³ra jakaÃ´ tam
 		PRZYGODY[NR][P_TERMIN]=100+Rnd(100);										//	      PRZYGODY(NR,P_TERMIN)=100+Rnd(100)
 		PRZYGODY[NR][P_CENA]=Rnd(100)+30;												//	      PRZYGODY(NR,P_CENA)=Rnd(100)+30
 																														//	      'jedno z miast rnd(m_czyje)
@@ -93,7 +93,7 @@ void NOWA_PRZYGODA(aint A,aint NR,aint TYP,aint LEVEL) {
 	}																													//	   End If
 																														//
 	if( TYP==8 ) {																						//	   If TYP=8
-		//---magiczna ksiega---																	//	      'magiczna ksiëga
+		//---magiczna ksiega---																	//	      'magiczna ksiÃ«ga
 		PRZYGODY[NR][P_LEVEL]=3;																//	      PRZYGODY(NR,P_LEVEL)=3
 		PRZYGODY[NR][P_TERMIN]=100+Rnd(100);										//	      PRZYGODY(NR,P_TERMIN)=100+Rnd(100)
 		PRZYGODY[NR][P_CENA]=100;																//	      PRZYGODY(NR,P_CENA)=100
@@ -108,7 +108,7 @@ void NOWA_PRZYGODA(aint A,aint NR,aint TYP,aint LEVEL) {
 	}																													//	   End If
 																														//
 	if( TYP==9 ) {																						//	   If TYP=9
-		//---swiatynia orkow---																	//	      'ôwiâtynia orków
+		//---swiatynia orkow---																	//	      'Ã´wiÃ¢tynia orkÃ³w
 		PRZYGODY[NR][P_TERMIN]=100+Rnd(100);										//	      PRZYGODY(NR,P_TERMIN)=100+Rnd(100)
 		PRZYGODY[NR][P_CENA]=Rnd(20);														//	      PRZYGODY(NR,P_CENA)=Rnd(20)
 		PRZYGODY[NR][P_TEREN]=9;																//	      PRZYGODY(NR,P_TEREN)=9
@@ -116,7 +116,7 @@ void NOWA_PRZYGODA(aint A,aint NR,aint TYP,aint LEVEL) {
 	}																													//	   End If
 																														//
 	if( TYP==10 ) {																						//	   If TYP=10
-		//---barbarzynca na bagnach															//	      'barbrayïca na bagnach
+		//---barbarzynca na bagnach															//	      'barbrayÄca na bagnach
 		PRZYGODY[NR][P_TERMIN]=100+Rnd(100);										//	      PRZYGODY(NR,P_TERMIN)=100+Rnd(100)
 		PRZYGODY[NR][P_CENA]=Rnd(100)+30;												//	      PRZYGODY(NR,P_CENA)=Rnd(100)+30
 		PRZYGODY[NR][P_TEREN]=7;																//	      PRZYGODY(NR,P_TEREN)=7
@@ -150,7 +150,7 @@ void NOWA_PRZYGODA(aint A,aint NR,aint TYP,aint LEVEL) {
 	}																													//	   End If
 																														//
 	if( TYP==13 ) {																						//	   If TYP=13
-		//---wladca chaosu---																		//	      'wîadca chaosu
+		//---wladca chaosu---																		//	      'wÃ®adca chaosu
 		PRZYGODY[NR][P_LEVEL]=4;																//	      PRZYGODY(NR,P_LEVEL)=4
 		PRZYGODY[NR][P_TERMIN]=100+Rnd(100);										//	      PRZYGODY(NR,P_TERMIN)=100+Rnd(100)
 		PRZYGODY[NR][P_CENA]=500+Rnd(100);											//	      PRZYGODY(NR,P_CENA)=500+Rnd(100)
@@ -171,7 +171,7 @@ void _PRZYGODY(aint XA,aint YA,aint NR) {
 	PRZYGODY[NR][P_LEVEL]=LEVEL;										//	   PRZYGODY(NR,P_LEVEL)=LEVEL
 																									//
 	if( LEVEL>0 ) {																	//	   If LEVEL>0
-																									//	      'wskaû konkretnâ osobë
+																									//	      'wskaÅ± konkretnÃ¢ osobÃ«
 																									//	      'miasto wybrane zgodnie z kierunkiem przygody
 		STARAODL=600;																	//	      STARAODL=600
 		OLD_KIER=PRZYGODY[NR][P_KIERUNEK];						//	      OLD_KIER=PRZYGODY(NR,P_KIERUNEK)
@@ -224,7 +224,7 @@ void _PRZYGODY(aint XA,aint YA,aint NR) {
 		Y=YA+Rnd(100)-50;															//	      Y=YA+Rnd(100)-50
 		PRZYGODY[NR][P_X]=X;													//	      PRZYGODY(NR,P_X)=X
 		PRZYGODY[NR][P_Y]=Y;													//	      PRZYGODY(NR,P_Y)=Y
-																									//	      'wskaû miejsce na mapie
+																									//	      'wskaÅ± miejsce na mapie
 																									//	      'strefa o numerze przygody
 	}																								//	   End If
 																									//	End Proc

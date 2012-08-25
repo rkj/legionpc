@@ -266,7 +266,7 @@ ScanException, ParseException)
 #line 197 "ALan.cg"
  var = code->AddVar(token->image(),type);
 								if( 0 == var ) {
-									throw AlanException( token->bPos.ln, token->bPos.col, "Zmienna " + token->image() + " jest ju¿ zadeklarowana" );
+									throw AlanException( token->bPos.ln, token->bPos.col, "Zmienna " + token->image() + " jest juÅ¼ zadeklarowana" );
 								}
 							}
 #line 273 "alan_parser.cc"
@@ -324,9 +324,9 @@ cnt =
 Expr();
   {
 #line 221 "ALan.cg"
- if( TP_INT != cnt->type ) throw AlanException( token->bPos.ln, token->bPos.col, "Wyra¿enie okreœlaj¹ce krotnoœæ musi byæ typu INT" );
+ if( TP_INT != cnt->type ) throw AlanException( token->bPos.ln, token->bPos.col, "WyraÅ¼enie okreÅ›lajÄ…ce krotnoÅ›Ä‡ musi byÄ‡ typu INT" );
 												cnt = Cast(TP_INT,cnt);
-												if( 0 == cnt ) throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma mo¿liwoœci rzutowania wartoœci do typu INT" );
+												if( 0 == cnt ) throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma moÅ¼liwoÅ›ci rzutowania wartoÅ›ci do typu INT" );
 											}
 #line 332 "alan_parser.cc"
 
@@ -340,9 +340,9 @@ Expr();
   {
 #line 227 "ALan.cg"
  if( TP_FLOAT != e->type ) {
-													if( ! TypesMatch(TP_FLOAT,e->type) ) throw AlanException( token->bPos.ln, token->bPos.col, "Próba przypisania krokowi w kierunku poziomym wartoœci innego typu ni¿ " + TypeName(TP_FLOAT) );
+													if( ! TypesMatch(TP_FLOAT,e->type) ) throw AlanException( token->bPos.ln, token->bPos.col, "PrÃ³ba przypisania krokowi w kierunku poziomym wartoÅ›ci innego typu niÅ¼ " + TypeName(TP_FLOAT) );
 													e = Cast(TP_FLOAT,e);
-													if( 0 == e ) throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma mo¿liwoœci rzutowania wartoœci do typu FLOAT" );
+													if( 0 == e ) throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma moÅ¼liwoÅ›ci rzutowania wartoÅ›ci do typu FLOAT" );
 												}
 												dx.push_back(e);
 											}
@@ -357,9 +357,9 @@ Expr();
   {
 #line 235 "ALan.cg"
  if( TP_FLOAT != e->type ) {
-													if( ! TypesMatch(TP_FLOAT,e->type) ) throw AlanException( token->bPos.ln, token->bPos.col, "Próba przypisania krokowi w kierunku pionowym wartoœci innego typu ni¿ " + TypeName(TP_FLOAT) );
+													if( ! TypesMatch(TP_FLOAT,e->type) ) throw AlanException( token->bPos.ln, token->bPos.col, "PrÃ³ba przypisania krokowi w kierunku pionowym wartoÅ›ci innego typu niÅ¼ " + TypeName(TP_FLOAT) );
 													e = Cast(TP_FLOAT,e);
-													if( 0 == e ) throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma mo¿liwoœci rzutowania wartoœci do typu FLOAT" );
+													if( 0 == e ) throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma moÅ¼liwoÅ›ci rzutowania wartoÅ›ci do typu FLOAT" );
 												}
 												dy.push_back(e);
 											}
@@ -374,9 +374,9 @@ Expr();
   {
 #line 243 "ALan.cg"
 	if( TP_FLOAT != e->type ) {
-													if( ! TypesMatch(TP_FLOAT,e->type) ) throw AlanException( token->bPos.ln, token->bPos.col, "Próba przypisania parametrowi okreœlaj¹cemu czas trwania klatki wartoœci innego typu ni¿ " + TypeName(TP_FLOAT) );
+													if( ! TypesMatch(TP_FLOAT,e->type) ) throw AlanException( token->bPos.ln, token->bPos.col, "PrÃ³ba przypisania parametrowi okreÅ›lajÄ…cemu czas trwania klatki wartoÅ›ci innego typu niÅ¼ " + TypeName(TP_FLOAT) );
 													e = Cast(TP_FLOAT,e);
-													if( 0 == e ) throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma mo¿liwoœci rzutowania wartoœci do typu FLOAT" );
+													if( 0 == e ) throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma moÅ¼liwoÅ›ci rzutowania wartoÅ›ci do typu FLOAT" );
 												}
 												e3 = e;
 												e4 = 0;
@@ -393,9 +393,9 @@ Expr();
     {
 #line 253 "ALan.cg"
 	if( TP_FLOAT != e->type ) {
-													if( ! TypesMatch(TP_FLOAT,e->type) ) throw AlanException( token->bPos.ln, token->bPos.col, "Próba przypisania parametrowi okreœlaj¹cemu czas trwania klatki wartoœci innego typu ni¿ " + TypeName(TP_FLOAT) );
+													if( ! TypesMatch(TP_FLOAT,e->type) ) throw AlanException( token->bPos.ln, token->bPos.col, "PrÃ³ba przypisania parametrowi okreÅ›lajÄ…cemu czas trwania klatki wartoÅ›ci innego typu niÅ¼ " + TypeName(TP_FLOAT) );
 													e = Cast(TP_FLOAT,e);
-													if( 0 == e ) throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma mo¿liwoœci rzutowania wartoœci do typu FLOAT" );
+													if( 0 == e ) throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma moÅ¼liwoÅ›ci rzutowania wartoÅ›ci do typu FLOAT" );
 												}
 												e4 = e;
 											}
@@ -427,9 +427,9 @@ Expr();
     {
 #line 227 "ALan.cg"
  if( TP_FLOAT != e->type ) {
-													if( ! TypesMatch(TP_FLOAT,e->type) ) throw AlanException( token->bPos.ln, token->bPos.col, "Próba przypisania krokowi w kierunku poziomym wartoœci innego typu ni¿ " + TypeName(TP_FLOAT) );
+													if( ! TypesMatch(TP_FLOAT,e->type) ) throw AlanException( token->bPos.ln, token->bPos.col, "PrÃ³ba przypisania krokowi w kierunku poziomym wartoÅ›ci innego typu niÅ¼ " + TypeName(TP_FLOAT) );
 													e = Cast(TP_FLOAT,e);
-													if( 0 == e ) throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma mo¿liwoœci rzutowania wartoœci do typu FLOAT" );
+													if( 0 == e ) throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma moÅ¼liwoÅ›ci rzutowania wartoÅ›ci do typu FLOAT" );
 												}
 												dx.push_back(e);
 											}
@@ -444,9 +444,9 @@ Expr();
     {
 #line 235 "ALan.cg"
  if( TP_FLOAT != e->type ) {
-													if( ! TypesMatch(TP_FLOAT,e->type) ) throw AlanException( token->bPos.ln, token->bPos.col, "Próba przypisania krokowi w kierunku pionowym wartoœci innego typu ni¿ " + TypeName(TP_FLOAT) );
+													if( ! TypesMatch(TP_FLOAT,e->type) ) throw AlanException( token->bPos.ln, token->bPos.col, "PrÃ³ba przypisania krokowi w kierunku pionowym wartoÅ›ci innego typu niÅ¼ " + TypeName(TP_FLOAT) );
 													e = Cast(TP_FLOAT,e);
-													if( 0 == e ) throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma mo¿liwoœci rzutowania wartoœci do typu FLOAT" );
+													if( 0 == e ) throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma moÅ¼liwoÅ›ci rzutowania wartoÅ›ci do typu FLOAT" );
 												}
 												dy.push_back(e);
 											}
@@ -461,9 +461,9 @@ Expr();
     {
 #line 243 "ALan.cg"
 	if( TP_FLOAT != e->type ) {
-													if( ! TypesMatch(TP_FLOAT,e->type) ) throw AlanException( token->bPos.ln, token->bPos.col, "Próba przypisania parametrowi okreœlaj¹cemu czas trwania klatki wartoœci innego typu ni¿ " + TypeName(TP_FLOAT) );
+													if( ! TypesMatch(TP_FLOAT,e->type) ) throw AlanException( token->bPos.ln, token->bPos.col, "PrÃ³ba przypisania parametrowi okreÅ›lajÄ…cemu czas trwania klatki wartoÅ›ci innego typu niÅ¼ " + TypeName(TP_FLOAT) );
 													e = Cast(TP_FLOAT,e);
-													if( 0 == e ) throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma mo¿liwoœci rzutowania wartoœci do typu FLOAT" );
+													if( 0 == e ) throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma moÅ¼liwoÅ›ci rzutowania wartoÅ›ci do typu FLOAT" );
 												}
 												e3 = e;
 												e4 = 0;
@@ -480,9 +480,9 @@ Expr();
       {
 #line 253 "ALan.cg"
 	if( TP_FLOAT != e->type ) {
-													if( ! TypesMatch(TP_FLOAT,e->type) ) throw AlanException( token->bPos.ln, token->bPos.col, "Próba przypisania parametrowi okreœlaj¹cemu czas trwania klatki wartoœci innego typu ni¿ " + TypeName(TP_FLOAT) );
+													if( ! TypesMatch(TP_FLOAT,e->type) ) throw AlanException( token->bPos.ln, token->bPos.col, "PrÃ³ba przypisania parametrowi okreÅ›lajÄ…cemu czas trwania klatki wartoÅ›ci innego typu niÅ¼ " + TypeName(TP_FLOAT) );
 													e = Cast(TP_FLOAT,e);
-													if( 0 == e ) throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma mo¿liwoœci rzutowania wartoœci do typu FLOAT" );
+													if( 0 == e ) throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma moÅ¼liwoÅ›ci rzutowania wartoÅ›ci do typu FLOAT" );
 												}
 												e4 = e;
 											}
@@ -534,9 +534,9 @@ cnt =
 Expr();
   {
 #line 281 "ALan.cg"
- if( TP_INT != cnt->type ) throw AlanException( token->bPos.ln, token->bPos.col, "Wyra¿enie okreœlaj¹ce krotnoœæ musi byæ typu INT" );
+ if( TP_INT != cnt->type ) throw AlanException( token->bPos.ln, token->bPos.col, "WyraÅ¼enie okreÅ›lajÄ…ce krotnoÅ›Ä‡ musi byÄ‡ typu INT" );
 												cnt = Cast(TP_INT,cnt);
-												if( 0 == cnt ) throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma mo¿liwoœci rzutowania wartoœci do typu INT" );
+												if( 0 == cnt ) throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma moÅ¼liwoÅ›ci rzutowania wartoÅ›ci do typu INT" );
 											}
 #line 542 "alan_parser.cc"
 
@@ -550,9 +550,9 @@ Expr();
   {
 #line 287 "ALan.cg"
  if( TP_STRING != e->type ) {
-													if( ! TypesMatch(TP_STRING,e->type) ) throw AlanException( token->bPos.ln, token->bPos.col, "Próba przypisania ID tekstury wartoœci innego typu ni¿ " + TypeName(TP_STRING) );
+													if( ! TypesMatch(TP_STRING,e->type) ) throw AlanException( token->bPos.ln, token->bPos.col, "PrÃ³ba przypisania ID tekstury wartoÅ›ci innego typu niÅ¼ " + TypeName(TP_STRING) );
 													e = Cast(TP_STRING,e);
-													if( 0 == e ) throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma mo¿liwoœci rzutowania wartoœci do typu STRING" );
+													if( 0 == e ) throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma moÅ¼liwoÅ›ci rzutowania wartoÅ›ci do typu STRING" );
 												}
 												img.push_back(e);
 											}
@@ -567,9 +567,9 @@ Expr();
   {
 #line 295 "ALan.cg"
 	if( TP_FLOAT != e->type ) {
-													if( ! TypesMatch(TP_FLOAT,e->type) ) throw AlanException( token->bPos.ln, token->bPos.col, "Próba przypisania parametrowi okreœlaj¹cemu czas trwania klatki wartoœci innego typu ni¿ " + TypeName(TP_FLOAT) );
+													if( ! TypesMatch(TP_FLOAT,e->type) ) throw AlanException( token->bPos.ln, token->bPos.col, "PrÃ³ba przypisania parametrowi okreÅ›lajÄ…cemu czas trwania klatki wartoÅ›ci innego typu niÅ¼ " + TypeName(TP_FLOAT) );
 													e = Cast(TP_FLOAT,e);
-													if( 0 == e ) throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma mo¿liwoœci rzutowania wartoœci do typu FLOAT" );
+													if( 0 == e ) throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma moÅ¼liwoÅ›ci rzutowania wartoÅ›ci do typu FLOAT" );
 												}
 												dt.push_back(e);
 											}
@@ -586,9 +586,9 @@ Expr();
     {
 #line 287 "ALan.cg"
  if( TP_STRING != e->type ) {
-													if( ! TypesMatch(TP_STRING,e->type) ) throw AlanException( token->bPos.ln, token->bPos.col, "Próba przypisania ID tekstury wartoœci innego typu ni¿ " + TypeName(TP_STRING) );
+													if( ! TypesMatch(TP_STRING,e->type) ) throw AlanException( token->bPos.ln, token->bPos.col, "PrÃ³ba przypisania ID tekstury wartoÅ›ci innego typu niÅ¼ " + TypeName(TP_STRING) );
 													e = Cast(TP_STRING,e);
-													if( 0 == e ) throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma mo¿liwoœci rzutowania wartoœci do typu STRING" );
+													if( 0 == e ) throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma moÅ¼liwoÅ›ci rzutowania wartoÅ›ci do typu STRING" );
 												}
 												img.push_back(e);
 											}
@@ -603,9 +603,9 @@ Expr();
     {
 #line 295 "ALan.cg"
 	if( TP_FLOAT != e->type ) {
-													if( ! TypesMatch(TP_FLOAT,e->type) ) throw AlanException( token->bPos.ln, token->bPos.col, "Próba przypisania parametrowi okreœlaj¹cemu czas trwania klatki wartoœci innego typu ni¿ " + TypeName(TP_FLOAT) );
+													if( ! TypesMatch(TP_FLOAT,e->type) ) throw AlanException( token->bPos.ln, token->bPos.col, "PrÃ³ba przypisania parametrowi okreÅ›lajÄ…cemu czas trwania klatki wartoÅ›ci innego typu niÅ¼ " + TypeName(TP_FLOAT) );
 													e = Cast(TP_FLOAT,e);
-													if( 0 == e ) throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma mo¿liwoœci rzutowania wartoœci do typu FLOAT" );
+													if( 0 == e ) throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma moÅ¼liwoÅ›ci rzutowania wartoÅ›ci do typu FLOAT" );
 												}
 												dt.push_back(e);
 											}
@@ -642,9 +642,9 @@ cnt =
 Expr();
   {
 #line 313 "ALan.cg"
- if( TP_INT != cnt->type ) throw AlanException( token->bPos.ln, token->bPos.col, "Wyra¿enie okreœlaj¹ce krotnoœæ musi byæ typu INT" );
+ if( TP_INT != cnt->type ) throw AlanException( token->bPos.ln, token->bPos.col, "WyraÅ¼enie okreÅ›lajÄ…ce krotnoÅ›Ä‡ musi byÄ‡ typu INT" );
 												cnt = Cast(TP_INT,cnt);
-												if( 0 == cnt ) throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma mo¿liwoœci rzutowania wartoœci do typu INT" );
+												if( 0 == cnt ) throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma moÅ¼liwoÅ›ci rzutowania wartoÅ›ci do typu INT" );
 											}
 #line 650 "alan_parser.cc"
 
@@ -658,9 +658,9 @@ Expr();
   {
 #line 319 "ALan.cg"
  if( TP_FLOAT != e->type ) {
-													if( ! TypesMatch(TP_FLOAT,e->type) ) throw AlanException( token->bPos.ln, token->bPos.col, "Próba przypisania wspó³czynnikowi rozmiaru poziomego wartoœci innego typu ni¿ " + TypeName(TP_FLOAT) );
+													if( ! TypesMatch(TP_FLOAT,e->type) ) throw AlanException( token->bPos.ln, token->bPos.col, "PrÃ³ba przypisania wspÃ³Å‚czynnikowi rozmiaru poziomego wartoÅ›ci innego typu niÅ¼ " + TypeName(TP_FLOAT) );
 													e = Cast(TP_FLOAT,e);
-													if( 0 == e ) throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma mo¿liwoœci rzutowania wartoœci do typu FLOAT" );
+													if( 0 == e ) throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma moÅ¼liwoÅ›ci rzutowania wartoÅ›ci do typu FLOAT" );
 												}
 												sx.push_back(e);
 											}
@@ -675,9 +675,9 @@ Expr();
   {
 #line 327 "ALan.cg"
  if( TP_FLOAT != e->type ) {
-													if( ! TypesMatch(TP_FLOAT,e->type) ) throw AlanException( token->bPos.ln, token->bPos.col, "Próba przypisania wspó³czynnikowi rozmiaru pionowego wartoœci innego typu ni¿ " + TypeName(TP_FLOAT) );
+													if( ! TypesMatch(TP_FLOAT,e->type) ) throw AlanException( token->bPos.ln, token->bPos.col, "PrÃ³ba przypisania wspÃ³Å‚czynnikowi rozmiaru pionowego wartoÅ›ci innego typu niÅ¼ " + TypeName(TP_FLOAT) );
 													e = Cast(TP_FLOAT,e);
-													if( 0 == e ) throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma mo¿liwoœci rzutowania wartoœci do typu FLOAT" );
+													if( 0 == e ) throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma moÅ¼liwoÅ›ci rzutowania wartoÅ›ci do typu FLOAT" );
 												}
 												sy.push_back(e);
 											}
@@ -692,9 +692,9 @@ Expr();
   {
 #line 335 "ALan.cg"
 	if( TP_FLOAT != e->type ) {
-													if( ! TypesMatch(TP_FLOAT,e->type) ) throw AlanException( token->bPos.ln, token->bPos.col, "Próba przypisania parametrowi okreœlaj¹cemu czas trwania zmiany rozmiaru wartoœci innego typu ni¿ " + TypeName(TP_FLOAT) );
+													if( ! TypesMatch(TP_FLOAT,e->type) ) throw AlanException( token->bPos.ln, token->bPos.col, "PrÃ³ba przypisania parametrowi okreÅ›lajÄ…cemu czas trwania zmiany rozmiaru wartoÅ›ci innego typu niÅ¼ " + TypeName(TP_FLOAT) );
 													e = Cast(TP_FLOAT,e);
-													if( 0 == e ) throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma mo¿liwoœci rzutowania wartoœci do typu FLOAT" );
+													if( 0 == e ) throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma moÅ¼liwoÅ›ci rzutowania wartoÅ›ci do typu FLOAT" );
 												}
 												dt.push_back(e);
 											}
@@ -711,9 +711,9 @@ Expr();
     {
 #line 319 "ALan.cg"
  if( TP_FLOAT != e->type ) {
-													if( ! TypesMatch(TP_FLOAT,e->type) ) throw AlanException( token->bPos.ln, token->bPos.col, "Próba przypisania wspó³czynnikowi rozmiaru poziomego wartoœci innego typu ni¿ " + TypeName(TP_FLOAT) );
+													if( ! TypesMatch(TP_FLOAT,e->type) ) throw AlanException( token->bPos.ln, token->bPos.col, "PrÃ³ba przypisania wspÃ³Å‚czynnikowi rozmiaru poziomego wartoÅ›ci innego typu niÅ¼ " + TypeName(TP_FLOAT) );
 													e = Cast(TP_FLOAT,e);
-													if( 0 == e ) throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma mo¿liwoœci rzutowania wartoœci do typu FLOAT" );
+													if( 0 == e ) throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma moÅ¼liwoÅ›ci rzutowania wartoÅ›ci do typu FLOAT" );
 												}
 												sx.push_back(e);
 											}
@@ -728,9 +728,9 @@ Expr();
     {
 #line 327 "ALan.cg"
  if( TP_FLOAT != e->type ) {
-													if( ! TypesMatch(TP_FLOAT,e->type) ) throw AlanException( token->bPos.ln, token->bPos.col, "Próba przypisania wspó³czynnikowi rozmiaru pionowego wartoœci innego typu ni¿ " + TypeName(TP_FLOAT) );
+													if( ! TypesMatch(TP_FLOAT,e->type) ) throw AlanException( token->bPos.ln, token->bPos.col, "PrÃ³ba przypisania wspÃ³Å‚czynnikowi rozmiaru pionowego wartoÅ›ci innego typu niÅ¼ " + TypeName(TP_FLOAT) );
 													e = Cast(TP_FLOAT,e);
-													if( 0 == e ) throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma mo¿liwoœci rzutowania wartoœci do typu FLOAT" );
+													if( 0 == e ) throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma moÅ¼liwoÅ›ci rzutowania wartoÅ›ci do typu FLOAT" );
 												}
 												sy.push_back(e);
 											}
@@ -745,9 +745,9 @@ Expr();
     {
 #line 335 "ALan.cg"
 	if( TP_FLOAT != e->type ) {
-													if( ! TypesMatch(TP_FLOAT,e->type) ) throw AlanException( token->bPos.ln, token->bPos.col, "Próba przypisania parametrowi okreœlaj¹cemu czas trwania zmiany rozmiaru wartoœci innego typu ni¿ " + TypeName(TP_FLOAT) );
+													if( ! TypesMatch(TP_FLOAT,e->type) ) throw AlanException( token->bPos.ln, token->bPos.col, "PrÃ³ba przypisania parametrowi okreÅ›lajÄ…cemu czas trwania zmiany rozmiaru wartoÅ›ci innego typu niÅ¼ " + TypeName(TP_FLOAT) );
 													e = Cast(TP_FLOAT,e);
-													if( 0 == e ) throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma mo¿liwoœci rzutowania wartoœci do typu FLOAT" );
+													if( 0 == e ) throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma moÅ¼liwoÅ›ci rzutowania wartoÅ›ci do typu FLOAT" );
 												}
 												dt.push_back(e);
 											}
@@ -850,10 +850,10 @@ Expr();
   {
 #line 375 "ALan.cg"
  if( var->type != e->type ) {
-												if( ! TypesMatch(var->type,e->type) ) throw AlanException( token->bPos.ln, token->bPos.col, "Próba przypisania zmiennej " + var->GetID() + " wartoœci innego typu ni¿ " + TypeName(var->type) );
+												if( ! TypesMatch(var->type,e->type) ) throw AlanException( token->bPos.ln, token->bPos.col, "PrÃ³ba przypisania zmiennej " + var->GetID() + " wartoÅ›ci innego typu niÅ¼ " + TypeName(var->type) );
 												//rzutujemy na pierwszy typ
 												e = Cast(var->type,e);
-												if( 0 == e ) throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma mo¿liwoœci rzutowania wartoœci do typu " + TypeName(var->type) );
+												if( 0 == e ) throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma moÅ¼liwoÅ›ci rzutowania wartoÅ›ci do typu " + TypeName(var->type) );
 											}
 											code->AddInstrLet(var,e);
 										}
@@ -905,7 +905,7 @@ Expr();
   }
   {
 #line 400 "ALan.cg"
- if( ! IsNumType(var->type) ) throw AlanException( token->bPos.ln, token->bPos.col, "Zmienna licznikowa instrukcji FOR musi byæ typu numerycznego a nie typu " + TypeName(var->type) );
+ if( ! IsNumType(var->type) ) throw AlanException( token->bPos.ln, token->bPos.col, "Zmienna licznikowa instrukcji FOR musi byÄ‡ typu numerycznego a nie typu " + TypeName(var->type) );
 								//TODO - dodac rzutowanie beg,end,step do typu var
 								if( ! code->AddInstrFor(var,beg,end,step,error) ) throw AlanException( token->bPos.ln, token->bPos.col, error );
 							}
@@ -956,7 +956,7 @@ exp =
 Expr();
   {
 #line 418 "ALan.cg"
-	if( exp->type != TP_BOOL) throw AlanException( token->bPos.ln, token->bPos.col, "Warunek instrukcji WHILE musi byæ typu BOOL a nie typu " + TypeName(exp->type) );
+	if( exp->type != TP_BOOL) throw AlanException( token->bPos.ln, token->bPos.col, "Warunek instrukcji WHILE musi byÄ‡ typu BOOL a nie typu " + TypeName(exp->type) );
 													if( ! code->AddInstrWhile(exp,error) ) throw AlanException( token->bPos.ln, token->bPos.col, error );
 												}
 #line 963 "alan_parser.cc"
@@ -1004,7 +1004,7 @@ exp =
 Expr();
   {
 #line 433 "ALan.cg"
-	if( exp->type != TP_BOOL) throw AlanException( token->bPos.ln, token->bPos.col, "Warunek instrukcji IF musi byæ typu BOOL a nie typu " + TypeName(exp->type) );
+	if( exp->type != TP_BOOL) throw AlanException( token->bPos.ln, token->bPos.col, "Warunek instrukcji IF musi byÄ‡ typu BOOL a nie typu " + TypeName(exp->type) );
 													if( ! code->AddInstrIf(exp,error) ) throw AlanException( token->bPos.ln, token->bPos.col, error );
 												}
 #line 1011 "alan_parser.cc"
@@ -1074,7 +1074,7 @@ exp =
 Expr();
     {
 #line 454 "ALan.cg"
-	if( exp->type != TP_BOOL) throw AlanException( token->bPos.ln, token->bPos.col, "Warunek instrukcji PAUSE WHILE musi byæ typu BOOL a nie typu " + TypeName(exp->type) );
+	if( exp->type != TP_BOOL) throw AlanException( token->bPos.ln, token->bPos.col, "Warunek instrukcji PAUSE WHILE musi byÄ‡ typu BOOL a nie typu " + TypeName(exp->type) );
 											}
 #line 1080 "alan_parser.cc"
 
@@ -1151,7 +1151,7 @@ Variable();
 																	else if( "Y" == var->GetID() )
 																		return new AlanFuncMouseY();
 																	else
-																		throw AlanException( token->bPos.ln, token->bPos.col, "Po MOUSE mo¿e wystêpowaæ tylko X lub Y" );
+																		throw AlanException( token->bPos.ln, token->bPos.col, "Po MOUSE moÅ¼e wystÄ™powaÄ‡ tylko X lub Y" );
 																}
 #line 1157 "alan_parser.cc"
 
@@ -1165,9 +1165,9 @@ key =
 Expr();
         {
 #line 487 "ALan.cg"
-	if( ! TypesMatch( TP_INT, key->type ) ) throw AlanException( token->bPos.ln, token->bPos.col, "Parametr 'k' funkcji MOUSE KEY musi byæ typu INT a nie typu " + TypeName(key->type) );
+	if( ! TypesMatch( TP_INT, key->type ) ) throw AlanException( token->bPos.ln, token->bPos.col, "Parametr 'k' funkcji MOUSE KEY musi byÄ‡ typu INT a nie typu " + TypeName(key->type) );
 																	Cast(TP_INT,key);
-																	if( 0 == key )  throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma mo¿liwoœci rzutowania wartoœci do typu INT" );
+																	if( 0 == key )  throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma moÅ¼liwoÅ›ci rzutowania wartoÅ›ci do typu INT" );
 																}
 #line 1173 "alan_parser.cc"
 
@@ -1189,9 +1189,9 @@ str =
 Expr();
         {
 #line 496 "ALan.cg"
-	if( ! TypesMatch( TP_STRING, str->type ) ) throw AlanException( token->bPos.ln, token->bPos.col, "Parametr 'str' funkcji STRLEN musi byæ typu STRING a nie typu " + TypeName(str->type) );
+	if( ! TypesMatch( TP_STRING, str->type ) ) throw AlanException( token->bPos.ln, token->bPos.col, "Parametr 'str' funkcji STRLEN musi byÄ‡ typu STRING a nie typu " + TypeName(str->type) );
 																	Cast(TP_STRING,str);
-																	if( 0 == str )  throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma mo¿liwoœci rzutowania wartoœci do typu STRING" );
+																	if( 0 == str )  throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma moÅ¼liwoÅ›ci rzutowania wartoÅ›ci do typu STRING" );
 																}
 #line 1197 "alan_parser.cc"
 
@@ -1212,9 +1212,9 @@ str =
 Expr();
           {
 #line 504 "ALan.cg"
-	if( ! TypesMatch( TP_STRING, str->type ) ) throw AlanException( token->bPos.ln, token->bPos.col, "Parametr 'str' funkcji STRLEN musi byæ typu STRING a nie typu " + TypeName(str->type) );
+	if( ! TypesMatch( TP_STRING, str->type ) ) throw AlanException( token->bPos.ln, token->bPos.col, "Parametr 'str' funkcji STRLEN musi byÄ‡ typu STRING a nie typu " + TypeName(str->type) );
 																	Cast(TP_STRING,str);
-																	if( 0 == str )  throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma mo¿liwoœci rzutowania wartoœci do typu STRING" );
+																	if( 0 == str )  throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma moÅ¼liwoÅ›ci rzutowania wartoÅ›ci do typu STRING" );
 																}
 #line 1220 "alan_parser.cc"
 
@@ -1226,9 +1226,9 @@ beg =
 Expr();
           {
 #line 509 "ALan.cg"
-	if( ! TypesMatch( TP_INT, beg->type ) ) throw AlanException( token->bPos.ln, token->bPos.col, "Parametr 'beg' funkcji STRLEN musi byæ typu INT a nie typu " + TypeName(beg->type) );
+	if( ! TypesMatch( TP_INT, beg->type ) ) throw AlanException( token->bPos.ln, token->bPos.col, "Parametr 'beg' funkcji STRLEN musi byÄ‡ typu INT a nie typu " + TypeName(beg->type) );
 																	Cast(TP_INT,beg);
-																	if( 0 == beg )  throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma mo¿liwoœci rzutowania wartoœci do typu INT" );
+																	if( 0 == beg )  throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma moÅ¼liwoÅ›ci rzutowania wartoÅ›ci do typu INT" );
 																}
 #line 1234 "alan_parser.cc"
 
@@ -1240,9 +1240,9 @@ cnt =
 Expr();
           {
 #line 514 "ALan.cg"
-	if( ! TypesMatch( TP_INT, cnt->type ) ) throw AlanException( token->bPos.ln, token->bPos.col, "Parametr 'cnt' funkcji STRLEN musi byæ typu INT a nie typu " + TypeName(cnt->type) );
+	if( ! TypesMatch( TP_INT, cnt->type ) ) throw AlanException( token->bPos.ln, token->bPos.col, "Parametr 'cnt' funkcji STRLEN musi byÄ‡ typu INT a nie typu " + TypeName(cnt->type) );
 																	Cast(TP_INT,cnt);
-																	if( 0 == cnt )  throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma mo¿liwoœci rzutowania wartoœci do typu INT" );
+																	if( 0 == cnt )  throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma moÅ¼liwoÅ›ci rzutowania wartoÅ›ci do typu INT" );
 																}
 #line 1248 "alan_parser.cc"
 
@@ -1263,9 +1263,9 @@ str =
 Expr();
             {
 #line 522 "ALan.cg"
-	if( ! TypesMatch( TP_STRING, str->type ) ) throw AlanException( token->bPos.ln, token->bPos.col, "Parametr 'str' funkcji INSTR musi byæ typu STRING a nie typu " + TypeName(str->type) );
+	if( ! TypesMatch( TP_STRING, str->type ) ) throw AlanException( token->bPos.ln, token->bPos.col, "Parametr 'str' funkcji INSTR musi byÄ‡ typu STRING a nie typu " + TypeName(str->type) );
 																	Cast(TP_STRING,str);
-																	if( 0 == str )  throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma mo¿liwoœci rzutowania wartoœci do typu STRING" );
+																	if( 0 == str )  throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma moÅ¼liwoÅ›ci rzutowania wartoÅ›ci do typu STRING" );
 																}
 #line 1271 "alan_parser.cc"
 
@@ -1277,9 +1277,9 @@ pat =
 Expr();
             {
 #line 527 "ALan.cg"
-	if( ! TypesMatch( TP_STRING, pat->type ) ) throw AlanException( token->bPos.ln, token->bPos.col, "Parametr 'pat' funkcji INSTR musi byæ typu STRING a nie typu " + TypeName(beg->type) );
+	if( ! TypesMatch( TP_STRING, pat->type ) ) throw AlanException( token->bPos.ln, token->bPos.col, "Parametr 'pat' funkcji INSTR musi byÄ‡ typu STRING a nie typu " + TypeName(beg->type) );
 																	Cast(TP_STRING,pat);
-																	if( 0 == pat )  throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma mo¿liwoœci rzutowania wartoœci do typu STRING" );
+																	if( 0 == pat )  throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma moÅ¼liwoÅ›ci rzutowania wartoÅ›ci do typu STRING" );
 																}
 #line 1285 "alan_parser.cc"
 
@@ -1291,9 +1291,9 @@ beg =
 Expr();
             {
 #line 532 "ALan.cg"
-	if( ! TypesMatch( TP_INT, beg->type ) ) throw AlanException( token->bPos.ln, token->bPos.col, "Parametr 'beg' funkcji INSTR musi byæ typu INT a nie typu " + TypeName(beg->type) );
+	if( ! TypesMatch( TP_INT, beg->type ) ) throw AlanException( token->bPos.ln, token->bPos.col, "Parametr 'beg' funkcji INSTR musi byÄ‡ typu INT a nie typu " + TypeName(beg->type) );
 																	Cast(TP_INT,beg);
-																	if( 0 == beg )  throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma mo¿liwoœci rzutowania wartoœci do typu INT" );
+																	if( 0 == beg )  throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma moÅ¼liwoÅ›ci rzutowania wartoÅ›ci do typu INT" );
 																}
 #line 1299 "alan_parser.cc"
 
@@ -1314,9 +1314,9 @@ p1 =
 Expr();
               {
 #line 540 "ALan.cg"
-	if( ! TypesMatch( TP_INT, p1->type ) ) throw AlanException( token->bPos.ln, token->bPos.col, "Parametr nr 1 funkcji RAND musi byæ typu INT a nie typu " + TypeName(p1->type) );
+	if( ! TypesMatch( TP_INT, p1->type ) ) throw AlanException( token->bPos.ln, token->bPos.col, "Parametr nr 1 funkcji RAND musi byÄ‡ typu INT a nie typu " + TypeName(p1->type) );
 																	Cast(TP_INT,p1);
-																	if( 0 == p1 )  throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma mo¿liwoœci rzutowania wartoœci do typu INT" );
+																	if( 0 == p1 )  throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma moÅ¼liwoÅ›ci rzutowania wartoÅ›ci do typu INT" );
 																}
 #line 1322 "alan_parser.cc"
 
@@ -1328,9 +1328,9 @@ p2 =
 Expr();
               {
 #line 545 "ALan.cg"
-	if( ! TypesMatch( TP_INT, p2->type ) ) throw AlanException( token->bPos.ln, token->bPos.col, "Parametr nr 2 funkcji RAND musi byæ typu INT a nie typu " + TypeName(p2->type) );
+	if( ! TypesMatch( TP_INT, p2->type ) ) throw AlanException( token->bPos.ln, token->bPos.col, "Parametr nr 2 funkcji RAND musi byÄ‡ typu INT a nie typu " + TypeName(p2->type) );
 																	Cast(TP_INT,p2);
-																	if( 0 == p2 )  throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma mo¿liwoœci rzutowania wartoœci do typu INT" );
+																	if( 0 == p2 )  throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma moÅ¼liwoÅ›ci rzutowania wartoÅ›ci do typu INT" );
 																}
 #line 1336 "alan_parser.cc"
 
@@ -1351,9 +1351,9 @@ p1 =
 Expr();
                 {
 #line 553 "ALan.cg"
-	if( ! TypesMatch( TP_FLOAT, p1->type ) ) throw AlanException( token->bPos.ln, token->bPos.col, "Parametr nr 1 funkcji RANDF musi byæ typu FLOAT a nie typu " + TypeName(p1->type) );
+	if( ! TypesMatch( TP_FLOAT, p1->type ) ) throw AlanException( token->bPos.ln, token->bPos.col, "Parametr nr 1 funkcji RANDF musi byÄ‡ typu FLOAT a nie typu " + TypeName(p1->type) );
 																	Cast(TP_FLOAT,p1);
-																	if( 0 == p1 )  throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma mo¿liwoœci rzutowania wartoœci do typu FLOAT" );
+																	if( 0 == p1 )  throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma moÅ¼liwoÅ›ci rzutowania wartoÅ›ci do typu FLOAT" );
 																}
 #line 1359 "alan_parser.cc"
 
@@ -1365,9 +1365,9 @@ p2 =
 Expr();
                 {
 #line 558 "ALan.cg"
-	if( ! TypesMatch( TP_FLOAT, p2->type ) ) throw AlanException( token->bPos.ln, token->bPos.col, "Parametr nr 2 funkcji RANDF musi byæ typu FLOAT a nie typu " + TypeName(p2->type) );
+	if( ! TypesMatch( TP_FLOAT, p2->type ) ) throw AlanException( token->bPos.ln, token->bPos.col, "Parametr nr 2 funkcji RANDF musi byÄ‡ typu FLOAT a nie typu " + TypeName(p2->type) );
 																	Cast(TP_FLOAT,p2);
-																	if( 0 == p2 )  throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma mo¿liwoœci rzutowania wartoœci do typu FLOAT" );
+																	if( 0 == p2 )  throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma moÅ¼liwoÅ›ci rzutowania wartoÅ›ci do typu FLOAT" );
 																}
 #line 1373 "alan_parser.cc"
 
@@ -1388,9 +1388,9 @@ p1 =
 Expr();
                   {
 #line 566 "ALan.cg"
-	if( ! TypesMatch( TP_FLOAT, p1->type ) ) throw AlanException( token->bPos.ln, token->bPos.col, "Parametr funkcji SIN musi byæ typu FLOAT a nie typu " + TypeName(p1->type) );
+	if( ! TypesMatch( TP_FLOAT, p1->type ) ) throw AlanException( token->bPos.ln, token->bPos.col, "Parametr funkcji SIN musi byÄ‡ typu FLOAT a nie typu " + TypeName(p1->type) );
 																	Cast(TP_FLOAT,p1);
-																	if( 0 == p1 )  throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma mo¿liwoœci rzutowania wartoœci do typu FLOAT" );
+																	if( 0 == p1 )  throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma moÅ¼liwoÅ›ci rzutowania wartoÅ›ci do typu FLOAT" );
 																}
 #line 1396 "alan_parser.cc"
 
@@ -1411,9 +1411,9 @@ p1 =
 Expr();
                     {
 #line 574 "ALan.cg"
-	if( ! TypesMatch( TP_FLOAT, p1->type ) ) throw AlanException( token->bPos.ln, token->bPos.col, "Parametr funkcji COS musi byæ typu FLOAT a nie typu " + TypeName(p1->type) );
+	if( ! TypesMatch( TP_FLOAT, p1->type ) ) throw AlanException( token->bPos.ln, token->bPos.col, "Parametr funkcji COS musi byÄ‡ typu FLOAT a nie typu " + TypeName(p1->type) );
 																	Cast(TP_FLOAT,p1);
-																	if( 0 == p1 )  throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma mo¿liwoœci rzutowania wartoœci do typu FLOAT" );
+																	if( 0 == p1 )  throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma moÅ¼liwoÅ›ci rzutowania wartoÅ›ci do typu FLOAT" );
 																}
 #line 1419 "alan_parser.cc"
 
@@ -1434,9 +1434,9 @@ p1 =
 Expr();
                       {
 #line 582 "ALan.cg"
-	if( ! TypesMatch( TP_FLOAT, p1->type ) ) throw AlanException( token->bPos.ln, token->bPos.col, "Parametr funkcji TAN musi byæ typu FLOAT a nie typu " + TypeName(p1->type) );
+	if( ! TypesMatch( TP_FLOAT, p1->type ) ) throw AlanException( token->bPos.ln, token->bPos.col, "Parametr funkcji TAN musi byÄ‡ typu FLOAT a nie typu " + TypeName(p1->type) );
 																	Cast(TP_FLOAT,p1);
-																	if( 0 == p1 )  throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma mo¿liwoœci rzutowania wartoœci do typu FLOAT" );
+																	if( 0 == p1 )  throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma moÅ¼liwoÅ›ci rzutowania wartoÅ›ci do typu FLOAT" );
 																}
 #line 1442 "alan_parser.cc"
 
@@ -1457,9 +1457,9 @@ p1 =
 Expr();
                         {
 #line 590 "ALan.cg"
-	if( ! TypesMatch( TP_FLOAT, p1->type ) ) throw AlanException( token->bPos.ln, token->bPos.col, "Parametr funkcji EXP musi byæ typu FLOAT a nie typu " + TypeName(p1->type) );
+	if( ! TypesMatch( TP_FLOAT, p1->type ) ) throw AlanException( token->bPos.ln, token->bPos.col, "Parametr funkcji EXP musi byÄ‡ typu FLOAT a nie typu " + TypeName(p1->type) );
 																	Cast(TP_FLOAT,p1);
-																	if( 0 == p1 )  throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma mo¿liwoœci rzutowania wartoœci do typu FLOAT" );
+																	if( 0 == p1 )  throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma moÅ¼liwoÅ›ci rzutowania wartoÅ›ci do typu FLOAT" );
 																}
 #line 1465 "alan_parser.cc"
 
@@ -1480,9 +1480,9 @@ p1 =
 Expr();
                           {
 #line 598 "ALan.cg"
-	if( ! TypesMatch( TP_FLOAT, p1->type ) ) throw AlanException( token->bPos.ln, token->bPos.col, "Parametr funkcji LOG musi byæ typu FLOAT a nie typu " + TypeName(p1->type) );
+	if( ! TypesMatch( TP_FLOAT, p1->type ) ) throw AlanException( token->bPos.ln, token->bPos.col, "Parametr funkcji LOG musi byÄ‡ typu FLOAT a nie typu " + TypeName(p1->type) );
 																	Cast(TP_FLOAT,p1);
-																	if( 0 == p1 )  throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma mo¿liwoœci rzutowania wartoœci do typu FLOAT" );
+																	if( 0 == p1 )  throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma moÅ¼liwoÅ›ci rzutowania wartoÅ›ci do typu FLOAT" );
 																}
 #line 1488 "alan_parser.cc"
 
@@ -1503,9 +1503,9 @@ p1 =
 Expr();
                             {
 #line 606 "ALan.cg"
-	if( ! TypesMatch( TP_FLOAT, p1->type ) ) throw AlanException( token->bPos.ln, token->bPos.col, "Parametr nr 1 funkcji POW musi byæ typu FLOAT a nie typu " + TypeName(p1->type) );
+	if( ! TypesMatch( TP_FLOAT, p1->type ) ) throw AlanException( token->bPos.ln, token->bPos.col, "Parametr nr 1 funkcji POW musi byÄ‡ typu FLOAT a nie typu " + TypeName(p1->type) );
 																	Cast(TP_FLOAT,p1);
-																	if( 0 == p1 )  throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma mo¿liwoœci rzutowania wartoœci do typu FLOAT" );
+																	if( 0 == p1 )  throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma moÅ¼liwoÅ›ci rzutowania wartoÅ›ci do typu FLOAT" );
 																}
 #line 1511 "alan_parser.cc"
 
@@ -1517,9 +1517,9 @@ p2 =
 Expr();
                             {
 #line 611 "ALan.cg"
-	if( ! TypesMatch( TP_INT, p2->type ) ) throw AlanException( token->bPos.ln, token->bPos.col, "Parametr nr 2 funkcji POW musi byæ typu FLOAT a nie typu " + TypeName(p2->type) );
+	if( ! TypesMatch( TP_INT, p2->type ) ) throw AlanException( token->bPos.ln, token->bPos.col, "Parametr nr 2 funkcji POW musi byÄ‡ typu FLOAT a nie typu " + TypeName(p2->type) );
 																	Cast(TP_FLOAT,p2);
-																	if( 0 == p2 )  throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma mo¿liwoœci rzutowania wartoœci do typu FLOAT" );
+																	if( 0 == p2 )  throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma moÅ¼liwoÅ›ci rzutowania wartoÅ›ci do typu FLOAT" );
 																}
 #line 1525 "alan_parser.cc"
 
@@ -1540,9 +1540,9 @@ p1 =
 Expr();
                               {
 #line 619 "ALan.cg"
-	if( ! TypesMatch( TP_FLOAT, p1->type ) ) throw AlanException( token->bPos.ln, token->bPos.col, "Parametr funkcji SQRT musi byæ typu FLOAT a nie typu " + TypeName(p1->type) );
+	if( ! TypesMatch( TP_FLOAT, p1->type ) ) throw AlanException( token->bPos.ln, token->bPos.col, "Parametr funkcji SQRT musi byÄ‡ typu FLOAT a nie typu " + TypeName(p1->type) );
 																	Cast(TP_FLOAT,p1);
-																	if( 0 == p1 )  throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma mo¿liwoœci rzutowania wartoœci do typu FLOAT" );
+																	if( 0 == p1 )  throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma moÅ¼liwoÅ›ci rzutowania wartoÅ›ci do typu FLOAT" );
 																}
 #line 1548 "alan_parser.cc"
 
@@ -1566,7 +1566,7 @@ Expr();
 #line 628 "ALan.cg"
  if( TP_FLOAT == p1->type ) return new AlanFuncAbsF(p1);
 																  if( TP_INT == p1->type ) return new AlanFuncAbsI(p1);
-																	throw AlanException( token->bPos.ln, token->bPos.col, "Parametr funkcji ABS musi byæ typu INT lub FLOAT a nie typu " + TypeName(p1->type) );
+																	throw AlanException( token->bPos.ln, token->bPos.col, "Parametr funkcji ABS musi byÄ‡ typu INT lub FLOAT a nie typu " + TypeName(p1->type) );
 																}
 #line 1572 "alan_parser.cc"
 
@@ -1584,7 +1584,7 @@ Expr();
 #line 636 "ALan.cg"
  if( TP_FLOAT == p1->type ) return new AlanFuncSgnF(p1);
 																  if( TP_INT == p1->type ) return new AlanFuncSgnI(p1);
-																	throw AlanException( token->bPos.ln, token->bPos.col, "Parametr funkcji SGN musi byæ typu INT lub FLOAT a nie typu " + TypeName(p1->type) );
+																	throw AlanException( token->bPos.ln, token->bPos.col, "Parametr funkcji SGN musi byÄ‡ typu INT lub FLOAT a nie typu " + TypeName(p1->type) );
 																}
 #line 1590 "alan_parser.cc"
 
@@ -1599,9 +1599,9 @@ p1 =
 Expr();
                                     {
 #line 643 "ALan.cg"
-	if( ! TypesMatch( TP_FLOAT, p1->type ) ) throw AlanException( token->bPos.ln, token->bPos.col, "Parametr funkcji FLOOR musi byæ typu FLOAT a nie typu " + TypeName(p1->type) );
+	if( ! TypesMatch( TP_FLOAT, p1->type ) ) throw AlanException( token->bPos.ln, token->bPos.col, "Parametr funkcji FLOOR musi byÄ‡ typu FLOAT a nie typu " + TypeName(p1->type) );
 																	Cast(TP_FLOAT,p1);
-																	if( 0 == p1 )  throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma mo¿liwoœci rzutowania wartoœci do typu FLOAT" );
+																	if( 0 == p1 )  throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma moÅ¼liwoÅ›ci rzutowania wartoÅ›ci do typu FLOAT" );
 																}
 #line 1607 "alan_parser.cc"
 
@@ -1622,9 +1622,9 @@ p1 =
 Expr();
                                       {
 #line 651 "ALan.cg"
-	if( ! TypesMatch( TP_FLOAT, p1->type ) ) throw AlanException( token->bPos.ln, token->bPos.col, "Parametr funkcji CEIL musi byæ typu FLOAT a nie typu " + TypeName(p1->type) );
+	if( ! TypesMatch( TP_FLOAT, p1->type ) ) throw AlanException( token->bPos.ln, token->bPos.col, "Parametr funkcji CEIL musi byÄ‡ typu FLOAT a nie typu " + TypeName(p1->type) );
 																	Cast(TP_FLOAT,p1);
-																	if( 0 == p1 )  throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma mo¿liwoœci rzutowania wartoœci do typu FLOAT" );
+																	if( 0 == p1 )  throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma moÅ¼liwoÅ›ci rzutowania wartoÅ›ci do typu FLOAT" );
 																}
 #line 1630 "alan_parser.cc"
 
@@ -1652,14 +1652,14 @@ Expr();
                                         consumeToken(AlanToken::RPAR);
                                         {
 #line 662 "ALan.cg"
- if( ! IsNumType(p1->type) )  throw AlanException( token->bPos.ln, token->bPos.col, "Parametr nr 1 funkcji MIN musi byæ typu numerycznego a nie typu " + TypeName(p1->type) );
-																	if( ! IsNumType(p2->type) )  throw AlanException( token->bPos.ln, token->bPos.col, "Parametr nr 2 funkcji MIN musi byæ typu numerycznego a nie typu " + TypeName(p2->type) );
+ if( ! IsNumType(p1->type) )  throw AlanException( token->bPos.ln, token->bPos.col, "Parametr nr 1 funkcji MIN musi byÄ‡ typu numerycznego a nie typu " + TypeName(p1->type) );
+																	if( ! IsNumType(p2->type) )  throw AlanException( token->bPos.ln, token->bPos.col, "Parametr nr 2 funkcji MIN musi byÄ‡ typu numerycznego a nie typu " + TypeName(p2->type) );
 																	if( TP_INT == p1->type && TP_INT == p2->type ) return new AlanFuncMinI(p1,p2);
 																	if( p1->type != p1->type ) {
-																			if( ! TypesMatch( p1->type, p2->type ) ) throw AlanException( token->bPos.ln, token->bPos.col, "Funkcja MIN nie jest zdefiniowana dla wartoœci typów " + TypeName(p1->type) + " i " + TypeName(p2->type) );
+																			if( ! TypesMatch( p1->type, p2->type ) ) throw AlanException( token->bPos.ln, token->bPos.col, "Funkcja MIN nie jest zdefiniowana dla wartoÅ›ci typÃ³w " + TypeName(p1->type) + " i " + TypeName(p2->type) );
 																			Cast(p1,p2);
-																			if( 0 == p1 ) throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma mo¿liwoœci rzutowania wartoœci do typu " + TypeName(p1->type) );
-																			if( 0 == p2 ) throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma mo¿liwoœci rzutowania wartoœci do typu " + TypeName(p2->type) );
+																			if( 0 == p1 ) throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma moÅ¼liwoÅ›ci rzutowania wartoÅ›ci do typu " + TypeName(p1->type) );
+																			if( 0 == p2 ) throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma moÅ¼liwoÅ›ci rzutowania wartoÅ›ci do typu " + TypeName(p2->type) );
 																	}
 																	return new AlanFuncMinF(p1,p2);
 																}
@@ -1682,14 +1682,14 @@ Expr();
                                         consumeToken(AlanToken::RPAR);
                                         {
 #line 679 "ALan.cg"
- if( ! IsNumType(p1->type) )  throw AlanException( token->bPos.ln, token->bPos.col, "Parametr nr 1 funkcji MAX musi byæ typu numerycznego a nie typu " + TypeName(p1->type) );
-																	if( ! IsNumType(p2->type) )  throw AlanException( token->bPos.ln, token->bPos.col, "Parametr nr 2 funkcji MAX musi byæ typu numerycznego a nie typu " + TypeName(p2->type) );
+ if( ! IsNumType(p1->type) )  throw AlanException( token->bPos.ln, token->bPos.col, "Parametr nr 1 funkcji MAX musi byÄ‡ typu numerycznego a nie typu " + TypeName(p1->type) );
+																	if( ! IsNumType(p2->type) )  throw AlanException( token->bPos.ln, token->bPos.col, "Parametr nr 2 funkcji MAX musi byÄ‡ typu numerycznego a nie typu " + TypeName(p2->type) );
 																	if( TP_INT == p1->type && TP_INT == p2->type ) return new AlanFuncMaxI(p1,p2);
 																	if( p1->type != p1->type ) {
-																			if( ! TypesMatch( p1->type, p2->type ) ) throw AlanException( token->bPos.ln, token->bPos.col, "Funkcja MAX nie jest zdefiniowana dla wartoœci typów " + TypeName(p1->type) + " i " + TypeName(p2->type) );
+																			if( ! TypesMatch( p1->type, p2->type ) ) throw AlanException( token->bPos.ln, token->bPos.col, "Funkcja MAX nie jest zdefiniowana dla wartoÅ›ci typÃ³w " + TypeName(p1->type) + " i " + TypeName(p2->type) );
 																			Cast(p1,p2);
-																			if( 0 == p1 ) throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma mo¿liwoœci rzutowania wartoœci do typu " + TypeName(p1->type) );
-																			if( 0 == p2 ) throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma mo¿liwoœci rzutowania wartoœci do typu " + TypeName(p2->type) );
+																			if( 0 == p1 ) throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma moÅ¼liwoÅ›ci rzutowania wartoÅ›ci do typu " + TypeName(p1->type) );
+																			if( 0 == p2 ) throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma moÅ¼liwoÅ›ci rzutowania wartoÅ›ci do typu " + TypeName(p2->type) );
 																	}
 																	return new AlanFuncMaxF(p1,p2);
 																}
@@ -1964,13 +1964,13 @@ exp2 =
 castExpr();
       {
 #line 724 "ALan.cg"
- if( ! IsNumType(exp->type) )  throw AlanException( token->bPos.ln, token->bPos.col, "Operator * nie jest zdefiniowany dla wartoœci typu " + TypeName(exp->type) );
-																		if( ! IsNumType(exp2->type) ) throw AlanException( token->bPos.ln, token->bPos.col, "Operator * nie jest zdefiniowany dla wartoœci typu " + TypeName(exp2->type) );
+ if( ! IsNumType(exp->type) )  throw AlanException( token->bPos.ln, token->bPos.col, "Operator * nie jest zdefiniowany dla wartoÅ›ci typu " + TypeName(exp->type) );
+																		if( ! IsNumType(exp2->type) ) throw AlanException( token->bPos.ln, token->bPos.col, "Operator * nie jest zdefiniowany dla wartoÅ›ci typu " + TypeName(exp2->type) );
 																		if( exp2->type != exp->type ) {
-																			if( ! TypesMatch( exp->type, exp2->type ) ) throw AlanException( token->bPos.ln, token->bPos.col, "Operator * nie jest zdefiniowany dla wartoœci typów " + TypeName(exp->type) + " i " + TypeName(exp2->type) );
+																			if( ! TypesMatch( exp->type, exp2->type ) ) throw AlanException( token->bPos.ln, token->bPos.col, "Operator * nie jest zdefiniowany dla wartoÅ›ci typÃ³w " + TypeName(exp->type) + " i " + TypeName(exp2->type) );
 																			Cast(exp,exp2);
-																			if( 0 == exp )  throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma mo¿liwoœci rzutowania wartoœci do typu " + TypeName(exp->type) );
-																			if( 0 == exp2 ) throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma mo¿liwoœci rzutowania wartoœci do typu " + TypeName(exp2->type) );
+																			if( 0 == exp )  throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma moÅ¼liwoÅ›ci rzutowania wartoÅ›ci do typu " + TypeName(exp->type) );
+																			if( 0 == exp2 ) throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma moÅ¼liwoÅ›ci rzutowania wartoÅ›ci do typu " + TypeName(exp2->type) );
 																		}
 																		exp = new AlanExprMul(exp,exp2);
 																	}
@@ -1986,13 +1986,13 @@ exp2 =
 castExpr();
         {
 #line 734 "ALan.cg"
- if( ! IsNumType(exp->type) )  throw AlanException( token->bPos.ln, token->bPos.col, "Operator / nie jest zdefiniowany dla wartoœci typu " + TypeName(exp->type) );
-																		if( ! IsNumType(exp2->type) ) throw AlanException( token->bPos.ln, token->bPos.col, "Operator / nie jest zdefiniowany dla wartoœci typu " + TypeName(exp2->type) );
+ if( ! IsNumType(exp->type) )  throw AlanException( token->bPos.ln, token->bPos.col, "Operator / nie jest zdefiniowany dla wartoÅ›ci typu " + TypeName(exp->type) );
+																		if( ! IsNumType(exp2->type) ) throw AlanException( token->bPos.ln, token->bPos.col, "Operator / nie jest zdefiniowany dla wartoÅ›ci typu " + TypeName(exp2->type) );
 																		if( exp2->type != exp->type ) {
-																			if( ! TypesMatch( exp->type, exp2->type ) ) throw AlanException( token->bPos.ln, token->bPos.col, "Operator / nie jest zdefiniowany dla wartoœci typów " + TypeName(exp->type) + " i " + TypeName(exp2->type) );
+																			if( ! TypesMatch( exp->type, exp2->type ) ) throw AlanException( token->bPos.ln, token->bPos.col, "Operator / nie jest zdefiniowany dla wartoÅ›ci typÃ³w " + TypeName(exp->type) + " i " + TypeName(exp2->type) );
 																			Cast(exp,exp2);
-																			if( 0 == exp )  throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma mo¿liwoœci rzutowania wartoœci do typu " + TypeName(exp->type) );
-																			if( 0 == exp2 ) throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma mo¿liwoœci rzutowania wartoœci do typu " + TypeName(exp2->type) );
+																			if( 0 == exp )  throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma moÅ¼liwoÅ›ci rzutowania wartoÅ›ci do typu " + TypeName(exp->type) );
+																			if( 0 == exp2 ) throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma moÅ¼liwoÅ›ci rzutowania wartoÅ›ci do typu " + TypeName(exp2->type) );
 																		}
 																		exp = new AlanExprDiv(exp,exp2);
 																	}
@@ -2007,13 +2007,13 @@ exp2 =
 castExpr();
         {
 #line 744 "ALan.cg"
- if( ! IsNumType(exp->type) )  throw AlanException( token->bPos.ln, token->bPos.col, "Operator % nie jest zdefiniowany dla wartoœci typu " + TypeName(exp->type) );
-																		if( ! IsNumType(exp2->type) ) throw AlanException( token->bPos.ln, token->bPos.col, "Operator % nie jest zdefiniowany dla wartoœci typu " + TypeName(exp2->type) );
+ if( ! IsNumType(exp->type) )  throw AlanException( token->bPos.ln, token->bPos.col, "Operator % nie jest zdefiniowany dla wartoÅ›ci typu " + TypeName(exp->type) );
+																		if( ! IsNumType(exp2->type) ) throw AlanException( token->bPos.ln, token->bPos.col, "Operator % nie jest zdefiniowany dla wartoÅ›ci typu " + TypeName(exp2->type) );
 																		if( exp2->type != exp->type ) {
-																			if( ! TypesMatch( exp->type, exp2->type ) ) throw AlanException( token->bPos.ln, token->bPos.col, "Operator % nie jest zdefiniowany dla wartoœci typów " + TypeName(exp->type) + " i " + TypeName(exp2->type) );
+																			if( ! TypesMatch( exp->type, exp2->type ) ) throw AlanException( token->bPos.ln, token->bPos.col, "Operator % nie jest zdefiniowany dla wartoÅ›ci typÃ³w " + TypeName(exp->type) + " i " + TypeName(exp2->type) );
 																			Cast(exp,exp2);
-																			if( 0 == exp )  throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma mo¿liwoœci rzutowania wartoœci do typu " + TypeName(exp->type) );
-																			if( 0 == exp2 ) throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma mo¿liwoœci rzutowania wartoœci do typu " + TypeName(exp2->type) );
+																			if( 0 == exp )  throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma moÅ¼liwoÅ›ci rzutowania wartoÅ›ci do typu " + TypeName(exp->type) );
+																			if( 0 == exp2 ) throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma moÅ¼liwoÅ›ci rzutowania wartoÅ›ci do typu " + TypeName(exp2->type) );
 																		}
 																		exp = new AlanExprMod(exp,exp2);
 																	}
@@ -2060,13 +2060,13 @@ exp2 =
 multiplicativeExpr();
       {
 #line 763 "ALan.cg"
- if( ! IsNumType(exp->type)  && exp->type != TP_STRING )  throw AlanException( token->bPos.ln, token->bPos.col, "Operator * nie jest zdefiniowany dla wartoœci typu " + TypeName(exp->type) );
-																								if( ! IsNumType(exp2->type) && exp2->type != TP_STRING ) throw AlanException( token->bPos.ln, token->bPos.col, "Operator * nie jest zdefiniowany dla wartoœci typu " + TypeName(exp2->type) );
+ if( ! IsNumType(exp->type)  && exp->type != TP_STRING )  throw AlanException( token->bPos.ln, token->bPos.col, "Operator * nie jest zdefiniowany dla wartoÅ›ci typu " + TypeName(exp->type) );
+																								if( ! IsNumType(exp2->type) && exp2->type != TP_STRING ) throw AlanException( token->bPos.ln, token->bPos.col, "Operator * nie jest zdefiniowany dla wartoÅ›ci typu " + TypeName(exp2->type) );
 																								if( exp2->type != exp->type ) {
-																									if( ! TypesMatch( exp->type, exp2->type ) ) throw AlanException( token->bPos.ln, token->bPos.col, "Operator * nie jest zdefiniowany dla wartoœci typów " + TypeName(exp->type) + " i " + TypeName(exp2->type) );
+																									if( ! TypesMatch( exp->type, exp2->type ) ) throw AlanException( token->bPos.ln, token->bPos.col, "Operator * nie jest zdefiniowany dla wartoÅ›ci typÃ³w " + TypeName(exp->type) + " i " + TypeName(exp2->type) );
 																									Cast(exp,exp2);
-																									if( 0 == exp )  throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma mo¿liwoœci rzutowania wartoœci do typu " + TypeName(exp->type) );
-																									if( 0 == exp2 ) throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma mo¿liwoœci rzutowania wartoœci do typu " + TypeName(exp2->type) );
+																									if( 0 == exp )  throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma moÅ¼liwoÅ›ci rzutowania wartoÅ›ci do typu " + TypeName(exp->type) );
+																									if( 0 == exp2 ) throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma moÅ¼liwoÅ›ci rzutowania wartoÅ›ci do typu " + TypeName(exp2->type) );
 																								}
 																								exp = new AlanExprAdd(exp,exp2);
 																							}
@@ -2081,13 +2081,13 @@ exp2 =
 multiplicativeExpr();
       {
 #line 773 "ALan.cg"
- if( ! IsNumType(exp->type) )  throw AlanException( token->bPos.ln, token->bPos.col, "Operator * nie jest zdefiniowany dla wartoœci typu " + TypeName(exp->type) );
-																								if( ! IsNumType(exp2->type) ) throw AlanException( token->bPos.ln, token->bPos.col, "Operator * nie jest zdefiniowany dla wartoœci typu " + TypeName(exp2->type) );
+ if( ! IsNumType(exp->type) )  throw AlanException( token->bPos.ln, token->bPos.col, "Operator * nie jest zdefiniowany dla wartoÅ›ci typu " + TypeName(exp->type) );
+																								if( ! IsNumType(exp2->type) ) throw AlanException( token->bPos.ln, token->bPos.col, "Operator * nie jest zdefiniowany dla wartoÅ›ci typu " + TypeName(exp2->type) );
 																								if( exp2->type != exp->type ) {
-																									if( ! TypesMatch( exp->type, exp2->type ) ) throw AlanException( token->bPos.ln, token->bPos.col, "Operator * nie jest zdefiniowany dla wartoœci typów " + TypeName(exp->type) + " i " + TypeName(exp2->type) );
+																									if( ! TypesMatch( exp->type, exp2->type ) ) throw AlanException( token->bPos.ln, token->bPos.col, "Operator * nie jest zdefiniowany dla wartoÅ›ci typÃ³w " + TypeName(exp->type) + " i " + TypeName(exp2->type) );
 																									Cast(exp,exp2);
-																									if( 0 == exp )  throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma mo¿liwoœci rzutowania wartoœci do typu " + TypeName(exp->type) );
-																									if( 0 == exp2 ) throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma mo¿liwoœci rzutowania wartoœci do typu " + TypeName(exp2->type) );
+																									if( 0 == exp )  throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma moÅ¼liwoÅ›ci rzutowania wartoÅ›ci do typu " + TypeName(exp->type) );
+																									if( 0 == exp2 ) throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma moÅ¼liwoÅ›ci rzutowania wartoÅ›ci do typu " + TypeName(exp2->type) );
 																								}
 																								exp = new AlanExprSub(exp,exp2);
 																							}
@@ -2141,14 +2141,14 @@ additiveExpr();
     {
 #line 791 "ALan.cg"
  if( op > 1 ) {
-																	if( ! IsRelType(exp->type) )  throw AlanException( token->bPos.ln, token->bPos.col, "Operator " + op_tok + " nie jest zdefiniowany dla wartoœci typu " + TypeName(exp->type) );
-																	if( ! IsRelType(exp2->type) ) throw AlanException( token->bPos.ln, token->bPos.col, "Operator " + op_tok + " nie jest zdefiniowany dla wartoœci typu " + TypeName(exp->type) );
+																	if( ! IsRelType(exp->type) )  throw AlanException( token->bPos.ln, token->bPos.col, "Operator " + op_tok + " nie jest zdefiniowany dla wartoÅ›ci typu " + TypeName(exp->type) );
+																	if( ! IsRelType(exp2->type) ) throw AlanException( token->bPos.ln, token->bPos.col, "Operator " + op_tok + " nie jest zdefiniowany dla wartoÅ›ci typu " + TypeName(exp->type) );
 																}
 																if( exp2->type != exp->type ) {
-																	if( ! TypesMatch( exp->type, exp2->type ) ) throw AlanException( token->bPos.ln, token->bPos.col, "Operator * nie jest zdefiniowany dla wartoœci typów " + TypeName(exp->type) + " i " + TypeName(exp2->type) );
+																	if( ! TypesMatch( exp->type, exp2->type ) ) throw AlanException( token->bPos.ln, token->bPos.col, "Operator * nie jest zdefiniowany dla wartoÅ›ci typÃ³w " + TypeName(exp->type) + " i " + TypeName(exp2->type) );
 																	Cast(exp,exp2);
-																	if( 0 == exp )  throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma mo¿liwoœci rzutowania wartoœci do typu " + TypeName(exp->type) );
-																	if( 0 == exp2 ) throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma mo¿liwoœci rzutowania wartoœci do typu " + TypeName(exp2->type) );
+																	if( 0 == exp )  throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma moÅ¼liwoÅ›ci rzutowania wartoÅ›ci do typu " + TypeName(exp->type) );
+																	if( 0 == exp2 ) throw AlanException( token->bPos.ln, token->bPos.col, "Nie ma moÅ¼liwoÅ›ci rzutowania wartoÅ›ci do typu " + TypeName(exp2->type) );
 																}
 																switch( op ) {
 																	case 0: exp = new AlanExprEq(exp,exp2); break;
@@ -2275,7 +2275,7 @@ exp =
 unaryBoolExpr();
     {
 #line 829 "ALan.cg"
-	if( exp->type != TP_BOOL ) throw AlanException( token->bPos.ln, token->bPos.col, "Operator NOT nie jest zdefiniowany dla wartoœci typu " + TypeName(exp->type) );
+	if( exp->type != TP_BOOL ) throw AlanException( token->bPos.ln, token->bPos.col, "Operator NOT nie jest zdefiniowany dla wartoÅ›ci typu " + TypeName(exp->type) );
 																				return new AlanExprNot(exp);
 																			}
 #line 2282 "alan_parser.cc"
@@ -2313,8 +2313,8 @@ exp2 =
 unaryBoolExpr();
     {
 #line 838 "ALan.cg"
-	if( exp->type != TP_BOOL )  throw AlanException( token->bPos.ln, token->bPos.col, "Operator AND nie jest zdefiniowany dla wartoœci typu " + TypeName(exp->type) );
-																					if( exp2->type != TP_BOOL ) throw AlanException( token->bPos.ln, token->bPos.col, "Operator AND nie jest zdefiniowany dla wartoœci typu " + TypeName(exp2->type) );
+	if( exp->type != TP_BOOL )  throw AlanException( token->bPos.ln, token->bPos.col, "Operator AND nie jest zdefiniowany dla wartoÅ›ci typu " + TypeName(exp->type) );
+																					if( exp2->type != TP_BOOL ) throw AlanException( token->bPos.ln, token->bPos.col, "Operator AND nie jest zdefiniowany dla wartoÅ›ci typu " + TypeName(exp2->type) );
 																					exp = new AlanExprAnd(exp,exp2);
 																				}
 #line 2321 "alan_parser.cc"
@@ -2357,8 +2357,8 @@ exp2 =
 mulBoolExpr();
     {
 #line 850 "ALan.cg"
-	if( exp->type != TP_BOOL )  throw AlanException( token->bPos.ln, token->bPos.col, "Operator OR nie jest zdefiniowany dla wartoœci typu " + TypeName(exp->type) );
-																			if( exp2->type != TP_BOOL ) throw AlanException( token->bPos.ln, token->bPos.col, "Operator OR nie jest zdefiniowany dla wartoœci typu " + TypeName(exp2->type) );
+	if( exp->type != TP_BOOL )  throw AlanException( token->bPos.ln, token->bPos.col, "Operator OR nie jest zdefiniowany dla wartoÅ›ci typu " + TypeName(exp->type) );
+																			if( exp2->type != TP_BOOL ) throw AlanException( token->bPos.ln, token->bPos.col, "Operator OR nie jest zdefiniowany dla wartoÅ›ci typu " + TypeName(exp2->type) );
 																			exp = new AlanExprOr(exp,exp2);
 																		}
 #line 2365 "alan_parser.cc"

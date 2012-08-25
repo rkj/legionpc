@@ -530,7 +530,7 @@ int TextureManager :: Load(const string& filename,const string& root) {
 
 int TextureManager :: Load(const Settings& sets,const string& root) {
 	if( ! sets.isValid() ) {
-		ERROR("Obiekt opisuj¹cy tekstury jest niewa¿ny");
+		ERROR("Obiekt opisujÄ…cy tekstury jest niewaÅ¼ny");
 		return -2;
 	}
 
@@ -624,7 +624,7 @@ int TextureManager :: Load(const Settings& sets,const string& root) {
 
 		pt = GetPTex(pid);
 		if( 0 == pt ) {
-			ERROR("Brak tekstury fizycznej o ID=\"" + pid + "\". Tekstura logiczna o ID=\"" + id + "\" nie mo¿e byæ utworzona !!!");
+			ERROR("Brak tekstury fizycznej o ID=\"" + pid + "\". Tekstura logiczna o ID=\"" + id + "\" nie moÅ¼e byÄ‡ utworzona !!!");
 		} else {
 			lt = new LTex();
 			lt->Set(pt,ix1,iy1,ix2,iy2);

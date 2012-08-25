@@ -50,7 +50,7 @@ void WCZYTAJ_BRON(void) {
 		//	   Data "chromic",12,5,0,0,1,15,4,8,0,350,3
 		//	   '10
 		//	   Data "golden",25,10,0,0,1,12,4,9,0,1100,3
-		//	   '-mîoty            s p s e t  w  g d mag cena
+		//	   '-mÃ®oty            s p s e t  w  g d mag cena
 		//	   Data "stone",7,2,0,0,11,16,4,0,0,150,4
 		//	   Data "heavy",10,3,0,0,11,30,4,1,0,300,4
 		//	   Data "diamond",25,5,0,0,11,25,4,2,0,1050,4
@@ -60,12 +60,12 @@ void WCZYTAJ_BRON(void) {
 		//	   Data "steel",0,15,0,0,3,8,4,0,0,150,15
 		//	   Data "storm",0,19,0,0,3,15,4,0,0,300,15
 		//	   Data "gremlin's",0,25,0,0,3,10,4,0,0,900,1
-		//	   '-îuki            s p s e t w g d mag cena
+		//	   '-Ã®uki            s p s e t w g d mag cena
 		//	   Data "common",10,0,0,0,4,1,4,0,0,80,5
 		//	   '20
 		//	   Data "special",15,0,0,0,4,2,4,0,0,190,5
 		//	   Data "elf",20,0,0,0,4,1,4,0,0,400,5
-		//	   '-heîmy
+		//	   '-heÃ®my
 		//	   Data "pointed",0,5,0,0,7,1,1,0,0,100,8
 		//	   Data "horned",2,5,0,0,7,2,1,0,0,170,8
 		//	   'buty            s p s e t w g d mag cena
@@ -78,7 +78,7 @@ void WCZYTAJ_BRON(void) {
 		//	   Data "heavy",0,22,0,0,6,30,2,0,0,390,18
 		//	   '30
 		//	   Data "silver",0,28,0,0,6,15,2,0,0,900,18
-		//	   'zioîa              s p s e t  w g d mag cena
+		//	   'zioÃ®a              s p s e t  w g d mag cena
 		//	   Data "sterydius",0,2,0,2,13,0,1,0,0,300,12
 		//	   Data "furialis",2,0,5,2,13,0,1,0,0,500,12
 		//	   Data "mole's root",-5,0,0,-40,13,0,1,0,0,5000,12
@@ -86,7 +86,7 @@ void WCZYTAJ_BRON(void) {
 		//	   Data "spinach",3,0,0,0,13,0,1,0,0,300,12
 		//	   Data "bay leaf",0,0,0,30,13,0,1,0,0,200,12
 		//	   Data "black grass ",0,0,0,0,13,0,1,0,30,400,12
-		//	   'strzaîy          s p s e t w g d mag cena
+		//	   'strzaÃ®y          s p s e t w g d mag cena
 		//	   Data "common",15,0,0,0,5,0,4,0,0,50,6
 		//	   Data "poisoned",20,0,0,0,5,0,4,10,0,100,6
 		//	   '40
@@ -119,13 +119,13 @@ void WCZYTAJ_BRON(void) {
 		//	   Data "ruining",40,10,0,0,15,120,4,0,0,450,32
 		//	   Data "light",30,6,0,0,15,50,4,0,0,600,32
 		//	   Data "ogre",90,15,0,0,15,60,4,0,0,1150,32
-		//	   'gîazy              s p sz e t   w g d mag cena bb
+		//	   'gÃ®azy              s p sz e t   w g d mag cena bb
 		//	   Data "small",10,0,0,0,16,10,4,0,0,2,33
 		//	   Data "big",20,0,0,0,16,20,4,0,0,4,33
 		//	   Data "medium",15,0,0,0,16,18,4,0,0,4,33
 		//	   Data "granite",40,0,0,0,16,20,4,0,0,20,33
 		//	   Data "marble",30,0,0,0,16,19,4,0,0,15,33
-		//	   'heîmy            s p s e t w g d mag cena bb
+		//	   'heÃ®my            s p s e t w g d mag cena bb
 		//	   Data "Klingon",2,6,0,0,7,2,1,0,0,600,19
 		//	   Data "Magic",2,6,3,0,7,-40,1,0,0,870,8
 		//	   '70
@@ -136,17 +136,17 @@ void WCZYTAJ_BRON(void) {
 		//	   Data "honey",4,0,0,30,18,1,1,0,0,490,16
 		//	   Data "halucinum",0,0,0,0,18,1,1,0,50,450,16
 		//	   Data "cure",0,0,0,70,18,1,1,0,0,350,16
-		//	   'ûywnoôê              s p s e  t w g d mag cena bb
+		//	   'Å±ywnoÃ´Ä™              s p s e  t w g d mag cena bb
 		//	   Data "hog meat",0,0,0,0,17,2,4,35,0,20,22
 		//	   Data "gargoyl meat",0,0,0,0,17,2,4,85,0,50,22
 		//	   Data "wolf meat",0,0,0,0,17,2,4,20,0,40,22
-		//	   'kosztownoôci     s p s e  t w g d mag cena bb
+		//	   'kosztownoÃ´ci     s p s e  t w g d mag cena bb
 		//	   Data "gold",0,0,0,0,14,0,4,0,0,2000,21
 		//	   '80
 		//	   Data "stones",0,0,0,0,14,0,4,0,0,1500,21
 		//	   Data "coins",0,0,0,0,14,0,4,0,0,3000,21
 		//	   Data "diamonds",0,0,0,0,14,0,4,0,0,5000,21
-		//	   'skóry            s p s e  t w g d mag cena bb
+		//	   'skÃ³ry            s p s e  t w g d mag cena bb
 		//	   Data "hog",0,5,0,0,19,0,2,0,0,200,24
 		//	   Data "gargoyl",0,9,0,0,19,0,2,0,0,1450,24
 		//	   Data "wolf",0,8,0,0,19,0,2,0,0,350,24
@@ -180,11 +180,11 @@ void WCZYTAJ_BRON(void) {
 		//	   'pterodon
 		//	   Data "haunch",0,0,0,0,17,2,4,25,0,20,22
 		//	   Data "fur",0,3,0,0,19,0,2,0,0,280,24
-		//	   '-îuki            s p s e t w g d mag cena
+		//	   '-Ã®uki            s p s e t w g d mag cena
 		//	   Data "Falcon",38,0,0,0,4,1,4,0,0,1180,5
-		//	   'strzaîy              s p s e t w g d mag cena
+		//	   'strzaÃ®y              s p s e t w g d mag cena
 		//	   Data "Falcon talons",35,0,0,0,5,0,4,0,0,1150,6
-		//	   'heîmy            s p s e t w g d mag cena bb
+		//	   'heÃ®my            s p s e t w g d mag cena bb
 		//	   Data "Sorasil's",8,10,5,0,7,0,1,0,0,1220,19
 		//	   'czary3                  s p s e  t w g  d mag cena bb
 		//	   Data "Unsure (12)",20,0,0,0,12,0,4,10,12,200,14
@@ -199,7 +199,7 @@ void WCZYTAJ_BRON(void) {
 		//	   Data "orks",10,7,0,0,1,37,4,0,0,120,3
 		//	   Data "silver",14,5,0,0,1,27,4,0,0,620,3
 		//	   Data "war",8,3,0,0,1,20,4,0,0,190,3
-		//	   'mîoty
+		//	   'mÃ®oty
 		//	   Data "battle",9,2,0,0,11,26,4,0,0,250,4
 		//	   Data "steel",11,5,0,0,11,18,4,0,0,450,4
 		//	   Data "granite",13,7,0,0,11,39,4,0,0,730,4
@@ -236,7 +236,7 @@ void WCZYTAJ_BRON(void) {
 		READBRON("b009"/*"chromic"*/,12,5,0,0,1,15,4,8,0,350,3);
 		//	   '10
 		READBRON("b010"/*"golden"*/,25,10,0,0,1,12,4,9,0,1100,3);
-		//	   '-mîoty            s p s e t  w  g d mag cena
+		//	   '-mÃ®oty            s p s e t  w  g d mag cena
 		READBRON("b011"/*"stone"*/,7,2,0,0,11,16,4,0,0,150,4);
 		READBRON("b012"/*"heavy"*/,10,3,0,0,11,30,4,1,0,300,4);
 		READBRON("b013"/*"diamond"*/,25,5,0,0,11,25,4,2,0,1050,4);
@@ -246,12 +246,12 @@ void WCZYTAJ_BRON(void) {
 		READBRON("b016"/*"steel"*/,0,15,0,0,3,8,4,0,0,150,15);
 		READBRON("b017"/*"storm"*/,0,19,0,0,3,15,4,0,0,300,15);
 		READBRON("b018"/*"gremlin's"*/,0,25,0,0,3,10,4,0,0,900,1);
-		//	   '-îuki            s p s e t w g d mag cena
+		//	   '-Ã®uki            s p s e t w g d mag cena
 		READBRON("b019"/*"common"*/,10,0,0,0,4,1,4,0,0,80,5);
 		//	   '20
 		READBRON("b020"/*"special"*/,15,0,0,0,4,2,4,0,0,190,5);
 		READBRON("b021"/*"elf"*/,20,0,0,0,4,1,4,0,0,400,5);
-		//	   '-heîmy
+		//	   '-heÃ®my
 		READBRON("b022"/*"pointed"*/,0,5,0,0,7,1,1,0,0,100,8);
 		READBRON("b023"/*"horned"*/,2,5,0,0,7,2,1,0,0,170,8);
 		//	   'buty            s p s e t w g d mag cena
@@ -264,7 +264,7 @@ void WCZYTAJ_BRON(void) {
 		READBRON("b029"/*"heavy"*/,0,22,0,0,6,30,2,0,0,390,18);
 		//	   '30
 		READBRON("b030"/*"silver"*/,0,28,0,0,6,15,2,0,0,900,18);
-		//	   'zioîa              s p s e t  w g d mag cena
+		//	   'zioÃ®a              s p s e t  w g d mag cena
 		READBRON("b031"/*"sterydius"*/,0,2,0,2,13,0,1,0,0,300,12);
 		READBRON("b032"/*"furialis"*/,2,0,5,2,13,0,1,0,0,500,12);
 		READBRON("b033"/*"mole's root"*/,-5,0,0,-40,13,0,1,0,0,5000,12);
@@ -272,7 +272,7 @@ void WCZYTAJ_BRON(void) {
 		READBRON("b035"/*"spinach"*/,3,0,0,0,13,0,1,0,0,300,12);
 		READBRON("b036"/*"bay leaf"*/,0,0,0,30,13,0,1,0,0,200,12);
 		READBRON("b037"/*"black grass "*/,0,0,0,0,13,0,1,0,30,400,12);
-		//	   'strzaîy          s p s e t w g d mag cena
+		//	   'strzaÃ®y          s p s e t w g d mag cena
 		READBRON("b038"/*"common"*/,15,0,0,0,5,0,4,0,0,50,6);
 		READBRON("b039"/*"poisoned"*/,20,0,0,0,5,0,4,10,0,100,6);
 		//	   '40
@@ -305,13 +305,13 @@ void WCZYTAJ_BRON(void) {
 		READBRON("b060"/*"ruining"*/,40,10,0,0,15,120,4,0,0,450,32);
 		READBRON("b061"/*"light"*/,30,6,0,0,15,50,4,0,0,600,32);
 		READBRON("b062"/*"ogre"*/,90,15,0,0,15,60,4,0,0,1150,32);
-		//	   'gîazy              s p sz e t   w g d mag cena bb
+		//	   'gÃ®azy              s p sz e t   w g d mag cena bb
 		READBRON("b063"/*"small"*/,10,0,0,0,16,10,4,0,0,2,33);
 		READBRON("b064"/*"big"*/,20,0,0,0,16,20,4,0,0,4,33);
 		READBRON("b065"/*"medium"*/,15,0,0,0,16,18,4,0,0,4,33);
 		READBRON("b066"/*"granite"*/,40,0,0,0,16,20,4,0,0,20,33);
 		READBRON("b067"/*"marble"*/,30,0,0,0,16,19,4,0,0,15,33);
-		//	   'heîmy            s p s e t w g d mag cena bb
+		//	   'heÃ®my            s p s e t w g d mag cena bb
 		READBRON("b068"/*"Klingon"*/,2,6,0,0,7,2,1,0,0,600,19);
 		READBRON("b069"/*"Magic"*/,2,6,3,0,7,-40,1,0,0,870,8);
 		//	   '70
@@ -322,17 +322,17 @@ void WCZYTAJ_BRON(void) {
 		READBRON("b073"/*"honey"*/,4,0,0,30,18,1,1,0,0,490,16);
 		READBRON("b074"/*"halucinum"*/,0,0,0,0,18,1,1,0,50,450,16);
 		READBRON("b075"/*"cure"*/,0,0,0,70,18,1,1,0,0,350,16);
-		//	   'ûywnoôê              s p s e  t w g d mag cena bb
+		//	   'Å±ywnoÃ´Ä™              s p s e  t w g d mag cena bb
 		READBRON("b076"/*"hog meat"*/,0,0,0,0,17,2,4,35,0,20,22);
 		READBRON("b077"/*"gargoyl meat"*/,0,0,0,0,17,2,4,85,0,50,22);
 		READBRON("b078"/*"wolf meat"*/,0,0,0,0,17,2,4,20,0,40,22);
-		//	   'kosztownoôci     s p s e  t w g d mag cena bb
+		//	   'kosztownoÃ´ci     s p s e  t w g d mag cena bb
 		READBRON("b079"/*"gold"*/,0,0,0,0,14,0,4,0,0,2000,21);
 		//	   '80
 		READBRON("b080"/*"stones"*/,0,0,0,0,14,0,4,0,0,1500,21);
 		READBRON("b081"/*"coins"*/,0,0,0,0,14,0,4,0,0,3000,21);
 		READBRON("b082"/*"diamonds"*/,0,0,0,0,14,0,4,0,0,5000,21);
-		//	   'skóry            s p s e  t w g d mag cena bb
+		//	   'skÃ³ry            s p s e  t w g d mag cena bb
 		READBRON("b083"/*"hog"*/,0,5,0,0,19,0,2,0,0,200,24);
 		READBRON("b084"/*"gargoyl"*/,0,9,0,0,19,0,2,0,0,1450,24);
 		READBRON("b085"/*"wolf"*/,0,8,0,0,19,0,2,0,0,350,24);
@@ -366,11 +366,11 @@ void WCZYTAJ_BRON(void) {
 		//	   'pterodon
 		READBRON("b104"/*"haunch"*/,0,0,0,0,17,2,4,25,0,20,22);
 		READBRON("b105"/*"fur"*/,0,3,0,0,19,0,2,0,0,280,24);
-		//	   '-îuki            s p s e t w g d mag cena
+		//	   '-Ã®uki            s p s e t w g d mag cena
 		READBRON("b106"/*"Falcon"*/,38,0,0,0,4,1,4,0,0,1180,5);
-		//	   'strzaîy              s p s e t w g d mag cena
+		//	   'strzaÃ®y              s p s e t w g d mag cena
 		READBRON("b107"/*"Falcon talons"*/,35,0,0,0,5,0,4,0,0,1150,6);
-		//	   'heîmy            s p s e t w g d mag cena bb
+		//	   'heÃ®my            s p s e t w g d mag cena bb
 		READBRON("b108"/*"Sorasil's"*/,8,10,5,0,7,0,1,0,0,1220,19);
 		//	   'czary3                  s p s e  t w g  d mag cena bb
 		READBRON("b109"/*"Unsure (12)"*/,20,0,0,0,12,0,4,10,12,200,14);
@@ -385,7 +385,7 @@ void WCZYTAJ_BRON(void) {
 		READBRON("b114"/*"orks"*/,10,7,0,0,1,37,4,0,0,120,3);
 		READBRON("b115"/*"silver"*/,14,5,0,0,1,27,4,0,0,620,3);
 		READBRON("b116"/*"war"*/,8,3,0,0,1,20,4,0,0,190,3);
-		//	   'mîoty
+		//	   'mÃ®oty
 		READBRON("b117"/*"battle"*/,9,2,0,0,11,26,4,0,0,250,4);
 		READBRON("b118"/*"steel"*/,11,5,0,0,11,18,4,0,0,450,4);
 		READBRON("b119"/*"granite"*/,13,7,0,0,11,39,4,0,0,730,4);
@@ -438,7 +438,7 @@ void WCZYTAJ_RASY(void) {
 			//	   Data "humanoid",40,40,30,0,0,35,42,18+63+128+32
 			//	   Data "spider  ",1,170,40,0,0,2,42,18+63+128+32
 			//	   Data "boss",200,190,40,0,0,90,46,241
-			//	   'smok,jaszczur,golem,upiór,kronk
+			//	   'smok,jaszczur,golem,upiÃ³r,kronk
 
 	READ("RA00",30,25,25,20,2,0,10,18+63+48);
 	READ("RA01",45,30,15,10,1,0,5,18+63+32);
@@ -467,12 +467,12 @@ void WCZYTAJ_RASY(void) {
 	//	   ZNAKI:
 	//	   Data "a","b","c","d","e","f","g","h","i","j"
 	//	   Data "k","l","m","n","o","p","r","s","t","u"
-	//	   Data "w","û","ô","z"
+	//	   Data "w","Å±","Ã´","z"
 	//
 	const char* znaki[] = {
 		"a","b","c","d","e","f","g","h","i","j",
 		"k","l","m","n","o","p","r","s","t","u",
-		"w","û","ô","z"
+		"w","Å±","Ã´","z"
 	};
 	for(i=1;i<24;++i)
 		ZNAKI_S[i]=znaki[i-1];
@@ -861,7 +861,7 @@ void WCZYTAJ_PRZYGODY(void) {
 		//	   Data "There is no way out from this damned swaps !"
 		//	   '11----------
 		//	   Data "$'s band."
-		//	   Data "A grim group appeared in the area. A psychodelic ¹ called $ is their leader. There is a reward for his head."
+		//	   Data "A grim group appeared in the area. A psychodelic Ä… called $ is their leader. There is a reward for his head."
 		//	   Data "I'm looking for $'s band."
 		//	   Data "I would like to help you, but I don't know where it is."
 		//	   Data "I hear he has trained gargoils at his service and great warriors. He fights very well although he lost his mind. He broke a chaser-squad on @."

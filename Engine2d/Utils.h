@@ -4,37 +4,37 @@
 #include <string>
 #include <iostream>
 
-/// Szablon funkcji zwracaj¹cej wartoœæ bezwzglêdn¹
+/// Szablon funkcji zwracajÄ…cej wartoÅ›Ä‡ bezwzglÄ™dnÄ…
 template<typename TYP>
 TYP Abs(TYP v) {
 	if(v<0) return -v; return v;
 }
 
-/// Szablon funkcji zwracaj¹cej wartoœæ maksymaln¹
+/// Szablon funkcji zwracajÄ…cej wartoÅ›Ä‡ maksymalnÄ…
 template<typename TYP>
 TYP Max(TYP a,TYP b) {
 	if(a<b) return b; return a;
 }
 
-/// Szablon funkcji zwracaj¹cej wartoœæ minimaln¹
+/// Szablon funkcji zwracajÄ…cej wartoÅ›Ä‡ minimalnÄ…
 template<typename TYP>
 TYP Min(TYP a,TYP b) {
 	if(a<b) return a; return b;
 }
 
-/// funkcja konwertuje wartosc ca³kowit¹ na string
+/// funkcja konwertuje wartosc caÅ‚kowitÄ… na string
 std::string toString(int v,const std::string& fmt = "%d");
 
-/// funkcja konwertuje wartosc ca³kowit¹ na string
+/// funkcja konwertuje wartosc caÅ‚kowitÄ… na string
 std::string toString(long v,const std::string& fmt = "%ld");
 
-/// funkcja konwertuje wartosc ca³kowit¹ na string
+/// funkcja konwertuje wartosc caÅ‚kowitÄ… na string
 std::string toString(unsigned long v,const std::string& fmt = "%lu");
 
-/// funkcja konwertuje wartosc zmiennoprzecinkow¹ na string
+/// funkcja konwertuje wartosc zmiennoprzecinkowÄ… na string
 std::string toString(float v,const std::string& fmt = "%f");
 
-/// funkcja konwertuje wartosc zmiennoprzecinkow¹ na string
+/// funkcja konwertuje wartosc zmiennoprzecinkowÄ… na string
 std::string toString(double v,const std::string& fmt = "%lf");
 
 /// funkcja konwertuje string na wartosc int

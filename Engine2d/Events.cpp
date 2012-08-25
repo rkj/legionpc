@@ -7,7 +7,7 @@ namespace Core {
 	
 extern void _CoreResizeEvent(int w,int h);
 
-//wskazniki na funkcjê, ktore beda wolane w przypadku zdarzenia
+//wskazniki na funkcjÄ™, ktore beda wolane w przypadku zdarzenia
 static QuitEvent						ifp_quit = 0;
 static KeyDownEvent					ifp_keydown = 0;
 static KeyUpEvent						ifp_keyup = 0;

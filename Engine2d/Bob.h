@@ -13,11 +13,11 @@ namespace Gfx {
 
 	class LTex;
 
-  /** Klasa bazowa reprezentuj¹ca obiekt graficzny wype³niony tekstur¹.
+  /** Klasa bazowa reprezentujÄ…ca obiekt graficzny wypeÅ‚niony teksturÄ….
    */
 	class Blitable {
 		protected:
-			/// Wskazanie na tekturê logiczn¹
+			/// Wskazanie na tekturÄ™ logicznÄ…
 			const LTex *tex;
 		public:
 			/// Konstruktor
@@ -32,68 +32,68 @@ namespace Gfx {
 			/// Rysuje obiekt na ekranie przesuniety o podane offsety
 			virtual void Blit(float xo,float yo) = 0;
 
-			/// Zwraca teksturê logiczn¹ skojarzon¹ z obiektem
+			/// Zwraca teksturÄ™ logicznÄ… skojarzonÄ… z obiektem
 			virtual const LTex* GetTex(void) const { return tex; }
 
-			/// Zmienia teksturê logiczn¹ obiektu
+			/// Zmienia teksturÄ™ logicznÄ… obiektu
 			virtual void SetTex(const LTex *t) { tex=t; }
 
 	};
 
 
-  /** Klasa reprezentuje obiekt graficzny (ruchomy b¹dŸ nie) wype³niony tekstur¹.
-	    Wszystko inne jest napisane po to aby na ekranie pojawi³ siê obiekt graficzny.
-      Bob to nic innego jak wyteksturowany prostok¹t po³o¿ony w dowolnym miejscu
-      pola gry (nawet poza czêœci¹ widoczn¹ na ekranie).
+  /** Klasa reprezentuje obiekt graficzny (ruchomy bÄ…dÅº nie) wypeÅ‚niony teksturÄ….
+	    Wszystko inne jest napisane po to aby na ekranie pojawiÅ‚ siÄ™ obiekt graficzny.
+      Bob to nic innego jak wyteksturowany prostokÄ…t poÅ‚oÅ¼ony w dowolnym miejscu
+      pola gry (nawet poza czÄ™Å›ciÄ… widocznÄ… na ekranie).
       Bob to rowniez mozliwosc kontrolowania polozenia, rozmiaru i wygladu obiektu
       graficznego za pomoca jezyka ALAN.
    */
 	class Bob : public Blitable, public AlanControlable {
 		protected:
 
-			/// Ustawia wartoœci inicjalne obiektu
+			/// Ustawia wartoÅ›ci inicjalne obiektu
 			void _reset(void);
 
-			/// Niszczy sk³adowe obiektu
+			/// Niszczy skÅ‚adowe obiektu
 			void _destroy(void);
 
-			/// Wpó³rzêdna X polo¿enie obiektu na polu gry (+ x_hotspot)
+			/// WpÃ³Å‚rzÄ™dna X poloÅ¼enie obiektu na polu gry (+ x_hotspot)
 			GLfloat x;
 
-			/// Wpó³rzêdna y polo¿enie obiektu na polu gry (+ y_hotspot)
+			/// WpÃ³Å‚rzÄ™dna y poloÅ¼enie obiektu na polu gry (+ y_hotspot)
 			GLfloat y;
 
-			/// K¹t obrotu wokó³ po³o¿enia
+			/// KÄ…t obrotu wokÃ³Å‚ poÅ‚oÅ¼enia
 			GLfloat	alpha;
 
-			/// Szerokoœæ boba w pixlach (brana z tekstury)
+			/// SzerokoÅ›Ä‡ boba w pixlach (brana z tekstury)
 			GLfloat	w;
 
-			/// Wysokoœæ boba w pixlach (brana z tekstury)
+			/// WysokoÅ›Ä‡ boba w pixlach (brana z tekstury)
 			GLfloat h;
 
-			/// Skala pozioma (rozci¹gniêcie w poziomie)
+			/// Skala pozioma (rozciÄ…gniÄ™cie w poziomie)
 			GLfloat sx;
 
-			/// Skala pionowa (rozci¹gniêcie w pionie)
+			/// Skala pionowa (rozciÄ…gniÄ™cie w pionie)
 			GLfloat sy;
 
-			/// Odleglosc od prawego gornego rogu do punktu, który chcemy uwa¿aæ za po³o¿enie oraz œrodek obrotu
+			/// Odleglosc od prawego gornego rogu do punktu, ktÃ³ry chcemy uwaÅ¼aÄ‡ za poÅ‚oÅ¼enie oraz Å›rodek obrotu
 			GLfloat x_hotspot;
 
-			/// Odleglosc od prawego gornego rogu do punktu, który chcemy uwa¿aæ za po³o¿enie oraz œrodek obrotu
+			/// Odleglosc od prawego gornego rogu do punktu, ktÃ³ry chcemy uwaÅ¼aÄ‡ za poÅ‚oÅ¼enie oraz Å›rodek obrotu
 			GLfloat y_hotspot;
 
-			/// Promieñ Boba = MAX(w,h) (do szybkiego poruszania sie po siatce)
+			/// PromieÅ„ Boba = MAX(w,h) (do szybkiego poruszania sie po siatce)
 			GLfloat	radius;
 
-			/// Wskazania na siatkê, w któr¹ jest wpiêty bob
+			/// Wskazania na siatkÄ™, w ktÃ³rÄ… jest wpiÄ™ty bob
 			Core::Grid *grid;
 
-			/// Wskazanie na obiekt okreslaj¹cy kolizyjnoœæ boba
+			/// Wskazanie na obiekt okreslajÄ…cy kolizyjnoÅ›Ä‡ boba
 			Fzx::Col  *col;
 
-			/// Czy Bob mo¿e siê przemieszczaæ (wa¿na wskazówka dla siatki)
+			/// Czy Bob moÅ¼e siÄ™ przemieszczaÄ‡ (waÅ¼na wskazÃ³wka dla siatki)
 			bool movable;
 
 			/// Kolor rysowanego boba
@@ -112,82 +112,82 @@ namespace Gfx {
 			/// Rysuje boba na ekranie przesunietego o podane offsety
 			void Blit(float xo,float yo);
 
-			/// Uwzglêdnienie zmiany polo¿enia boba na siatce
+			/// UwzglÄ™dnienie zmiany poloÅ¼enia boba na siatce
 			void Actualize(void);
 
-			/// Zwraca wspo³rzêdn¹ X po³o¿enia boba
+			/// Zwraca wspoÅ‚rzÄ™dnÄ… X poÅ‚oÅ¼enia boba
 			GLfloat GetX(void) const { return x + x_hotspot; }
 
-			/// Zwraca wspo³rzêdn¹ Y po³o¿enia boba
+			/// Zwraca wspoÅ‚rzÄ™dnÄ… Y poÅ‚oÅ¼enia boba
 			GLfloat GetY(void) const { return y + y_hotspot; }
 
-			/// Zwraca sumê po³o¿enia X + x_hotspot boba
+			/// Zwraca sumÄ™ poÅ‚oÅ¼enia X + x_hotspot boba
 			GLfloat GetXH(void) const { return x; }
 
-			/// Zwraca sumê po³o¿enia Y + y_hotspot boba
+			/// Zwraca sumÄ™ poÅ‚oÅ¼enia Y + y_hotspot boba
 			GLfloat GetYH(void) const { return y; }
 
-			/// Zwraca k¹t obrotu wokó³ punktu po³o¿enia (X,Y)
+			/// Zwraca kÄ…t obrotu wokÃ³Å‚ punktu poÅ‚oÅ¼enia (X,Y)
 			GLfloat GetRot(void) const { return alpha; }
 
-			/// Zwraca szerokoœæ boba
+			/// Zwraca szerokoÅ›Ä‡ boba
 			GLfloat GetWidth(void) const { return w; }
 
-			/// Zwraca wysokoœæ boba
+			/// Zwraca wysokoÅ›Ä‡ boba
 			GLfloat GetHeight(void) const { return h; }
 
-			/// Zwrac skalê boba w poziomie
+			/// Zwrac skalÄ™ boba w poziomie
 			GLfloat GetScaleX(void) const { return sx; }
 
-			/// Zwrac skalê boba w poziomie
+			/// Zwrac skalÄ™ boba w poziomie
 			GLfloat GetScaleY(void) const { return sy; }
 
-			/// Zwraca przesuniêcie poziome punktu po³o¿enia wzglêdem prawego-górnego rogu boba
+			/// Zwraca przesuniÄ™cie poziome punktu poÅ‚oÅ¼enia wzglÄ™dem prawego-gÃ³rnego rogu boba
 			GLfloat GetHotSpotX(void) const { return x_hotspot; }
 
-			/// Zwraca przesuniêcie pionowe punktu po³o¿enia wzglêdem prawego-górnego rogu boba
+			/// Zwraca przesuniÄ™cie pionowe punktu poÅ‚oÅ¼enia wzglÄ™dem prawego-gÃ³rnego rogu boba
 			GLfloat GetHotSpotY(void) const { return y_hotspot; }
 
-			/// Zwraca siatkê, w któr¹ wpiêty jest bob
+			/// Zwraca siatkÄ™, w ktÃ³rÄ… wpiÄ™ty jest bob
 			Core::Grid* GetGrid(void) const { return grid; }
 
 			/// Zwraca obiekt kolizji skojarzony z bobem
 			Fzx::Col* GetCol(void) const { return col; }
 
-			/// Zwraca <b>true</b> je¿eli bob mo¿e siê poruszaæ
+			/// Zwraca <b>true</b> jeÅ¼eli bob moÅ¼e siÄ™ poruszaÄ‡
 			bool IsMovable(void) { return movable; }
 
-			/// Zmienia pozycjê boba
+			/// Zmienia pozycjÄ™ boba
 			void SetPos(GLfloat x,GLfloat y) { this->x = x - x_hotspot; this->y = y - y_hotspot; if( grid ) grid->ActObj(this); }
 
-			/// Zmienia pozycjê i obrót boba
+			/// Zmienia pozycjÄ™ i obrÃ³t boba
 			void SetPos(GLfloat x,GLfloat y,GLfloat alpha) { this->x = x - x_hotspot; this->y = y - y_hotspot; this->alpha = alpha; if( grid ) grid->ActObj(this); }
 
 			/// Zmienia rozmiar boba
 			void SetSize(GLfloat w,GLfloat h) { this->w = w; this->h = h; this->radius = Max(w,h); if( grid ) grid->ActObj(this); }
 
-			/// Zmienia obrót boba
+			/// Zmienia obrÃ³t boba
 			void SetRot(GLfloat a) { alpha = a; }
 
-			/// Zmienia skalê boba
+			/// Zmienia skalÄ™ boba
 			void SetScale(GLfloat sx,GLfloat sy) { this->sx = sx; this->sy = sy; }
 
-			/// Zmienia przesuniêcie punktu po³o¿enia wzglêdem prawego-górnego rogu
+			/// Zmienia przesuniÄ™cie punktu poÅ‚oÅ¼enia wzglÄ™dem prawego-gÃ³rnego rogu
 			void SetHotSpot(GLfloat xhs,GLfloat yhs) { x += x_hotspot - xhs; y += y_hotspot - yhs; x_hotspot = xhs; y_hotspot = yhs; if( grid ) grid->ActObj(this); }
 
-			/// Zmienia teksturê logiczn¹ boba
+			/// Zmienia teksturÄ™ logicznÄ… boba
 			void SetTex(const LTex *t,bool preserve_size, bool preserve_hotspot);
 
-			/// Zmienia teksturê logiczn¹ boba
+			/// Zmienia teksturÄ™ logicznÄ… boba
 			void SetTex(const LTex *t) { SetTex(t,false,false); }
 
-			/// Zmienia siatkê, w która wpiêty jest bob
+			/// Zmienia siatkÄ™, w ktÃ³ra wpiÄ™ty jest bob
 			void SetGrid(Core::Grid *g) { grid = g; }
 
-			/// Zmienia obiekt kolizyjnoœci boba
+			/// Zmienia obiekt kolizyjnoÅ›ci boba
 			void SetCol(Fzx::Col *c) { col = c; if( grid ) grid->ActObjCol(this); }
 
-			/// Zmienia w³asnoœæ "ruchomoœci" boba
+			/// Zmienia wÅ‚asnoÅ›Ä‡ "ruchomoÅ›ci" boba
 			void Movable(bool m) { movable = m; }
 
 			/// Zmienia kolor rysowanego boba
@@ -207,11 +207,11 @@ namespace Gfx {
 			friend class Core::Grid;
 	};
 
-	/// Informuje engine, ¿e teraz nast¹pi seria rysowañ bobów (mo¿na tego nie robiæ, ale zwiêksza to wydajnoœæ)
+	/// Informuje engine, Å¼e teraz nastÄ…pi seria rysowaÅ„ bobÃ³w (moÅ¼na tego nie robiÄ‡, ale zwiÄ™ksza to wydajnoÅ›Ä‡)
 	void BeginBobBlits(void);
-	/// Informuje engine, ¿e teraz zakoñczy³a siê seria rysowañ bobów (mo¿na tego nie robiæ, ale zwiêksza to wydajnoœæ)
+	/// Informuje engine, Å¼e teraz zakoÅ„czyÅ‚a siÄ™ seria rysowaÅ„ bobÃ³w (moÅ¼na tego nie robiÄ‡, ale zwiÄ™ksza to wydajnoÅ›Ä‡)
 	void EndBobBlits(void);
-	/// Informuje engine, ¿e nast¹pi³a inna operacja graficzna ni¿ rysowanie boba i seria rysowañ zosta³a przerwana
+	/// Informuje engine, Å¼e nastÄ…piÅ‚a inna operacja graficzna niÅ¼ rysowanie boba i seria rysowaÅ„ zostaÅ‚a przerwana
 	void BreakBobBlits(void);
 
 	///licznik wykonanych blitow (narysowan Bobow) - do celow diagnostycznych

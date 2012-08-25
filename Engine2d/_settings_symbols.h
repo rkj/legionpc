@@ -289,8 +289,8 @@ public:
 	}
 
 	bool Exists(int cidx,int vidx) const {
-		//w "childs" mamy mapê string->ChildList
-		//obiekt Symbol, z którego pobieramy dane powinnien zawierac tylko
+		//w "childs" mamy mapÄ™ string->ChildList
+		//obiekt Symbol, z ktÃ³rego pobieramy dane powinnien zawierac tylko
 		//dzieciaki o jednakowej nazwie, a wiec mapa jest jednoelementowa
 		ChildList *cl = childs.rbegin()->second;
 		if( cl ) {
@@ -344,8 +344,8 @@ public:
 
 
 	bool GetValB(int cidx,int vidx) const {
-		//w "childs" mamy mapê string->ChildList
-		//obiekt Symbol, z którego pobieramy dane powinnien zawierac tylko
+		//w "childs" mamy mapÄ™ string->ChildList
+		//obiekt Symbol, z ktÃ³rego pobieramy dane powinnien zawierac tylko
 		//dzieciaki o jednakowej nazwie, a wiec mapa jest jednoelementowa
 		ChildList *cl = childs.rbegin()->second;
 		if( cl ) {
@@ -358,8 +358,8 @@ public:
 	}
 
 	long GetValI(int cidx,int vidx) const {
-		//w "childs" mamy mapê string->ChildList
-		//obiekt Symbol, z którego pobieramy dane powinnien zawierac tylko
+		//w "childs" mamy mapÄ™ string->ChildList
+		//obiekt Symbol, z ktÃ³rego pobieramy dane powinnien zawierac tylko
 		//dzieciaki o jednakowej nazwie, a wiec mapa jest jednoelementowa
 		ChildList *cl = childs.rbegin()->second;
 		if( cl ) {
@@ -372,8 +372,8 @@ public:
 	}
 
 	double GetValF(int cidx,int vidx) const {
-		//w "childs" mamy mapê string->ChildList
-		//obiekt Symbol, z którego pobieramy dane powinnien zawierac tylko
+		//w "childs" mamy mapÄ™ string->ChildList
+		//obiekt Symbol, z ktÃ³rego pobieramy dane powinnien zawierac tylko
 		//dzieciaki o jednakowej nazwie, a wiec mapa jest jednoelementowa
 		ChildList *cl = childs.rbegin()->second;
 		if( cl ) {
@@ -386,8 +386,8 @@ public:
 	}
 
 	const std::string& GetValS(int cidx,int vidx) const {
-		//w "childs" mamy mapê string->ChildList
-		//obiekt Symbol, z którego pobieramy dane powinnien zawierac tylko
+		//w "childs" mamy mapÄ™ string->ChildList
+		//obiekt Symbol, z ktÃ³rego pobieramy dane powinnien zawierac tylko
 		//dzieciaki o jednakowej nazwie, a wiec mapa jest jednoelementowa
 		static std::string ls_null = std::string("");
 		ChildList *cl = childs.rbegin()->second;

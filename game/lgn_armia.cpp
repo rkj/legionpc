@@ -42,7 +42,7 @@ void ZROB_ARMIE(void) {
 			B_DRAW(AR,X,Y,B1);	//	         B_DRAW[AR,X,Y,B1]
 		}											//	      Next K
 	}												//	   Next L
-													//	   'ustawianie pocz鈚kowej za頾gi
+													//	   'ustawianie pocz芒tkowej za卯ogi
 													//
 	X=Rnd(600)+20;					//	   X=Rnd(600)+20
 	Y=Rnd(490)+10;					//	   Y=Rnd(490)+10
@@ -340,7 +340,7 @@ void _ARMIA(aint A) {
 								TER2=MIASTA[TEREN-70][1][M_X];//	                        TER2=MIASTA(TEREN-70,1,M_X)
 								RYSUJ_SCENERIE(TER2,TEREN-70);//	                        RYSUJ_SCENERIE[TER2,TEREN-70]
 								WRG=40;										//	                        WRG=40
-																					//	                        'ustaw wie鬾iak體
+																					//	                        'ustaw wie么niak贸w
 								for(I=1;I<=7;++I) {				//	                        For I=1 To 7 : NOWA_POSTAC[40,I,9] : Next I
 									NOWA_POSTAC(40,I,9);
 								}
@@ -361,7 +361,7 @@ void _ARMIA(aint A) {
 							}														//	                     End If
 							USTAW_WOJSKO(ARM,1,1,0);		//	                     USTAW_WOJSKO[ARM,1,1,0]
 							MAIN_ACTION();							//	                     MAIN_ACTION
-																					//	                     'skasuj wie鬾iak體
+																					//	                     'skasuj wie么niak贸w
 							for(I=0;I<=10;++I) {				//	                     For I=0 To 10 : ARMIA(40,I,TE)=0 : Next I
 								ARMIA[40][I][TE]=0;
 							}

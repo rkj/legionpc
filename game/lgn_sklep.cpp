@@ -317,8 +317,8 @@ void _SKLEP(aint pMIASTO,aint pSNR,aint pA,aint pNR2) {
 																																				//	   Colour 0,$310
 	GADGET(6,2,200,40,"",19,6,1000,1,-1);																		//	   GADGET[6,2,200,40,"",19,6,0,1,-1]
 	GADGET(234,2,80,40,"",19,6,1000,1,-1);																		//	   GADGET[234,2,80,40,"",19,6,0,1,-1]
-	GADGET(210,2,20,16," -",5,0,8,1,1);																		//	   GADGET[210,2,20,16," «",5,0,8,1,1]
-	GADGET(210,24,20,16," +",5,0,8,1,2);																	//	   GADGET[210,24,20,16," »",5,0,8,1,2]
+	GADGET(210,2,20,16," -",5,0,8,1,1);																		//	   GADGET[210,2,20,16," Â«",5,0,8,1,1]
+	GADGET(210,24,20,16," +",5,0,8,1,2);																	//	   GADGET[210,24,20,16," Â»",5,0,8,1,2]
 	_SKLEP_KLIENT(v);																											//	   Gosub KLIENT
 	_SKLEP_SZMAL(v);																												//	   Gosub SZMAL
 																																				//	   Gr Writing 1
@@ -347,8 +347,8 @@ void _SKLEP(aint pMIASTO,aint pSNR,aint pA,aint pNR2) {
 			v.I=MouseZone();																										//	         I=Mouse Zone
 			if( v.I==1 ) {																											//	         If I=1
 				rysuj();
-				GADGET(210,2,20,16," -",0,5,10,1,0);														//	            GADGET[210,2,20,16," «",0,5,10,1,0]
-				GADGET(210,2,20,16," -",5,0,8,1,-1);														//	            GADGET[210,2,20,16," «",5,0,8,1,-1]
+				GADGET(210,2,20,16," -",0,5,10,1,0);														//	            GADGET[210,2,20,16," Â«",0,5,10,1,0]
+				GADGET(210,2,20,16," -",5,0,8,1,-1);														//	            GADGET[210,2,20,16," Â«",5,0,8,1,-1]
 				AG2:																														//	            AG2:
 				Add(v.NR,1,1,10);																									//	            Add NR,1,1 To 10
 				if( ARMIA[ARM][v.NR][TE]<=0 ) goto AG2;														//	            If ARMIA(ARM,NR,TE)<=0 : Goto AG2 : End If
@@ -357,8 +357,8 @@ void _SKLEP(aint pMIASTO,aint pSNR,aint pA,aint pNR2) {
 			}																																	//	         End If
 			if( v.I==2 ) {																											//	         If I=2
 				rysuj();
-				GADGET(210,24,20,16," +",0,5,10,1,0);														//	            GADGET[210,24,20,16," »",0,5,10,1,0]
-				GADGET(210,24,20,16," +",5,0,8,1,-1);														//	            GADGET[210,24,20,16," »",5,0,8,1,-1]
+				GADGET(210,24,20,16," +",0,5,10,1,0);														//	            GADGET[210,24,20,16," Â»",0,5,10,1,0]
+				GADGET(210,24,20,16," +",5,0,8,1,-1);														//	            GADGET[210,24,20,16," Â»",5,0,8,1,-1]
 				AG1:																														//	            AG1:
 				Add(v.NR,-1,1,10);																								//	            Add NR,-1,1 To 10
 				if( ARMIA[ARM][v.NR][TE]<=0 ) goto AG1;														//	            If ARMIA(ARM,NR,TE)<=0 : Goto AG1 : End If

@@ -9,7 +9,7 @@
 #include "Pictures.h"
 #include "PicDraw.h"
 
-/** ZbiÛr klas i funkcji do obs≥ugi grafiki.
+/** Zbi√≥r klas i funkcji do obs≈Çugi grafiki.
     <BR>
 		Cala grafika oparta jest o OpenGL i SDL. Klasy z przestrzeni nazw Gfx
 		maja za zadanie uproscic dostep do mozliwosci danych przez OpenGL.

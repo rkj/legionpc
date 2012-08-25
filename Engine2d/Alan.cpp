@@ -49,43 +49,43 @@ public:
 
 
 bool AlanControlable::AlanGetVarB(const std::string& name) {
-	ASSERT( channel != 0, "Obiekt nie jest powi¹zany z kana³em ALANa" );
-	ASSERT( channel->code, "Kana³ ALANa ma niezdefiniowany kod" );
+	ASSERT( channel != 0, "Obiekt nie jest powiÄ…zany z kanaÅ‚em ALANa" );
+	ASSERT( channel->code, "KanaÅ‚ ALANa ma niezdefiniowany kod" );
 	return channel->code->GetVarValB(name);
 }
 int AlanControlable::AlanGetVarI(const std::string& name) {
-	ASSERT( channel != 0, "Obiekt nie jest powi¹zany z kana³em ALANa" );
-	ASSERT( channel->code, "Kana³ ALANa ma niezdefiniowany kod" );
+	ASSERT( channel != 0, "Obiekt nie jest powiÄ…zany z kanaÅ‚em ALANa" );
+	ASSERT( channel->code, "KanaÅ‚ ALANa ma niezdefiniowany kod" );
 	return channel->code->GetVarValI(name);
 }
 float AlanControlable::AlanGetVarF(const std::string& name) {
-	ASSERT( channel != 0, "Obiekt nie jest powi¹zany z kana³em ALANa" );
-	ASSERT( channel->code, "Kana³ ALANa ma niezdefiniowany kod" );
+	ASSERT( channel != 0, "Obiekt nie jest powiÄ…zany z kanaÅ‚em ALANa" );
+	ASSERT( channel->code, "KanaÅ‚ ALANa ma niezdefiniowany kod" );
 	return channel->code->GetVarValF(name);
 }
 std::string AlanControlable::AlanGetVarS(const std::string& name) {
-	ASSERT( channel != 0, "Obiekt nie jest powi¹zany z kana³em ALANa" );
-	ASSERT( channel->code, "Kana³ ALANa ma niezdefiniowany kod" );
+	ASSERT( channel != 0, "Obiekt nie jest powiÄ…zany z kanaÅ‚em ALANa" );
+	ASSERT( channel->code, "KanaÅ‚ ALANa ma niezdefiniowany kod" );
 	return channel->code->GetVarValS(name);
 }
 void AlanControlable::AlanSetVar(const std::string& name,bool v) {
-	ASSERT( channel != 0, "Obiekt nie jest powi¹zany z kana³em ALANa" );
-	ASSERT( channel->code, "Kana³ ALANa ma niezdefiniowany kod" );
+	ASSERT( channel != 0, "Obiekt nie jest powiÄ…zany z kanaÅ‚em ALANa" );
+	ASSERT( channel->code, "KanaÅ‚ ALANa ma niezdefiniowany kod" );
 	channel->code->SetVarVal(name,v);
 }
 void AlanControlable::AlanSetVar(const std::string& name,int v) {
-	ASSERT( channel != 0, "Obiekt nie jest powi¹zany z kana³em ALANa" );
-	ASSERT( channel->code, "Kana³ ALANa ma niezdefiniowany kod" );
+	ASSERT( channel != 0, "Obiekt nie jest powiÄ…zany z kanaÅ‚em ALANa" );
+	ASSERT( channel->code, "KanaÅ‚ ALANa ma niezdefiniowany kod" );
 	channel->code->SetVarVal(name,v);
 }
 void AlanControlable::AlanSetVar(const std::string& name,float v) {
-	ASSERT( channel != 0, "Obiekt nie jest powi¹zany z kana³em ALANa" );
-	ASSERT( channel->code, "Kana³ ALANa ma niezdefiniowany kod" );
+	ASSERT( channel != 0, "Obiekt nie jest powiÄ…zany z kanaÅ‚em ALANa" );
+	ASSERT( channel->code, "KanaÅ‚ ALANa ma niezdefiniowany kod" );
 	channel->code->SetVarVal(name,v);
 }
 void AlanControlable::AlanSetVar(const std::string& name,std::string v) {
-	ASSERT( channel != 0, "Obiekt nie jest powi¹zany z kana³em ALANa" );
-	ASSERT( channel->code, "Kana³ ALANa ma niezdefiniowany kod" );
+	ASSERT( channel != 0, "Obiekt nie jest powiÄ…zany z kanaÅ‚em ALANa" );
+	ASSERT( channel->code, "KanaÅ‚ ALANa ma niezdefiniowany kod" );
 	channel->code->SetVarVal(name,v);
 }
 
@@ -97,7 +97,7 @@ AlanCode* AlanChannel :: _parseCode(const string& src) {
 	try {
 		ifs = new istringstream(src);
 	} catch(...) {
-		ERROR("B³¹d otwierania strumienia na buforze");
+		ERROR("BÅ‚Ä…d otwierania strumienia na buforze");
 		return 0;
 	}
 

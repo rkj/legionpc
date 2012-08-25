@@ -12,39 +12,39 @@ namespace Gfx {
 	class PTex;
 	class LTex;
 
-/** Klasa reprezentuje font (czcionkê).
-    Obs³ugiwane s¹ czcionki wektorowe (TrueType).
+/** Klasa reprezentuje font (czcionkÄ™).
+    ObsÅ‚ugiwane sÄ… czcionki wektorowe (TrueType).
  */
 class Font {
 protected:
-	/// fizyczna tekstura przechowuj¹ca wygl¹d literek
+	/// fizyczna tekstura przechowujÄ…ca wyglÄ…d literek
 	PTex *ptex;
 
-	/// logiczna tekstura przechowuj¹ca wygl¹d literek
+	/// logiczna tekstura przechowujÄ…ca wyglÄ…d literek
 	LTex *ltex;
 
-	/// tablica szerokoœci literek
+	/// tablica szerokoÅ›ci literek
 	float *glyphs_width;
 
-	/// tablica wysokoœæ literek
+	/// tablica wysokoÅ›Ä‡ literek
 	float *glyphs_height;
 
-	/// tablica przesuniêæ literek w poziomie
+	/// tablica przesuniÄ™Ä‡ literek w poziomie
 	float *glyphs_xshift;
 
-	/// tablica przesuniêæ literek w pionie
+	/// tablica przesuniÄ™Ä‡ literek w pionie
 	float *glyphs_yshift;
 
-	/// tablica przesuniêæ do nastêpnej literki (o ile trzeba zwiêkszyæ pozycjê X aby wydrukowaæ kolejn¹ literkê wystêpuj¹c¹ po tej)
+	/// tablica przesuniÄ™Ä‡ do nastÄ™pnej literki (o ile trzeba zwiÄ™kszyÄ‡ pozycjÄ™ X aby wydrukowaÄ‡ kolejnÄ… literkÄ™ wystÄ™pujÄ…cÄ… po tej)
 	float *glyphs_advance;
 
 	/// Typ filtrowania przy rysowaniu (musi byc okreslone przed zaladowaniem fontu)
 	bool ib_antialiasing;
 
-	/// Ustawia wartoœci inicjalne obiektu
+	/// Ustawia wartoÅ›ci inicjalne obiektu
 	void _reset(void);
 
-	/// Niszczy sk³adowe obiektu
+	/// Niszczy skÅ‚adowe obiektu
 	void _destroy(void);
 public:
 
@@ -57,7 +57,7 @@ public:
 	/// Ustawia tryb rysowania fontow
 	void SetAntialiasing(bool pb_aa);
 
-	/** £aduje font z pliku i tworzy na jego podstawie tekstury s³u¿¹ce do pisania po ekranie.
+	/** Åaduje font z pliku i tworzy na jego podstawie tekstury sÅ‚uÅ¼Ä…ce do pisania po ekranie.
 	 */
 	int Load(const std::string& name,int ptx);
 
@@ -68,22 +68,22 @@ public:
 
 
 	/**
-		Klasa reprezentuje managera (zarz¹dce) fontów
+		Klasa reprezentuje managera (zarzÄ…dce) fontÃ³w
 		<BR>
 				 Klasa przechowuje fonty i przypisuje im identyfikatory (stringi),
-				 dziêki którym mo¿liwe jest pos³ugiwanie si¿ nazwami fontów zamiast adresami obiektów.
-				 Dodatkowo mo¿liwe jest za³adowanie i inicjacja ca³ego zbioru fontów
+				 dziÄ™ki ktÃ³rym moÅ¼liwe jest posÅ‚ugiwanie siÅ¼ nazwami fontÃ³w zamiast adresami obiektÃ³w.
+				 Dodatkowo moÅ¼liwe jest zaÅ‚adowanie i inicjacja caÅ‚ego zbioru fontÃ³w
 				 na podstawie definicji zapisanej w pliku konfiguracyjnym.
 	*/
 	class FontManager {
 		protected:
-			/// Zbiór fontów
+			/// ZbiÃ³r fontÃ³w
 			std::map<std::string,Font*> fonts;
 
-			/// Ustawia wartoœci inicjalne obiektu
+			/// Ustawia wartoÅ›ci inicjalne obiektu
 			void _reset(void);
 
-			/// Niszczy sk³adowe obiektu
+			/// Niszczy skÅ‚adowe obiektu
 			void _destroy(void);
 
 			/// tworzy klucz indeksujacy zbior fontow
@@ -97,37 +97,37 @@ public:
 			/// Destruktor
 			~FontManager();
 
-			/** Zwraca <B>true</B> je¿eli w zbiorze fontów istnieje font o podanym ID i rozmiarze
+			/** Zwraca <B>true</B> jeÅ¼eli w zbiorze fontÃ³w istnieje font o podanym ID i rozmiarze
 			 @param id ID fontu
 			 @param siz rozmiar fontu
 			 */
 			bool Exists(const std::string& id,int siz);
 
-			/** Dodaje do zbioru fontów nowy font
+			/** Dodaje do zbioru fontÃ³w nowy font
 			 @param id ID fontu
 			 @param siz rozmiar fontu
 			 @param t wskazanie na dodawany font
-			 @param overwrite mówi o tym czy nale¿y nadpisaæ font je¿eli
-			                  w zbiorze istnieje ju¿ font o podanym ID i rozmiarze
+			 @param overwrite mÃ³wi o tym czy naleÅ¼y nadpisaÄ‡ font jeÅ¼eli
+			                  w zbiorze istnieje juÅ¼ font o podanym ID i rozmiarze
 			 */
 			void Add(const std::string& id,int siz,Font* t,bool overwrite=false);
 
-			/** Zwraca wskazanie na font okreœlon¹ poprzez przekazane ID i rozmiar
+			/** Zwraca wskazanie na font okreÅ›lonÄ… poprzez przekazane ID i rozmiar
 			 @param id ID tekstury
 			 @param siz rozmiar fontu
-			 @return wskazanie na font lub 0 je¿eli w zbiorze nie istnieje font o podanym ID i rozmiarze
+			 @return wskazanie na font lub 0 jeÅ¼eli w zbiorze nie istnieje font o podanym ID i rozmiarze
 			 */
 			Font* Get(const std::string& id,int siz);
 
-			/** Usuwa font ze zbioru a nastêpnie zwraca wskazanie na niego.
+			/** Usuwa font ze zbioru a nastÄ™pnie zwraca wskazanie na niego.
 			    Font jako obiekt nie jest niszczona a jedynie usuwana ze zbioru.
 			 @param id ID rozmiar
 			 @param siz rozmiar fontu
-			 @return wskazanie na font lub 0 je¿eli w zbiorze nie istnieje font o podanym ID i rozmiarze
+			 @return wskazanie na font lub 0 jeÅ¼eli w zbiorze nie istnieje font o podanym ID i rozmiarze
 			 */
 			Font* Rem(const std::string& id,int siz);
 
-			/** Usuwa font ze zbioru a nastêpnie niszczy obiekt opisuj¹cy go.
+			/** Usuwa font ze zbioru a nastÄ™pnie niszczy obiekt opisujÄ…cy go.
 			 @param id ID fontu
 			 @param siz rozmiar fontu
 			 */
@@ -135,41 +135,41 @@ public:
 
 			/** Automatycznie tworzy obiekty fontow na podstawie
 			    opisu w pliku konfiguracyjnym.
-			    Stworzone obiekty s¹ nastêpnie dodawane do zbiorów.
+			    Stworzone obiekty sÄ… nastÄ™pnie dodawane do zbiorÃ³w.
 			 @param filename nazwa pliku konfiguracyjnego
-			 @param root scie¿ka do opisu fontow w pliku konfiguracyjnym
+			 @param root scieÅ¼ka do opisu fontow w pliku konfiguracyjnym
 			 */
 			int Load(const std::string& filename,const std::string& root="");
 
 			/** Automatycznie tworzy obiekty fontow na podstawie
 			    opisu w obiekcie konfiguracyjnym.
-			    Stworzone obiekty s¹ nastêpnie dodawane do zbiorów.
-			 @param sets obiekt z konfiguracj¹
-			 @param root scie¿ka do opisu tekstur w pliku konfiguracyjnym
+			    Stworzone obiekty sÄ… nastÄ™pnie dodawane do zbiorÃ³w.
+			 @param sets obiekt z konfiguracjÄ…
+			 @param root scieÅ¼ka do opisu tekstur w pliku konfiguracyjnym
 			 */
 			int Load(const Core::Settings& sets,const std::string& root="");
 	};
 
 
 /** Rysuje na ekranie napis.
-  @param font czcionka jak¹ ma byæ rysowany napis
+  @param font czcionka jakÄ… ma byÄ‡ rysowany napis
   @param text napis
-  @param x wspó³rzêdna pozioma pocz¹tku napisu
-  @param y wspó³rzêdna pionowa lini bazowej napisu
-  @param sizh rozmiar (skala) poziomy czcionki (je¿eli literki maj¹ mieæ zachowane proporcje nale¿y podaæ tak¹ sam¹ wartoœæ jak w sizv)
+  @param x wspÃ³Å‚rzÄ™dna pozioma poczÄ…tku napisu
+  @param y wspÃ³Å‚rzÄ™dna pionowa lini bazowej napisu
+  @param sizh rozmiar (skala) poziomy czcionki (jeÅ¼eli literki majÄ… mieÄ‡ zachowane proporcje naleÅ¼y podaÄ‡ takÄ… samÄ… wartoÅ›Ä‡ jak w sizv)
   @param sizv rozmiar (skala) pionowa czcionki (np. 12 oznacza 12 pixli)
  */
 void Text(Font *font,const std::string& text, float x, float y, float sizh, float sizv);
 
 /** Zwraca szerokosc tekstu wyrazona w pixlach (tyle miejsca zajmie napis na ekranie)
-  @param font czcionka jak¹ ma byæ rysowany napis
+  @param font czcionka jakÄ… ma byÄ‡ rysowany napis
   @param text napis
-  @param sizh rozmiar (skala) poziomy czcionki (je¿eli literki maj¹ mieæ zachowane proporcje nale¿y podaæ tak¹ sam¹ wartoœæ jak w sizv)
+  @param sizh rozmiar (skala) poziomy czcionki (jeÅ¼eli literki majÄ… mieÄ‡ zachowane proporcje naleÅ¼y podaÄ‡ takÄ… samÄ… wartoÅ›Ä‡ jak w sizv)
   @param sizv rozmiar (skala) pionowa czcionki (np. 12 oznacza 12 pixli)
  */
 float TextLength(Font *font,const std::string& text,float sizh);
 
-/** Rysuje na ekranie podgl¹d fontu (ca³¹ teksturê)
+/** Rysuje na ekranie podglÄ…d fontu (caÅ‚Ä… teksturÄ™)
  */
 void _render_font(Font *font);
 

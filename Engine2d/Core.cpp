@@ -31,7 +31,7 @@ int _ii_video_bpp = 0;
 int Init(void) {
 
 	  //////////////////////////
-	 // Ogólna inicjalizacja //
+	 // OgÃ³lna inicjalizacja //
 	//////////////////////////
 	unsigned long ll_mask = 0;
 	if( ib_gfx_enable ) ll_mask |= SDL_INIT_VIDEO;
@@ -95,7 +95,7 @@ int Init(void) {
 
 
 	  /////////////////////
-	 // Dzwiêki, muzyka //
+	 // DzwiÄ™ki, muzyka //
 	/////////////////////
 //	int audio_rate,audio_channels
 	int	audio_buffers=1024;

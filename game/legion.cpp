@@ -20,7 +20,7 @@ astr gs_language = "PL";
 astr gs_default_language = "PL";
 
 																//	Set Buffer 150
-																//	'sîoma off
+																//	'sÃ®oma off
 																//	'MLech - usuniecie
 																//	'Request Wb : Hide On : Erase All : Led Off : Auto View Off
 																//	'Amos Lock : Break Off
@@ -670,7 +670,7 @@ void ZAB2(void) {
 		//	   'Print ERR#,OLDL,L#
 		//	   Ink 30,25
 		//	   Text XP,YP-15,"Enter a first letter of the wrord."
-		//	   'zamiast edit jakiô poke niszczâcy system'
+		//	   'zamiast edit jakiÃ´ poke niszczÃ¢cy system'
 		//	   If ERR#>0.04 : ERR#=ARMIA(YP,0,1) : End If
 		//	   Text XP,YP-5,"Page:"+Str$(STRONA)+", Line:"+Str$(WIERSZ)+", Word:"+Str$(WYRAZ)
 		//	   Return
@@ -686,15 +686,15 @@ void ZAB2(void) {
 }
 void ZAB(void) {
 		//	Procedure ZAB
-		//	   '* po upîywie 20-u rozmów do 50-u musi odpaliê
-		//	   'po kaûdym kliku w gadce dec bomba1 inc bomba2
+		//	   '* po upÃ®ywie 20-u rozmÃ³w do 50-u musi odpaliÄ™
+		//	   'po kaÅ±dym kliku w gadce dec bomba1 inc bomba2
 		//	   'sprawdzanie bomby w mapa_akcja,ma_ruch,main_action
 		//	   'wychodzenie albo endami albo editami albo pokami albo gameover=true
-		//	   'wywoîywana przez co sîychaê albo przyîâcz ôie albo szmal albo samoistnie
-		//	   '* wywoîywana przez ekwipunek ale b.rzadko rnd(100)=1
+		//	   'wywoÃ®ywana przez co sÃ®ychaÄ™ albo przyÃ®Ã¢cz Ã´ie albo szmal albo samoistnie
+		//	   '* wywoÃ®ywana przez ekwipunek ale b.rzadko rnd(100)=1
 		//	   'w procedurze deaktywacja bomby nastawionej na X dni
-		//	   'jeôli zîe dane to wyjôcie od razu lub trochë dalej + bomba znowu + game_over=true
-		//	   'jeôli dobre dane ustawienie bomby na nastëpne rnd(50)+50 dni.
+		//	   'jeÃ´li zÃ®e dane to wyjÃ´cie od razu lub trochÃ« dalej + bomba znowu + game_over=true
+		//	   'jeÃ´li dobre dane ustawienie bomby na nastÃ«pne rnd(50)+50 dni.
 		//	   'Flash 13,"(a90,2)(ba0,2)(cb0,2)(db0,2)(ec0,2)(ed0,2)(fe0,2)(ff0,0)(ff2,2)(ff3,2)"
 		//	   GADGET[150,20,150,90,"",26,24,25,30,-1]
 		//	   Gosub LOSOWANIE
@@ -702,7 +702,7 @@ void ZAB(void) {
 		//	   'Print L1,L2,L1-L2
 		//	   'Wait Key
 		//	   If STRONA=WIERSZ and WIERSZ=WYRAZ
-		//	      '      Print "kotô grzebaî w danych"
+		//	      '      Print "kotÃ´ grzebaÃ® w danych"
 		//	      Edit
 		//	   End If
 		//
@@ -732,14 +732,14 @@ void ZAB(void) {
 		//	               GAME_OVER=True
 		//	               BOMBA3=True
 		//	               Gosub LOSOWANIE
-		//	               'mydîo
+		//	               'mydÃ®o
 		//	               CXZ=WER-2
 		//	               CNVB=CNVB+SERF
 		//	            Else
 		//	               BOMBA1#=83+Rnd(30)
 		//	               BOMBA3=False
 		//	               GAME_OVER=False
-		//	               'mydîo
+		//	               'mydÃ®o
 		//	               CXZ=WER-4
 		//	               CNVB=CXZ
 		//	               BOMBA2#=0
@@ -786,7 +786,7 @@ void ZAB(void) {
 		//	   'Print ERR#,OLDL,L#
 		//	   Ink 30,25
 		//	   Text XP,YP-15,"Enter a first letter of the word."
-		//	   'zamiast edit jakiô poke niszczâcy system'
+		//	   'zamiast edit jakiÃ´ poke niszczÃ¢cy system'
 		//	   If ERR#>0.04 : ERR#=ARMIA(YP,0,1) : End If
 		//	   Text XP,YP-5,"Page:"+Str$(STRONA)+", Line:"+Str$(WIERSZ)+", Word:"+Str$(WYRAZ)
 		//	   Return

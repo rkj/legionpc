@@ -158,7 +158,7 @@ void MAIN(void) {
 	}																		//	End If
 																			//	'   Wait 25
 																			//	'End If
-																			//	'sprzâtamy po sobie
+																			//	'sprzÃ¢tamy po sobie
 	CLEAR_TABLES();											//	CLEAR_TABLES
 	EraseAll();													//	Erase All
 	SamStop(-1);												//	Sam Stop
@@ -298,7 +298,7 @@ void MAPA_AKCJA(void) {
 
 	DZIEN++;																			//	   Inc DZIEN
 	BUSY_ANIM();																	//	   BUSY_ANIM
-																								//	   'wygaszanie konfliktów zbrojnych przez NATO
+																								//	   'wygaszanie konfliktÃ³w zbrojnych przez NATO
 	for(I=0;I<=5;++I) {														//	   For I=0 To 5
 		for(J=0;J<=5;++J) {													//	      For J=0 To 5
 			//!!! BLAD
@@ -308,7 +308,7 @@ void MAPA_AKCJA(void) {
 			//clipl(WOJNA[I][J],0);
 		}																						//	      Next
 	}																							//	   Next
-																								//	   'wszczynanie duûych wojen
+																								//	   'wszczynanie duÅ±ych wojen
 	SR=0;																					//	   SR=0
 	for(PL=1;PL<=4;++PL) {												//	   For PL=1 To 4 : OBLICZ_POWER[PL] : SR=SR+Param : Next
 		OBLICZ_POWER(PL); SR=SR+Param;
@@ -351,11 +351,11 @@ void MAPA_AKCJA(void) {
 		}																						//	      Next I
 	}																							//	   End If
 																								//
-																								//	   'obsîuga moich armii
+																								//	   'obsÃ®uga moich armii
 	for(A=0;A<=19;++A) {													//	   For A=0 To 19
 		if( GAME_OVER != 0 ) break;									//	      Exit If GAME_OVER
 		if( ARMIA[A][0][TE] > 0 ) {									//	      If ARMIA(A,0,TE)>0
-																								//	         'comiesiëczne douczanki
+																								//	         'comiesiÃ«czne douczanki
 			if( DZIEN % 30 == 0 ) {										//	         If DZIEN mod 30=0
 				for(I=1;I<=10;++I) {										//	            For I=1 To 10
 					if( ARMIA[A][I][TE] > 0 ) {						//	               If ARMIA(A,I,TE)>0
@@ -398,7 +398,7 @@ void MAPA_AKCJA(void) {
 			;
 	}																							//	   Next A
 	if( GAME_OVER ) goto OVER;										//	   If GAME_OVER : Goto OVER : End If
-																								//	   'obsîuga cudzych armii
+																								//	   'obsÃ®uga cudzych armii
 	for(A=20;A<=39;++A) {													//	   For A=20 To 39
 		if( ARMIA[A][0][TE] > 0 ) {									//	      If ARMIA(A,0,TE)>0
 			PL=ARMIA[A][0][TMAG];											//	         PL=ARMIA(A,0,TMAG)
@@ -440,7 +440,7 @@ void MAPA_AKCJA(void) {
 		}
 		PODATEK=MIASTA[M][0][M_PODATEK];						//	      PODATEK=MIASTA(M,0,M_PODATEK)
 		GRACZE[CZYJE][1] += PODATEK*MIASTA[M][0][M_LUDZIE]/25;//	      Add GRACZE(CZYJE,1),PODATEK*MIASTA(M,0,M_LUDZIE)/25
-																								//	      'obsîuga spichlerzy
+																								//	      'obsÃ®uga spichlerzy
 		SPI=0;																			//	      SPI=0
 		for(I=2;I<=20;++I) {												//	      For I=2 To 20
 			if( MIASTA[M][I][M_LUDZIE]==9 ) SPI++;		//	         If MIASTA(M,I,M_LUDZIE)=9 : Inc SPI : End If
@@ -505,7 +505,7 @@ void MAPA_AKCJA(void) {
 					LWOJ=(LUDZIE/70)+1;										//	               LWOJ=(LUDZIE/70)+1 : If LWOJ>10 : LWOJ=10 : End If
 					if( LWOJ>10 ) LWOJ=10;
 					NOWA_ARMIA(40,LWOJ,-1);								//	               NOWA_ARMIA[40,LWOJ,-1]
-																								//	               'wieôniacy wôród buntowników
+																								//	               'wieÃ´niacy wÃ´rÃ³d buntownikÃ³w
 					aint k=2+Rnd(2);
 					for(I=1;I<=k;++I) {										//	               For I=1 To 2+Rnd(2) : NOWA_POSTAC[40,I,9] : Next I
 						NOWA_POSTAC(40,I,9);
@@ -678,7 +678,7 @@ void MA_RUCH(aint A,aint TRYB) {
 		LOK=PRZYGODY[NR][P_TEREN];				//	      LOK=PRZYGODY(NR,P_TEREN)
 		CENTER(X1,Y1,1);									//	      CENTER[X1,Y1,1]
 		MA_PRZYGODA(A,NR);								//	      MA_PRZYGODA[A,NR]
-																			//	      'nie chcë juû wiëcej przygód
+																			//	      'nie chcÃ« juÅ± wiÃ«cej przygÃ³d
 		SKIP=1;														//	      SKIP=1
 	}																		//	   End If
 	ARMIA[A][0][TNOGI]=LOK;							//	   ARMIA(A,0,TNOGI)=LOK
@@ -743,7 +743,7 @@ void MA_RUCH(aint A,aint TRYB) {
 				OLDPOWER=POWER;								//	            OLDPOWER=POWER
 				POWER=(MORALE/3)+10;					//	            POWER=(MORALE/3)+10
 				NOWA_ARMIA(40,LWOJ,-1);				//	            NOWA_ARMIA[40,LWOJ,-1]
-																			//	            'wiëkszy ostrzaî
+																			//	            'wiÃ«kszy ostrzaÃ®
 				ARMIA[40][0][TKORP]=150+POWER;//	            ARMIA(40,0,TKORP)=150+POWER
 				BITWA_SYMULOWANA(A,40);				//	            BITWA_SYMULOWANA[A,40]
 
@@ -1072,7 +1072,7 @@ void MA_PRZYGODA(aint A,aint NR) {
 	if( TESTING==0 ) {																								//	   If Not TESTING
 		MESSAGE(A,A_S,NR,0); SpriteOnOff(2,false);											//	      MESSAGE[A,A$,NR,0] : Sprite Off 2
 	}																																	//	   End If
-																																		//	   'ûadnych komunikatów po akcji 0 armie lub 1 miasta
+																																		//	   'Å±adnych komunikatÃ³w po akcji 0 armie lub 1 miasta
 	M=-1;																															//	   M=-1
 	ARM=A; WRG=40;																										//	   ARM=A : WRG=40
 	TRWA_PRZYGODA=NR;																									//	   TRWA_PRZYGODA=NR
@@ -1082,13 +1082,13 @@ void MA_PRZYGODA(aint A,aint NR) {
 		if( Rnd(1)==0 ) {																								//	      If Rnd(1)=0
 			POT=16; ILE=3; PO_S="skirial";																//	         POT=16 : ILE=3 : PO$="skirial"
 		} else {																												//	      Else
-			POT=18; ILE=5; PO_S="pajâk";																	//	         POT=18 : ILE=5 : PO$="pajâk"
+			POT=18; ILE=5; PO_S="pajÃ¢k";																	//	         POT=18 : ILE=5 : PO$="pajÃ¢k"
 		}																																//	      End If
 		POTWOR(40,PO_S,ILE,POT);																				//	      POTWOR[40,PO$,ILE,POT]
 		for( I=ILE+1; I<=10; ++I ) { NOWA_POSTAC(40,I,3); }							//	      For I=ILE+1 To 10 : NOWA_POSTAC[40,I,3] : Next I
 		for( I=1; I<=10; ++I ) { ARMIA[WRG][I][TPRAWA]=-1; }						//	      For I=1 To 10 : ARMIA(WRG,I,TPRAWA)=-1 : Next I
 		RYSUJ_SCENERIE(_TEREN,-1);																			//	      RYSUJ_SCENERIE[TEREN,-1]
-			//dosypujemy skarbow																					//	      'dosypujemy trochë skarbów
+			//dosypujemy skarbow																					//	      'dosypujemy trochÃ« skarbÃ³w
 		IMAX=Rnd(8)+8;
 		for( I=1; I<=IMAX; ++I ) {																			//	      For I=1 To Rnd(8)+8
 			X=Rnd(29)+70; Y=Rnd(3);																				//	         X=Rnd(29)+70 : Y=Rnd(3)
@@ -1115,7 +1115,7 @@ void MA_PRZYGODA(aint A,aint NR) {
 		if( Rnd(1)==0 ) {																								//	      If Rnd(1)=0
 			POT=17; ILE=9; PO_S="humanoid";																//	         POT=17 : ILE=9 : PO$="humanoid"
 		} else {																												//	      Else
-			POT=18; ILE=9; PO_S="pajâk";																	//	         POT=18 : ILE=9 : PO$="pajâk"
+			POT=18; ILE=9; PO_S="pajÃ¢k";																	//	         POT=18 : ILE=9 : PO$="pajÃ¢k"
 		}																																//	      End If
 		POTWOR(40,PO_S,ILE,POT);																				//	      POTWOR[40,PO$,ILE,POT]
 		for( I=1; I<=10; ++I) { ARMIA[WRG][I][TKORP]=180; }							//	      For I=1 To 10 : ARMIA(WRG,I,TKORP)=180 : Next I
@@ -1142,7 +1142,7 @@ void MA_PRZYGODA(aint A,aint NR) {
 		NOWA_ARMIA(40,ILE,POT);																					//	      NOWA_ARMIA[40,ILE,POT]
 		for( I=1; I<=ILE; ++I ) { ARMIA[WRG][I][TPRAWA]=-1; }						//	      For I=1 To ILE : ARMIA(WRG,I,TPRAWA)=-1 : Next I
 		RYSUJ_SCENERIE(_TEREN,-1);																			//	      RYSUJ_SCENERIE[TEREN,-1]
-																																		//	      'silna i doôwiadczona zaîoga show no mercy and kill them all
+																																		//	      'silna i doÃ´wiadczona zaÃ®oga show no mercy and kill them all
 		for( I=1; I<=10; ++I ) { ARMIA[WRG][I][TKORP]=250; }						//	      For I=1 To 10 : ARMIA(WRG,I,TKORP)=250 : Next I
 		for( I=1; I<=10; ++I ) { ARMIA[WRG][I][TDOSW]=Rnd(25); }				//	      For I=1 To 10 : ARMIA(WRG,I,TDOSW)=Rnd(25) : Next I
 		USTAW_WOJSKO(ARM,1,1,1);																				//	      USTAW_WOJSKO[ARM,1,1,1]
@@ -1157,7 +1157,7 @@ void MA_PRZYGODA(aint A,aint NR) {
 		}																																//	      End If
 	}																																	//	   End If
 	if( TYP==4 ) {																										//	   If TYP=4
-		//---córka króla---																							//	      'córka króla
+		//---cÃ³rka krÃ³la---																							//	      'cÃ³rka krÃ³la
 		POT=-1; ILE=9;																									//	      POT=-1 : ILE=9
 		POS=4;																													//	      POS=4
 		NOWA_ARMIA(40,ILE,POT);																					//	      NOWA_ARMIA[40,ILE,POT]
@@ -1176,7 +1176,7 @@ void MA_PRZYGODA(aint A,aint NR) {
 		}																																//	      End If
 	}																																	//	   End If
 	if( TYP==5 ) {																										//	   If TYP=5
-		//---góra szczerbiec---																					//	      'góra szczerbiec
+		//---gÃ³ra szczerbiec---																					//	      'gÃ³ra szczerbiec
 		POTWOR(WRG,"skirial",5,16);																			//	      POTWOR[WRG,"skirial",5,16]
 		RYSUJ_SCENERIE(_TEREN,-1);																			//	      RYSUJ_SCENERIE[TEREN,-1]
 		GLEBA[5][Rnd(3)]=7;																							//	      GLEBA(5,Rnd(3))=7
@@ -1204,7 +1204,7 @@ void MA_PRZYGODA(aint A,aint NR) {
 		ARMIA[WRG][10][TSZ]+=SZBKOSC;																		//	      Add ARMIA(WRG,10,TSZ),SZBKOSC
 		ARMIA[WRG][10][TMAGMA]+=MAGIA;																	//	      Add ARMIA(WRG,10,TMAGMA),MAGIA
 		ARMIA[WRG][10][TDOSW]+=_DOS;																		//	      Add ARMIA(WRG,10,TDOSW),_DOS
-																																		//	      'bëdzie gadaî
+																																		//	      'bÃ«dzie gadaÃ®
 		ARMIA[WRG][10][TPRAWA]=-1;																			//	      ARMIA(WRG,10,TPRAWA)=-1
 		USTAW_WOJSKO(ARM,0,1,0);																				//	      USTAW_WOJSKO[ARM,0,1,0]
 		USTAW_WOJSKO(WRG,2,1,0);																				//	      USTAW_WOJSKO[WRG,2,1,0]
@@ -1232,13 +1232,13 @@ void MA_PRZYGODA(aint A,aint NR) {
 	}																																	//	   End If
 																																		//
 	if( TYP==9 ) {																										//	   If TYP=9
-		//---swiatynia orkow---																					//	      'ôwiâtynia orków
+		//---swiatynia orkow---																					//	      'Ã´wiÃ¢tynia orkÃ³w
 		NOWA_ARMIA(40,10,1);																						//	      NOWA_ARMIA[40,10,1]
 		for( I=1; I<=10; ++I ) { ARMIA[WRG][I][TPRAWA]=-1; }						//	      For I=1 To 10 : ARMIA(WRG,I,TPRAWA)=-1 : Next I
 		for( I=1; I<=10; ++I ) { ARMIA[WRG][I][TKORP]=180; }						//	      For I=1 To 10 : ARMIA(WRG,I,TKORP)=180 : Next I
 		RYSUJ_SCENERIE(_TEREN,-1);																			//	      RYSUJ_SCENERIE[TEREN,-1]
 		WIDOCZNOSC=250;																									//	      WIDOCZNOSC=250
-																																		//	      'umieszczenie trupów
+																																		//	      'umieszczenie trupÃ³w
 		PBListOnoff(true);
 		for( Y=0; Y<=20; ++Y ) {																				//	      For Y=0 To 20
 			for( X=0; X<=10; ++X ) {																			//	         For X=O To 10
@@ -1256,7 +1256,7 @@ void MA_PRZYGODA(aint A,aint NR) {
 	}																																	//	   End If
 																																		//
 	if( TYP==10 ) {																										//	   If TYP=10
-		//---barbarzyïca na bagnach---																	//	      'barbarzyïca na bagnach
+		//---barbarzyÄca na bagnach---																	//	      'barbarzyÄca na bagnach
 		MAGIA=10+Rnd(20); ENERGIA=40+Rnd(40); SILA=20+Rnd(20); SZYBKOSC=10+Rnd(10); _DOS=60;//	      MAGIA=10+Rnd(20) : ENERGIA=40+Rnd(40) : SILA=20+Rnd(20) : SZYBKOSC=10+Rnd(10) : _DOS=60
 		POTWOR(40,"gloom",9,14);																				//	      POTWOR[40,"gloom",9,14]
 		RYSUJ_SCENERIE(_TEREN,-1);																			//	      RYSUJ_SCENERIE[TEREN,-1]
@@ -1271,7 +1271,7 @@ void MA_PRZYGODA(aint A,aint NR) {
 		ARMIA[WRG][10][TSZ]+=SZBKOSC;																		//	      Add ARMIA(WRG,10,TSZ),SZBKOSC
 		ARMIA[WRG][10][TMAGMA]+=MAGIA;																	//	      Add ARMIA(WRG,10,TMAGMA),MAGIA
 		ARMIA[WRG][10][TDOSW]+=_DOS;																		//	      Add ARMIA(WRG,10,TDOSW),_DOS
-																																		//	      'bëdzie gadaî
+																																		//	      'bÃ«dzie gadaÃ®
 		ARMIA[WRG][10][TPRAWA]=-1;																			//	      ARMIA(WRG,10,TPRAWA)=-1
 		USTAW_WOJSKO(ARM,0,1,0);																				//	      USTAW_WOJSKO[ARM,0,1,0]
 		USTAW_WOJSKO(WRG,2,1,0);																				//	      USTAW_WOJSKO[WRG,2,1,0]
@@ -1284,7 +1284,7 @@ void MA_PRZYGODA(aint A,aint NR) {
 		IMAX=5+Rnd(4);
 		for( I=3; I<=IMAX; ++I ) { NOWA_POSTAC(WRG,I,Rnd(8)); }					//	      For I=3 To 5+Rnd(4) : NOWA_POSTAC[WRG,I,Rnd(8)] : Next I
 		RYSUJ_SCENERIE(_TEREN,-1);																			//	      RYSUJ_SCENERIE[TEREN,-1]
-																																		//	      'umieszczenie trupów
+																																		//	      'umieszczenie trupÃ³w
 		PBListOnoff(true);
 		for( Y=0; Y<=20; ++Y ) {																				//	      For Y=0 To 20
 			for( X=0; X<=10; ++X ) {																			//	         For X=O To 10
@@ -1296,7 +1296,7 @@ void MA_PRZYGODA(aint A,aint NR) {
 			}																															//	         Next X
 		}																																//	      Next Y
 		PBListOnoff(true);
-																																		//	      'silna i doôwiadczona zaîoga show no mercy and kill them all
+																																		//	      'silna i doÃ´wiadczona zaÃ®oga show no mercy and kill them all
 		for( I=1; I<=10; ++I ) { ARMIA[WRG][I][TKORP]=250; }						//	      For I=1 To 10 : ARMIA(WRG,I,TKORP)=250 : Next I
 		for( I=1; I<=10; ++I ) { ARMIA[WRG][I][TDOSW]=Rnd(25); }				//	      For I=1 To 10 : ARMIA(WRG,I,TDOSW)=Rnd(25) : Next I
 																																		//	      'tworzenie bossa
@@ -1312,7 +1312,7 @@ void MA_PRZYGODA(aint A,aint NR) {
 		ARMIA[WRG][10][TSZ]+=SZBKOSC;																		//	      Add ARMIA(WRG,10,TSZ),SZBKOSC
 		ARMIA[WRG][10][TMAG]+=MAGIA;																		//	      Add ARMIA(WRG,10,TMAG),MAGIA
 		ARMIA[WRG][10][TDOSW]+=_DOS;																		//	      Add ARMIA(WRG,10,TDOSW),_DOS
-																																		//	      'bëdzie gadaî
+																																		//	      'bÃ«dzie gadaÃ®
 		ARMIA[WRG][10][TPRAWA]=-1;																			//	      ARMIA(WRG,10,TPRAWA)=-1
 		USTAW_WOJSKO(ARM,1,2,0);																				//	      USTAW_WOJSKO[ARM,1,2,0]
 		USTAW_WOJSKO(WRG,1,0,0);																				//	      USTAW_WOJSKO[WRG,1,0,0]
@@ -1343,7 +1343,7 @@ void MA_PRZYGODA(aint A,aint NR) {
 	}																																	//	   End If
 	if( TYP==13 ) {																										//	   If TYP=13
 																																		//	      'Goto SKIP2
-		//---sparing koïcowy---																					//	      'sparing koïcowy
+		//---sparing koÄcowy---																					//	      'sparing koÄcowy
 		//---obrona bagien---																						//	      'obrona bagien
 		POTWOR(WRG,"szkielet",10,11);																		//	      POTWOR[WRG,"szkielet",10,11]
 		RYSUJ_SCENERIE(7,-3);																						//	      RYSUJ_SCENERIE[7,-3]
@@ -1351,7 +1351,7 @@ void MA_PRZYGODA(aint A,aint NR) {
 		USTAW_WOJSKO(ARM,0,2,2);																				//	      USTAW_WOJSKO[ARM,0,2,2]
 		USTAW_WOJSKO(WRG,0,0,2);																				//	      USTAW_WOJSKO[WRG,0,0,2]
 		MAIN_ACTION();																									//	      MAIN_ACTION
-		if( WYNIK_AKCJI==1 || IMIONA_S[1]=="Marcin ®" ) {								//	      If WYNIK_AKCJI=1 or IMIONA$(1)="Marcin ®"
+		if( WYNIK_AKCJI==1 || IMIONA_S[1]=="Marcin Â®" ) {								//	      If WYNIK_AKCJI=1 or IMIONA$(1)="Marcin Â®"
 			for( I=0; I<=10; ++I ) { ARMIA[40][I][TE]=0; }								//	         For I=0 To 10 : ARMIA(40,I,TE)=0 : Next I
 																																		//	         Hide On
 			_LOAD(KAT_S+"grob.hb","legion:grob.hb","Legion",3);						//	         _LOAD[KAT$+"grob.hb","legion:grob.hb","Legion",3]
@@ -1366,8 +1366,8 @@ void MA_PRZYGODA(aint A,aint NR) {
 			if( GS("082")!="" ) OUTLINE(10,240,GS("082"),1,0);
 
 																																		//	         'OUTLINE[10,220,"krypcie grobowej,",1,0]
-																																		//	         'OUTLINE[10,230,"z której zatruwa caîe",1,0]
-																																		//	         'OUTLINE[10,240,"królestwo.",1,0]
+																																		//	         'OUTLINE[10,230,"z ktÃ³rej zatruwa caÃ®e",1,0]
+																																		//	         'OUTLINE[10,240,"krÃ³lestwo.",1,0]
 																																		//	         View
 			_WAIT(1500);																									//	         _WAIT[1500]
 //			Fade 2;																											//	         Fade 2
@@ -1381,7 +1381,7 @@ void MA_PRZYGODA(aint A,aint NR) {
 			USTAW_WOJSKO(ARM,1,1,0);																			//	         USTAW_WOJSKO[ARM,1,1,0]
 			USTAW_WOJSKO(WRG,1,1,0);																			//	         USTAW_WOJSKO[WRG,1,1,0]
 			MAIN_ACTION();																								//	         MAIN_ACTION
-			if( WYNIK_AKCJI==1 || IMIONA_S[1]=="Marcin ®" ) {							//	         If WYNIK_AKCJI=1 or IMIONA$(1)="Marcin ®"
+			if( WYNIK_AKCJI==1 || IMIONA_S[1]=="Marcin Â®" ) {							//	         If WYNIK_AKCJI=1 or IMIONA$(1)="Marcin Â®"
 				//SKIP2:																											//	            SKIP2:
 				PRZYGODY[NR][P_TYP]=0;																			//	            PRZYGODY(NR,P_TYP)=0
 				GAME_OVER=-1;																								//	            GAME_OVER=True
@@ -1390,10 +1390,10 @@ void MA_PRZYGODA(aint A,aint NR) {
 				_LOAD(KAT_S+"mod.2sample+","legion:mod.2sample+","Legion",6);//	            _LOAD[KAT$+"mod.2sample+","legion:mod.2sample+","Legion",6]
 				TrackLoop(true); TrackPlay(3);															//	            Track Loop On : Track Play 3
 				USTAW_FONT("defender2",FONT_DEFENDER,8,1);									//	            USTAW_FONT["defender2",8]
-				OUTLINE(10,200,GS("086"),1,0);															//	            OUTLINE[10,200,"Oto ten, który niszczyî",1,0]
-				OUTLINE(10,210,GS("087"),1,0);															//	            OUTLINE[10,210,"wszelkie ûycie ",1,0]
-				OUTLINE(10,220,GS("088"),1,0);															//	            OUTLINE[10,220,"leûy teraz martwy",1,0]
-				OUTLINE(10,230,GS("089"),1,0);															//	            OUTLINE[10,230,"u twych stóp",1,0]
+				OUTLINE(10,200,GS("086"),1,0);															//	            OUTLINE[10,200,"Oto ten, ktÃ³ry niszczyÃ®",1,0]
+				OUTLINE(10,210,GS("087"),1,0);															//	            OUTLINE[10,210,"wszelkie Å±ycie ",1,0]
+				OUTLINE(10,220,GS("088"),1,0);															//	            OUTLINE[10,220,"leÅ±y teraz martwy",1,0]
+				OUTLINE(10,230,GS("089"),1,0);															//	            OUTLINE[10,230,"u twych stÃ³p",1,0]
 				OUTLINE(10,240,GS("090"),1,0);															//	            OUTLINE[10,240,"",1,0]
 				A_S=GS("091");																							//	            A$="Your adventure is ending."
 				M=0; CO=ARM; B=34;																					//	            M=0 : CO=ARM : B=34
@@ -1472,7 +1472,7 @@ void MA_WYPADEK(aint A,aint TYP) {
 	if( TYP==7 ) {																						//	   If TYP=7
 		A_S=GS("098");																					//	      A$="We've found an entrance to cavern."
 		POT=18; ILE=5; XT=1; YT=0;															//	      POT=18 : ILE=5 : XT=1 : YT=0
-		PO_S="pajâk";																						//	      PO$="pajâk"
+		PO_S="pajÃ¢k";																						//	      PO$="pajÃ¢k"
 		_TEREN=8;																								//	      TEREN=8
 		BB=34;																									//	      BB=34
 	}																													//	   End If
@@ -1571,7 +1571,7 @@ void MA_WYDAJ_ROZKAZ(aint PL,aint A) {
 		for(I=0;I<49;++I) {							//	      For I=0 To 49
 			PL2=MIASTA[I][0][M_CZYJE];		//	         PL2=MIASTA(I,0,M_CZYJE)
 			LUDZIE=MIASTA[I][0][M_LUDZIE];//	         LUDZIE=MIASTA(I,0,M_LUDZIE)
-																		//	         'wszczynaie drobnych konfliktów
+																		//	         'wszczynaie drobnych konfliktÃ³w
 			if( PL2==0 || PL2==1 ) {			//	         If PL2=0 or PL2=1
 				SZAJBA=300-POWER;						//	            SZAJBA=300-POWER
 			} else {											//	         Else
@@ -1584,7 +1584,7 @@ void MA_WYDAJ_ROZKAZ(aint PL,aint A) {
 				WOJNA[PL2][PL]=Rnd(20)+8;		//	            WOJNA(PL2,PL)=Rnd(20)+8
 			}															//	         End If
 			if( WOJNA[PL][PL2]>0 && PL2!=PL ) {//	         If WOJNA(PL,PL2)>0 and PL2<>PL
-																		//	            'litoôci !!!
+																		//	            'litoÃ´ci !!!
 				if( PL==5 && LUDZIE<200 ) {	//	            If PL=5 and LUDZIE<200
 					goto SKIP;								//	               Goto SKIP
 				}														//	            End If
@@ -1678,7 +1678,7 @@ void VISUAL_OBJECTS(void) {
 		}																									//	      End If
 		X=MIASTA[I][0][M_X];															//	      X=MIASTA(I,0,M_X)
 		Y=MIASTA[I][0][M_Y];															//	      Y=MIASTA(I,0,M_Y)
-																											//	      'to moûna potem wywaliê
+																											//	      'to moÅ±na potem wywaliÄ™
 																											//	      '  TEREN[X+4,Y+4]
 																											//	      '  If LOK=7 : LOK=1 : End If
 																											//	      '  MIASTA(I,1,M_X)=LOK
@@ -1750,8 +1750,8 @@ void SZPIEGUJ(aint NR,aint CO) {
 	rysuj();
 	OKNO(80,90,156,100);									//	   OKNO[80,90,156,100]
 	GADGET(OKX+4,OKY+4,104,92,"",31,2,30,1,-1);		//	   GADGET[OKX+4,OKY+4,104,92,"",31,2,30,1,-1]
-	GADGET(OKX+112,OKY+4,18,15,"<<",8,2,6,31,1);	//	   GADGET[OKX+112,OKY+4,18,15," «",8,2,6,31,1]
-	GADGET(OKX+133,OKY+4,18,15,">>",8,2,6,31,2);	//	   GADGET[OKX+133,OKY+4,18,15," »",8,2,6,31,2]
+	GADGET(OKX+112,OKY+4,18,15,"<<",8,2,6,31,1);	//	   GADGET[OKX+112,OKY+4,18,15," Â«",8,2,6,31,1]
+	GADGET(OKX+133,OKY+4,18,15,">>",8,2,6,31,2);	//	   GADGET[OKX+133,OKY+4,18,15," Â»",8,2,6,31,2]
 	GADGET(OKX+112,OKY+24,40,15,"",31,2,30,1,-1);	//	   GADGET[OKX+112,OKY+24,40,15,"",31,2,30,1,-1]
 	GADGET(OKX+112,OKY+61,40,15,GS("176"),8,2,6,31,3);//	   GADGET[OKX+112,OKY+61,40,15," Cancel",8,2,6,31,3]
 	GADGET(OKX+112,OKY+81,40,15,GS("177"),8,2,6,31,4);	//	   GADGET[OKX+112,OKY+81,40,15,"    Ok",8,2,6,31,4]
@@ -1873,7 +1873,7 @@ void TEREN(aint X1,aint Y1) {
 		LOK=7;												//	      LOK=7
 	}																//	   End If
 	if( FINAL>12 && FINAL<16 ) {		//	   If FINAL>12 and FINAL<16
-																	//	      'îâka
+																	//	      'Ã®Ã¢ka
 		LOK=2;												//	      LOK=2
 	}																//	   End If
 	if( FINAL>10 && FINAL<13 ) {		//	   If FINAL>10 and FINAL<13
@@ -1893,11 +1893,11 @@ void TEREN(aint X1,aint Y1) {
 		LOK=5;												//	      LOK=5
 	}																//	   End If
 	if( FINAL>3 && FINAL<7 ) {			//	   If FINAL>3 and FINAL<7
-																	//	      'skaîy
+																	//	      'skaÃ®y
 		LOK=4;												//	      LOK=4
 	}																//	   End If
 	if( FINAL>23 && FINAL<29 ) {		//	   If FINAL>23 and FINAL<29
-																	//	      'skaîy
+																	//	      'skaÃ®y
 		LOK=4;												//	      LOK=4
 	}																//	   End If
 	OVER:														//	   OVER:

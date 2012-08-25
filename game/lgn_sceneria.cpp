@@ -68,7 +68,7 @@ void _RYSUJ_SCENERIE_OBCINANIE(void) {
 	for(I=BUBY+4;I<=BUBY+163;++I) {	//   For I=BUBY+4 To BUBY+163
 		//### - ulepszenie
 		//TODO: mozna w ramach ulepszenia zrobic to ladniej
-		//zamiast ustawiac na 32 od góry obciaæ np 12 od dolu
+		//zamiast ustawiac na 32 od gÃ³ry obciaÄ‡ np 12 od dolu
 		//wtedy wyzsze postacie beda nadal wyzsze ;-)
 		_ClipImage(-1,I,0,-12);
 		//_ClipImage(-1,I,0,32);
@@ -223,7 +223,7 @@ LOG("Sceneria typ="+toString(TYP));
 																			//	      '      Next
 	}																		//	   End If
 
-	//---skaly---												//	   'skaîy
+	//---skaly---												//	   'skaÃ®y
 	if(	TYP==4 ) {											//	   If TYP=4
 		WIDOCZNOSC=250;										//	      WIDOCZNOSC=250
 		_LOAD(KAT_S+"dane/scen-skaly","dane:scen-skaly","Dane",1);						//	      _LOAD[KAT$+"dane/scen-skaly","dane:scen-skaly","Dane",1] : Get Bob Palette
@@ -467,7 +467,7 @@ LOG("Sceneria typ="+toString(TYP));
 				PasteBob(X*144,Y*75,BIBY+1,1.005);//	            Paste Bob X*144,Y*75,BIBY+1
 			}																//	         Next
 		}																	//	      Next
-																			//	      'rozrzucanie zîota
+																			//	      'rozrzucanie zÃ®ota
 		for(I=1;I<=Rnd(8)+2;++I) {				//	      For I=1 To Rnd(8)+2
 			X=Rnd(29)+70; Y=Rnd(3);					//	         X=Rnd(29)+70 : Y=Rnd(3)
 			BB=BIBY+12;											//	         BB=BIBY+12
@@ -553,7 +553,7 @@ LOG("Sceneria typ="+toString(TYP));
 			_RYSUJ_SCENERIE_LOSUJ2(X,Y,LX,LY,LSZER,WIES);
 			PasteBob(X,Y,BIBY+8);
 		}
-																			//	      'rozrzucanie zîota
+																			//	      'rozrzucanie zÃ®ota
 		for(I=0;I<=Rnd(8)+2;++I) {																	//	      For I=1 To Rnd(8)+2
 			X=Rnd(99); Y=Rnd(3);																//	         X=Rnd(99) : Y=Rnd(3)
 			BB=BIBY+12;																//	         BB=BIBY+12
@@ -649,7 +649,7 @@ LOG("Sceneria typ="+toString(TYP));
 																			//
 	//---grota wladcy---
 	if( TYP==10 ) {												//	   If TYP=10
-																				//	      'grota wîadcy
+																				//	      'grota wÃ®adcy
 		WIDOCZNOSC=500;											//	      WIDOCZNOSC=500
 		_LOAD(KAT_S+"dane/scen-grota","dane:scen-grota","Dane",1);//	      _LOAD[KAT$+"dane/scen-grota","dane:scen-grota","Dane",1] : Get Bob Palette
 		_LOAD(KAT_S+"dane/muzyka/mus-grota","dane:muzyka/mus-grota","Dane",7);//	      _LOAD[KAT$+"dane/muzyka/mus-grota","dane:muzyka/mus-grota","Dane",7]
@@ -728,15 +728,15 @@ LOG("Sceneria typ="+toString(TYP));
 																				//
 	if(WIES>=0) {													//	   If WIES>=0
 		RYSUJ_WIES(WIES);										//	      RYSUJ_WIES[WIES]
-																				//	      'dodaê domy (9)
+																				//	      'dodaÄ™ domy (9)
 		BSIBY=BIBY+12+9;										//	      BSIBY=BIBY+12+9
 	}																			//	   End If
 	if(WIES<-1) {													//	   If WIES<-1
 		RYSUJ_MUR(WIES);										//	      RYSUJ_MUR[WIES]
-																				//	      'dodaê mury (2)
+																				//	      'dodaÄ™ mury (2)
 		BSIBY=BIBY+12+2;										//	      BSIBY=BIBY+12+2
 	}																			//	   End If
-																				//	   'wytnij strzaîy
+																				//	   'wytnij strzaÃ®y
 	//to nie ma znaczenia na PC
 																				//	   Screen 2
 																				//	   Cls 0

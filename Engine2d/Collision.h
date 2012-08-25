@@ -7,34 +7,34 @@ namespace Fzx {
 
 	class ColSphere;
 
-	/** Klasa bazowa obiektów do wykrywania kolizji
+	/** Klasa bazowa obiektÃ³w do wykrywania kolizji
 	 */
 	class Col {
 		protected:
-			/// id typu obiektu kolizyjnego - inny dla ka¿dej klasy wyprowadzonej z tej
+			/// id typu obiektu kolizyjnego - inny dla kaÅ¼dej klasy wyprowadzonej z tej
 			unsigned char type_id;
 
-			/// maska bitowa w³aœciwoœci (czym jest ten obiekt, np. statek, pocisk)
+			/// maska bitowa wÅ‚aÅ›ciwoÅ›ci (czym jest ten obiekt, np. statek, pocisk)
 			unsigned long props;
 
-			/// maska bitowa kolizyjnoœci (z czym mo¿e kolidowaæ ten obiekt, np. ze statkiem, pociskiem)
+			/// maska bitowa kolizyjnoÅ›ci (z czym moÅ¼e kolidowaÄ‡ ten obiekt, np. ze statkiem, pociskiem)
 			unsigned long	mask;
 
-			/// Po³o¿enie obiektu kolizyjnego
+			/// PoÅ‚oÅ¼enie obiektu kolizyjnego
 			GLfloat x,y,a;
 
-			/// Dane dla programisty (np. wskazanie na boba, funkcjê, etc.)
+			/// Dane dla programisty (np. wskazanie na boba, funkcjÄ™, etc.)
 			void *user_data;
 
-			/// Ustawia wartoœci inicjalne obiektu
+			/// Ustawia wartoÅ›ci inicjalne obiektu
 			void _reset(void);
 
-			/// Niszczy sk³adowe obiektu
+			/// Niszczy skÅ‚adowe obiektu
 			void _destroy(void);
 
-			/// Zbiór mo¿liwych typów obiektu kolizyjnego
+			/// ZbiÃ³r moÅ¼liwych typÃ³w obiektu kolizyjnego
 			enum TYPE_IDS {
-				/// Okr¹g
+				/// OkrÄ…g
 				ID_SPHERE		= 0
 			};
 		public:
@@ -45,86 +45,86 @@ namespace Fzx {
 			/// Destruktor
 			virtual ~Col();
 
-			/// Ustawia maskê w³aœciwoœci
+			/// Ustawia maskÄ™ wÅ‚aÅ›ciwoÅ›ci
 			void SetProperties(unsigned long p) { props = p; }
 
-			/// Ustawia maskê kolizyjnoœci
+			/// Ustawia maskÄ™ kolizyjnoÅ›ci
 			void SetMask(unsigned long m) { mask = m; }
 
 			/// Ustawia dane programisty
 			void SetUserData(void *ud) { user_data = ud; }
 
-			/// Zwraca maskê w³aœciwoœci
+			/// Zwraca maskÄ™ wÅ‚aÅ›ciwoÅ›ci
 			unsigned long GetProperties(void) const { return props; }
 
-			/// Zwraca maskê kolizyjnoœci
+			/// Zwraca maskÄ™ kolizyjnoÅ›ci
 			unsigned long GetMask(void) const { return mask; }
 
 			/// Zwraca dane programisty
 			void* GetUserData(void) const { return user_data; }
 
-			/// Uaktualnia po³o¿enie obiektu kolizyjnego
+			/// Uaktualnia poÅ‚oÅ¼enie obiektu kolizyjnego
 			void UpdatePos(GLfloat x,GLfloat y,GLfloat a) { this->x = x; this->y = y; this->a = a; }
 
-			/** Testuje kolizjê z innym obiektem kolizyjnym.
-			    Je¿eli zostanie wykryta kolizja wo³ana jest metoda OnCollision().
-			    Metoda ta mo¿e zablokowaæ kolizjê zwracaj¹c <b>false</b>.
-			  @param c obiekt, z którym ma byæ testowana kolizja tego obiektu
-			  @return <b>true</b> je¿eli obiekty koliduj¹
+			/** Testuje kolizjÄ™ z innym obiektem kolizyjnym.
+			    JeÅ¼eli zostanie wykryta kolizja woÅ‚ana jest metoda OnCollision().
+			    Metoda ta moÅ¼e zablokowaÄ‡ kolizjÄ™ zwracajÄ…c <b>false</b>.
+			  @param c obiekt, z ktÃ³rym ma byÄ‡ testowana kolizja tego obiektu
+			  @return <b>true</b> jeÅ¼eli obiekty kolidujÄ…
 			 */
 			bool Collide(const Col* c);
 
-			/** Testuje kolizjê z innym obiektem kolizyjnym typu okr¹g.
-			    Je¿eli zostanie wykryta kolizja wo³ana jest metoda OnCollision().
-			    Metoda ta mo¿e zablokowaæ kolizjê zwracaj¹c <b>false</b>.
-			  @param c obiekt, z którym ma byæ testowana kolizja tego obiektu
-			  @return <b>true</b> je¿eli obiekty koliduj¹
+			/** Testuje kolizjÄ™ z innym obiektem kolizyjnym typu okrÄ…g.
+			    JeÅ¼eli zostanie wykryta kolizja woÅ‚ana jest metoda OnCollision().
+			    Metoda ta moÅ¼e zablokowaÄ‡ kolizjÄ™ zwracajÄ…c <b>false</b>.
+			  @param c obiekt, z ktÃ³rym ma byÄ‡ testowana kolizja tego obiektu
+			  @return <b>true</b> jeÅ¼eli obiekty kolidujÄ…
 			 */
 			virtual bool Collide(const ColSphere* c) = 0;
 
-			/** Rysuje ksza³t obiektu kolizyjnego
-			    (wymyœlone do testów, ale kto wie jakie zasosowanie ktoœ wymyœli)
+			/** Rysuje kszaÅ‚t obiektu kolizyjnego
+			    (wymyÅ›lone do testÃ³w, ale kto wie jakie zasosowanie ktoÅ› wymyÅ›li)
 			 */
 			virtual void Draw(void) { /* do nothing */ }
 
-			/** Metoda wo³ana w czasie wykrycia kolizji.
-			    Wynik tej metody mo¿e zablokowaæ kolizjê (wymusiæ jej brak)
+			/** Metoda woÅ‚ana w czasie wykrycia kolizji.
+			    Wynik tej metody moÅ¼e zablokowaÄ‡ kolizjÄ™ (wymusiÄ‡ jej brak)
 			 */
 			virtual bool OnCollision(const Col* c) const { /* do nothing and do not block collision */ return true; }
 	};
 
-	/** Klasa obiektu kolizyjnego w ksztalcie okrêgu.
+	/** Klasa obiektu kolizyjnego w ksztalcie okrÄ™gu.
 	 */
 	class ColSphere : public Col {
 		public:
 
-			/// Promieñ okrêgu
+			/// PromieÅ„ okrÄ™gu
 			GLfloat r;
 
-			/// Konstruktor - okr¹g o promieniu zero
+			/// Konstruktor - okrÄ…g o promieniu zero
 			ColSphere(void) { r=0.0f; }
 
-			/// Konstruktor - okr¹g o podanym promieniu
+			/// Konstruktor - okrÄ…g o podanym promieniu
 			ColSphere(GLfloat r) : r(r) {}
 
 			/// Destruktor
 			virtual ~ColSphere() {}
 
-			/// Metoda wykrywa kolizjê z innym okrêgiem
+			/// Metoda wykrywa kolizjÄ™ z innym okrÄ™giem
 			virtual bool Collide(const ColSphere* c);
 
-			/** Rysuje ksza³t obiektu kolizyjnego
-			    (wymyœlone do testów, ale kto wie jakie zasosowanie ktoœ wymyœli)
+			/** Rysuje kszaÅ‚t obiektu kolizyjnego
+			    (wymyÅ›lone do testÃ³w, ale kto wie jakie zasosowanie ktoÅ› wymyÅ›li)
 			 */
 			virtual void Draw(void);
 
-			/** Metoda wo³ana w czasie wykrycia kolizji.
-			    Wynik tej metody mo¿e zablokowaæ kolizjê (wymusiæ jej brak)
+			/** Metoda woÅ‚ana w czasie wykrycia kolizji.
+			    Wynik tej metody moÅ¼e zablokowaÄ‡ kolizjÄ™ (wymusiÄ‡ jej brak)
 			 */
 			virtual bool OnCollision(const Col* c) const { /* do nothing and do not block collision */ return true; }
 	};
 
-	/// Licznik testów kolizji - do celów diagnostycznych
+	/// Licznik testÃ³w kolizji - do celÃ³w diagnostycznych
 	extern long collision_test_cnt;
 
 };

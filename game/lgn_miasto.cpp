@@ -184,10 +184,10 @@ void MIASTO(aint NR) {
 							GADGET(OKX+4,OKY+4,100,64,"",31,2,30,1,0);//	                     GADGET[OKX+4,OKY+4,100,64,"",31,2,30,1,0]
 							PasteBob(OKX+6,OKY+6,41);				//	                     Paste Bob OKX+6,OKY+6,41
 							//!!! inaczej
-							//							GADGET(OKX+110,OKY+4,20,15," ´ ",8,2,6,31,1);//	                     GADGET[OKX+110,OKY+4,20,15," ´ ",8,2,6,31,1]
-							//							GADGET(OKX+110,OKY+24,20,15," ª ",8,2,6,31,2);//	                     GADGET[OKX+110,OKY+24,20,15," ª ",8,2,6,31,2]
-							GADGET(OKX+110,OKY+4,20,15," + ",8,2,6,31,1);//	                     GADGET[OKX+110,OKY+4,20,15," ´ ",8,2,6,31,1]
-							GADGET(OKX+110,OKY+24,20,15," - ",8,2,6,31,2);//	                     GADGET[OKX+110,OKY+24,20,15," ª ",8,2,6,31,2]
+							//							GADGET(OKX+110,OKY+4,20,15," ¬´ ",8,2,6,31,1);//	                     GADGET[OKX+110,OKY+4,20,15," ¬´ ",8,2,6,31,1]
+							//							GADGET(OKX+110,OKY+24,20,15," ¬ª ",8,2,6,31,2);//	                     GADGET[OKX+110,OKY+24,20,15," ¬ª ",8,2,6,31,2]
+							GADGET(OKX+110,OKY+4,20,15," + ",8,2,6,31,1);//	                     GADGET[OKX+110,OKY+4,20,15," ¬´ ",8,2,6,31,1]
+							GADGET(OKX+110,OKY+24,20,15," - ",8,2,6,31,2);//	                     GADGET[OKX+110,OKY+24,20,15," ¬ª ",8,2,6,31,2]
 
 							GADGET(OKX+110,OKY+52,20,15,GS("OK"),8,2,6,31,3);//	                     GADGET[OKX+110,OKY+52,20,15,"Ok",8,2,6,31,3]
 																							//	                     Set Font FON2 : Get Block 120,OKX+6,OKY+6,32,32 : Gr Writing 0
@@ -316,7 +316,7 @@ void ZROB_MIASTA() {
 				MIASTA[I][J][M_Y]=Y;					//	            MIASTA(I,J,M_Y)=Y
 				MIASTA[I][J][M_LUDZIE]=BUD;		//	            MIASTA(I,J,M_LUDZIE)=BUD
 				X+=SZER;											//	            Add X,SZER
-																			//	            'za co nie˙le zapÓaci
+																			//	            'za co nie√∫le zap√Æaci
 				MIASTA[I][J][M_PODATEK]=Rnd(18)+1;	//	            MIASTA(I,J,M_PODATEK)=Rnd(18)+1
 			}																//	         Next J
 			//	         'modyfikatory cenowe w %
@@ -461,7 +461,7 @@ void ROZBUDOWA(aint MIASTO) {
 		GADGET(4+I*24,12,20,20,BB_S,5,12,9,1,I+1);//	      GADGET[4+I*24,12,20,20,BB$,5,12,9,1,I+1]
 	}																						//	   Next I
 
-		GADGET(4+I*24,12,20,20,"buø",5,12,9,1,I+1);	//buzenie
+		GADGET(4+I*24,12,20,20,"bu≈º",5,12,9,1,I+1);	//buzenie
 
 //!!!	GADGET(165,2,110,30,"",0,5,22,1,-1);				//	   GADGET[165,2,110,30,"",0,5,22,1,-1]
 	GADGET(175,2,100,30,"",0,5,22,1,-1);				//	   GADGET[165,2,110,30,"",0,5,22,1,-1]
@@ -494,13 +494,13 @@ void ROZBUDOWA(aint MIASTO) {
 					I=STREFA+3;													//	               I=STREFA+3
 					if( STREFA == 7 ) {
 						//buzenie
-						GADGET(4+(STREFA-1)*24,12,20,20,"BUØ",12,5,11,1,0);	//	               GADGET[4+(STREFA-1)*24,12,20,20,BB$,12,5,11,1,0]
+						GADGET(4+(STREFA-1)*24,12,20,20,"BU≈ª",12,5,11,1,0);	//	               GADGET[4+(STREFA-1)*24,12,20,20,BB$,12,5,11,1,0]
 						SZER=16;
 						WYS=16;
 						CENA=1500;
 						CZAS=1;
 						B1=-1;
-						A_S="Wybuøenie";
+						A_S="Wybu≈ºenie";
 						TYP=I;
 					} else {
 						BB_S=Minus_S("bob"+Str_S(56+STREFA)," ");//	               BB$="bob"+Str$(56+STREFA)-" "
@@ -516,7 +516,7 @@ void ROZBUDOWA(aint MIASTO) {
 					_ROZBUDOWA_WYPISZ(A_S,CENA);				//	               Gosub WYPISZ
 					if( PREV_STREFA>0 && PREV_STREFA != STREFA) {
 						if( PREV_STREFA==7 ) {
-							GADGET(4+(PREV_STREFA-1)*24,12,20,20,"buø",5,12,9,1,-1);
+							GADGET(4+(PREV_STREFA-1)*24,12,20,20,"bu≈º",5,12,9,1,-1);
 						} else {
 							BB_S=Minus_S("bob"+Str_S(50+PREV_STREFA)," ");	//	               BB$="bob"+Str$(50+STREFA)-" "
 							GADGET(4+(PREV_STREFA-1)*24,12,20,20,BB_S,5,12,9,1,-1);//	               GADGET[4+(STREFA-1)*24,12,20,20,BB$,5,12,9,1,-1]

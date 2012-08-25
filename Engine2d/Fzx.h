@@ -3,9 +3,9 @@
 
 #include "Collision.h"
 
-/** Zbiór klas i funkcji do obs³ugi fizyki.
+/** ZbiÃ³r klas i funkcji do obsÅ‚ugi fizyki.
     <BR>
-    Na tym etapie rozwoju engine'a fizyka sprowadza siê do kontroli kolizji.
+    Na tym etapie rozwoju engine'a fizyka sprowadza siÄ™ do kontroli kolizji.
 */
 namespace Fzx {
 };

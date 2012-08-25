@@ -1917,25 +1917,25 @@ string Inkey_S(void) {
 	}
 	if( mod & KMOD_ALT ) {
 		switch( s.c_str()[0] ) {
-			case 'A': s="¥"; break;
-			case 'C': s="Æ"; break;
-			case 'E': s="Ê"; break;
-			case 'L': s="£"; break;
-			case 'N': s="Ñ"; break;
-			case 'O': s="Ó"; break;
-			case 'S': s=""; break;
-			case 'Z': s="¯"; break;
-			case 'X': s=""; break;
+			case 'A': s="ÂĄ"; break;
+			case 'C': s="Ă†"; break;
+			case 'E': s="ĂŠ"; break;
+			case 'L': s="ÂŁ"; break;
+			case 'N': s="Ă‘"; break;
+			case 'O': s="Ă“"; break;
+			case 'S': s="ÂŚ"; break;
+			case 'Z': s="ÂŻ"; break;
+			case 'X': s="ÂŹ"; break;
 
-			case 'a': s="¹"; break;
-			case 'c': s="æ"; break;
-			case 'e': s="ê"; break;
-			case 'l': s="³"; break;
-			case 'n': s="ñ"; break;
-			case 'o': s="ó"; break;
-			case 's': s=""; break;
-			case 'z': s="¿"; break;
-			case 'x': s=""; break;
+			case 'a': s="Âą"; break;
+			case 'c': s="Ă¦"; break;
+			case 'e': s="ĂŞ"; break;
+			case 'l': s="Âł"; break;
+			case 'n': s="Ă±"; break;
+			case 'o': s="Ăł"; break;
+			case 's': s="Âś"; break;
+			case 'z': s="Âż"; break;
+			case 'x': s="Âź"; break;
 		}
 	}
 	return s;
