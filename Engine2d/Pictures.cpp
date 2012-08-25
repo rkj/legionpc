@@ -550,7 +550,7 @@ void Pic::Set(const Pic& src,int dm) {
 			conv.mc_src_buf = src.buf;
 			break;
 		default:
-			ERROR("Nieobs³ugiwany zród³owy tryb danych rysunku");
+			ERROR("Nieobs?ugiwany zr?d?owy tryb danych rysunku");
 			return;
 	}
 
@@ -580,7 +580,7 @@ void Pic::Set(const Pic& src,int dm) {
 			conv.mc_dst_buf = this->buf;
 			break;
 		default:
-			ERROR("Nieobs³ugiwany docelowy tryb danych rysunku");
+			ERROR("Nieobs?ugiwany docelowy tryb danych rysunku");
 			return;
 	}
 
@@ -675,10 +675,10 @@ void Pic::FixAlphaZero(void) {
 	return;
 }
 string Pic::Dump(void) const {
-	string ret = "";
-	ret += "Pic: w=" + toString(w) + " h=" + toString(h) + " data_mode=" + toString(data_mode);
-	ret += " buf=" + toString((int)buf,"%8.8x") + " buf_owner=" + (buf_owner ? "TRUE" : "FALSE");
-	ret += " priv_data=" + toString((int)priv_data,"%8.8x");
+  string ret = "not implemented";
+	//ret += "Pic: w=" + toString(w) + " h=" + toString(h) + " data_mode=" + toString(data_mode);
+	//ret += " buf=" + toString((int)buf,"%8.8x") + " buf_owner=" + (buf_owner ? "TRUE" : "FALSE");
+	//ret += " priv_data=" + toString((int)priv_data,"%8.8x");
 	return ret;
 }
 

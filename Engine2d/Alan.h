@@ -2,6 +2,7 @@
 #define D_ALAN_H_D
 
 #include <map>
+#include <string>
 
 namespace Gfx {
 
