@@ -1,1 +1,0 @@
-Legion.exe EN
